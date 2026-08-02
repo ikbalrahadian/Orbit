@@ -101,7 +101,7 @@ Ready to switch applications faster?
 
 👉 [Download the latest release](https://github.com/ikbalrahadian/Orbit/releases)
 
-or visit **https://ikbalrahadian.github.io/Orbit/**
+or visit **https://orbit-air.vercel.app/**
 
 ---
 
