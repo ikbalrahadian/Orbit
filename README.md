@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo.png" width="128" alt="Orbit Logo">
+  <img src="web/assets/icon/app_icon.png" width="128" alt="Orbit Logo">
 </p>
 
 <h1 align="center">Orbit</h1>
@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/hero.gif" alt="Orbit Demo" width="900">
+  <img src="web/assets/img/hero.gif" alt="Orbit Demo" width="900">
 </p>
 
 ---
@@ -21,7 +21,7 @@
 Modern games solved fast selection years ago. Whether you're switching weapons in **Grand Theft Auto V** or navigating inventory wheels in your favorite RPG, everything is built around **spatial memory**. You don't search, you simply know where everything is.
 
 <p align="center">
-  <img src="assets/game-wheel.gif" alt="Weapon Wheel Inspiration" width="650">
+  <img src="web/assets/img/game-wheel.gif" alt="Weapon Wheel Inspiration" width="650">
   <br>
   <em>Weapon wheels let players select items in a fraction of a second using muscle memory.</em>
 </p>
@@ -61,19 +61,19 @@ Orbit brings that same fast, intuitive radial navigation to your desktop. Instea
 ## Radial Wheel
 
 <p align="center">
-  <img src="assets/wheel.png" width="700">
+  <img src="web/assets/img/wheel.png" width="700">
 </p>
 
 ## Quick Dock
 
 <p align="center">
-  <img src="assets/dock.png" width="700">
+  <img src="web/assets/img/dock.png" width="700">
 </p>
 
 ## Search
 
 <p align="center">
-  <img src="assets/search.png" width="700">
+  <img src="web/assets/img/searchbar.png" width="700">
 </p>
 
 ---
@@ -99,9 +99,9 @@ You're ready to go.
 
 Ready to switch applications faster?
 
-👉 Download the latest release
+👉 [Download the latest release](https://github.com/ikbalrahadian/Orbit/releases)
 
-or visit **https://orbitapp.dev**
+or visit **https://ikbalrahadian.github.io/Orbit/**
 
 ---
 
