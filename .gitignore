@@ -1,0 +1,14 @@
+# Python environment and bytecode
+.venv/
+__pycache__/
+*.py[cod]
+
+# Generated application and installer output
+build/
+dist/
+
+# Editor settings
+.vscode/
+
+# Local backups
+archive/
