@@ -1,384 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-      <title>Orbit — The fastest way to switch applications on Windows</title>
-
-      <meta
-         name="description"
-         content="Orbit is a radial application switcher inspired by the weapon wheels in modern games."
-      />
-
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-      <link
-         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
-         rel="stylesheet"
-      />
-
-      <link rel="stylesheet" href="style.css" />
-   </head>
-
-   <body>
-      <header>
-         <div class="container nav">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orbit — The fastest way to switch applications on Windows</title>
+    <meta name="description" content="Orbit is a Windows application launcher and switcher that uses radial menus and spatial memory to help you launch apps faster. One-time purchase with lifetime updates.">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <a href="#" class="logo">
+          <img src="assets/icon/app_icon.png" alt="Orbit" />
+          <span>Orbit</span>
+        </a>
+        <nav>
+          <a href="#showcase">Features</a>
+          <a href="#controls">Controls</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+          <a href="support.html">Support</a>
+          <a href="https://github.com/ikbalrahadian/Orbit" target="_blank">GitHub</a>
+        </nav>
+      </div>
+    </header>
+    <!-- ===================================== -->
+    <section class="hero">
+      <div class="container">
+        <h1> The fastest way to switch applications on Windows. </h1>
+        <p> A radial application launcher inspired by modern game interfaces. </p>
+        <div class="hero-buttons">
+          <a href="https://github.com/ikbalrahadian/Orbit/releases" class="btn btn-secondary"> Download </a>
+          <a href="#pricing" class="btn btn-primary"> Buy License Key </a>
+        </div>
+        <p class="hero-note"> ✓ One-time purchase • Lifetime updates • 30-day money-back guarantee </p>
+        <img src="assets/img/hero.gif" class="hero-image" alt="Orbit Demo" />
+      </div>
+    </section>
+    <!-- ===================================== -->
+    <section id="games" class="games">
+      <div class="container narrow">
+        <h2>Inspired by Games</h2>
+        <p> Modern games solved fast selection years ago. Whether you're switching weapons in modern games, navigating inventories in RPGs, or selecting abilities in competitive games, everything relies on <strong>spatial memory</strong> instead of searching through menus. </p>
+        <img src="assets/img/game-wheel.gif" class="game-demo" alt="Weapon Wheel" />
+        <p class="caption"> Weapon wheels let players select items in a fraction of a second because they remember positions. </p>
+        <p> Windows still asks you to scan rows of windows every time you press <strong>Alt + Tab</strong>. Orbit brings the same radial interaction used in games to your desktop, making application switching feel natural and fast. </p>
+      </div>
+    </section>
+    <!-- ===================================== -->
+    <section id="showcase" class="showcase">
+      <div class="container">
+        <!-- Showcase 1 -->
+        <div class="showcase-item">
+          <div class="image">
+            <img src="assets/img/wheel.png" alt="Orbit Wheel" />
+          </div>
+          <div class="text">
+            <span> RADIAL NAVIGATION </span>
+            <h3>Select by direction and typing.</h3>
+            <p> Every application lives in a consistent position, allowing your muscle memory to take over. When start typing, Orbit also instantly filter applications on the wheel, helping you find what you need in seconds. </p>
+          </div>
+        </div>
+        <!-- Showcase 2 -->
+        <div class="showcase-item reverse">
+          <div class="image">
+            <img src="assets/img/searchbar.png" alt="Instant Search" />
+          </div>
+          <div class="text">
+            <span> SEARCH APPLICATION </span>
+            <h3>Find application on searching bar.</h3>
+            <p> Press <strong>Tab</strong> to switch to searching bar and start typing. Orbit instantly search installed applications on Windows, helping you find what you need in seconds. </p>
+          </div>
+        </div>
+        <!-- Showcase 3 -->
+        <div class="showcase-item">
+          <div class="image">
+            <img src="assets/img/dock.png" alt="Quick Dock" />
+          </div>
+          <div class="text">
+            <span> QUICK DOCK </span>
+            <h3>Keep your favorite applications close.</h3>
+            <p> Pin frequently used applications to the dock for quick access while keeping your Windows taskbar clean. </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===================================== -->
+    <section id="controls" class="controls">
+      <div class="container narrow">
+        <div class="section-title">
+          <h2>Keyboard & Mouse Controls</h2>
+          <p> Orbit is designed to be fully usable with both your mouse and keyboard. </p>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Action</th>
+              <th>Result</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <strong>Alt + Q</strong>
+              </td>
+              <td>Open Orbit around your cursor.</td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Mouse + Click</strong>
+              </td>
+              <td> Launch the selected application or open its submenu. </td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Type</strong>
+              </td>
+              <td>Instantly filter applications on the wheel.</td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Tab</strong>
+              </td>
+              <td> Switch focus between the Wheel, Quick Dock, and Search. </td>
+            </tr>
+            <tr>
+              <td>
+                <strong>← →</strong>
+              </td>
+              <td>Move the current selection around the wheel.</td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Enter</strong>
+              </td>
+              <td> Launch the selected application or open its submenu. </td>
+            </tr>
+            <tr>
+              <td>
+                <strong>↑ ↓</strong>
+              </td>
+              <td>Navigate through submenu items.</td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Esc</strong>
+              </td>
+              <td>Close Orbit.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <!-- ===================================== -->
+    <section class="requirements">
+      <h2>System Requirements</h2>
+      <ul>
+        <li>Windows 10 or Windows 11 (64-bit)</li>
+        <li>Internet connection required for activation</li>
+        <li>No administrator privileges required</li>
+        <li>Less than 20 MB disk space</li>
+      </ul>
+    </section>
+    <!-- ===================================== -->
+    <section id="pricing" class="pricing">
+      <div class="container">
+        <div class="section-title">
+          <span class="eyebrow"> Pricing </span>
+          <h2>Simple, honest pricing.</h2>
+          <p>One payment. No subscriptions. Own Orbit forever.</p>
+        </div>
+        <div class="price-card">
+          <span class="badge"> One-Time Purchase </span>
+          <h3 class="price-name">Orbit</h3>
+          <div class="price">
+            <span class="currency">$</span>
+            <span class="amount">10</span>
+            <span class="per">lifetime</span>
+          </div>
+          <p class="price-desc">Pay once, use it forever.</p>
+          <ul class="price-features">
+            <li>✓ Full version of Orbit</li>
+            <li>✓ Lifetime updates</li>
+            <li>✓ One-time purchase</li>
+            <li>✓ Windows 10 & Windows 11</li>
+            <li>✓ Secure license activation</li>
+            <li>✓ Email support</li>
+            <li>✓ 30-day money-back guarantee</li>
+          </ul>
+          <a href="https://ikbalrahadian.lemonsqueezy.com/checkout/buy/caa7ea38-18cd-4725-bf7a-bad52e008998" class="btn btn-primary"> Buy Orbit </a>
+          <p class="payment-note"> Secure checkout powered by Lemon Squeezy. </p>
+          <p class="guarantee">30-day money-back guarantee</p>
+        </div>
+      </div>
+    </section>
+    <!-- ===================================== -->
+    <section class="purchase-flow">
+      <div class="container narrow">
+        <div class="section-title">
+          <h2>What happens after purchase?</h2>
+          <p> Buying Orbit takes less than a minute. </p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <h3>1</h3>
+            <p>Complete the secure checkout.</p>
+          </div>
+          <div class="step">
+            <h3>2</h3>
+            <p> Receive your download instructions and license key by email. </p>
+          </div>
+          <div class="step">
+            <h3>3</h3>
+            <p> Activate Orbit and enjoy lifetime updates. </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===================================== -->
+    <section id="faq" class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h3>Which Windows versions are supported?</h3>
+        <p>Orbit supports Windows 10 and Windows 11 (64-bit).</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do I need an internet connection?</h3>
+        <p> Internet is only required for purchase and activation. Orbit works offline afterward. </p>
+      </div>
+      <div class="faq-item">
+        <h3>How will I receive Orbit?</h3>
+        <p> After payment you'll receive download instructions and your license by email. </p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I reinstall Orbit?</h3>
+        <p> Yes. You may reinstall Orbit on your licensed devices at any time. </p>
+      </div>
+      <div class="faq-item">
+        <h3>How many devices can I activate?</h3>
+        <p> Each personal license may be activated on up to two Windows devices owned by you. </p>
+      </div>
+      <div class="faq-item">
+        <h3>Do I receive future updates?</h3>
+        <p> Yes. All future updates are included at no additional cost. </p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I request a refund?</h3>
+        <p> Yes. Refunds are available within 30 days of purchase if this application can't work on your computer. </p>
+      </div>
+    </section>
+    <!-- ===================================== -->
+    <footer>
+      <div class="container footer">
+        <div class="footer-top">
+          <div class="footer-brand">
             <a href="#" class="logo">
-               <img src="assets/icon/app_icon.png" alt="Orbit" />
-
-               <span>Orbit</span>
+              <img src="assets/icon/app_icon.png" alt="Orbit" />
+              <span>Orbit</span>
             </a>
-
-            <nav>
-               <a href="#games"> Why </a>
-
-               <a href="#showcase"> Features </a>
-
-               <a href="#controls"> Controls </a>
-
-               <a href="#pricing"> Pricing </a>
-
-               <a href="https://github.com/ikbalrahadian/Orbit" target="_blank">
-                  GitHub
-               </a>
-            </nav>
-         </div>
-      </header>
-
-      <!-- ===================================== -->
-
-      <section class="hero">
-         <div class="container">
-            <h1>
-               Start switching windows with muscle memory.
-            </h1>
-
-            <p>
-               The fastest way to switch applications on Windows. Inspired by
-               the weapon wheels found in modern games.
-            </p>
-
-            <div class="hero-buttons">
-               <a
-                  href="https://github.com/ikbalrahadian/Orbit/releases"
-                  class="btn btn-secondary"
-               >
-                  Download
-               </a>
-
-               <a href="#pricing" class="btn btn-primary"> Buy for $10 </a>
-            </div>
-
-            <img src="assets/img/hero.gif" class="hero-image" alt="Orbit Demo" />
-         </div>
-      </section>
-
-      <!-- ===================================== -->
-
-      <section id="games" class="games">
-         <div class="container narrow">
-            <h2>Inspired by Games</h2>
-
-            <p>
-               Modern games solved fast selection years ago. Whether you're
-               switching weapons in
-               <strong>Grand Theft Auto V</strong>, navigating inventories in
-               RPGs, or selecting abilities in competitive games, everything
-               relies on
-               <strong>spatial memory</strong>
-               instead of searching through menus.
-            </p>
-
-            <img
-               src="assets/img/game-wheel.gif"
-               class="game-demo"
-               alt="Weapon Wheel"
-            />
-
-            <p class="caption">
-               Weapon wheels let players select items in a fraction of a second
-               because they remember positions.
-            </p>
-
-            <p>
-               Windows still asks you to scan rows of windows every time you
-               press
-               <strong>Alt + Tab</strong>. Orbit brings the same radial
-               interaction used in games to your desktop, making application
-               switching feel natural and fast.
-            </p>
-         </div>
-      </section>
-
-      <!-- ===================================== -->
-
-      <section id="showcase" class="showcase">
-         <div class="container">
-            <!-- Showcase 1 -->
-
-            <div class="showcase-item">
-               <div class="image">
-                  <img src="assets/img/wheel.png" alt="Orbit Wheel" />
-               </div>
-
-               <div class="text">
-                  <span> RADIAL NAVIGATION </span>
-
-                  <h3>Select by direction and typing.</h3>
-
-                  <p>
-                     Every application lives in a consistent position, allowing
-                     your muscle memory to take over. When start typing, Orbit 
-                     also instantly filter applications on the wheel, helping you
-                     find what you need in seconds.
-                  </p>
-               </div>
-            </div>
-
-            <!-- Showcase 2 -->
-
-            <div class="showcase-item reverse">
-               <div class="image">
-                  <img src="assets/img/searchbar.png" alt="Instant Search" />
-               </div>
-
-               <div class="text">
-                  <span> SEARCH APPLICATION </span>
-
-                  <h3>Find application on searching bar.</h3>
-
-                  <p>
-                     Press <strong>Tab</strong> to switch to searching bar and start typing. 
-                     Orbit instantly search installed applications on Windows, helping you
-                     find what you need in seconds.
-                  </p>
-               </div>
-            </div>
-
-            <!-- Showcase 3 -->
-
-            <div class="showcase-item">
-               <div class="image">
-                  <img src="assets/img/dock.png" alt="Quick Dock" />
-               </div>
-
-               <div class="text">
-                  <span> QUICK DOCK </span>
-
-                  <h3>Keep your favorite applications close.</h3>
-
-                  <p>
-                     Pin frequently used applications to the dock for quick
-                     access while keeping your Windows taskbar clean.
-                  </p>
-               </div>
-            </div>
-         </div>
-      </section>
-
-      <!-- ===================================== -->
-
-      <section id="controls" class="controls">
-         <div class="container narrow">
-            <div class="section-title">
-               <h2>Keyboard & Mouse Controls</h2>
-
-               <p>
-                  Orbit is designed to be fully usable with both your mouse and
-                  keyboard.
-               </p>
-            </div>
-
-            <table>
-               <thead>
-                  <tr>
-                     <th>Action</th>
-
-                     <th>Result</th>
-                  </tr>
-               </thead>
-
-               <tbody>
-                  <tr>
-                     <td>
-                        <strong>Alt + Q</strong>
-                     </td>
-
-                     <td>Open Orbit around your cursor.</td>
-                  </tr>
-
-                  <tr>
-                     <td>
-                        <strong>Mouse + Click</strong>
-                     </td>
-
-                     <td>
-                        Launch the selected application or open its submenu.
-                     </td>
-                  </tr>
-
-                  <tr>
-                     <td>
-                        <strong>Type</strong>
-                     </td>
-
-                     <td>Instantly filter applications on the wheel.</td>
-                  </tr>
-
-                  <tr>
-                     <td>
-                        <strong>Tab</strong>
-                     </td>
-
-                     <td>
-                        Switch focus between the Wheel, Quick Dock, and Search.
-                     </td>
-                  </tr>
-
-                  <tr>
-                     <td>
-                        <strong>← →</strong>
-                     </td>
-
-                     <td>Move the current selection around the wheel.</td>
-                  </tr>
-
-                  <tr>
-                     <td>
-                        <strong>Enter</strong>
-                     </td>
-
-                     <td>
-                        Launch the selected application or open its submenu.
-                     </td>
-                  </tr>
-
-                  <tr>
-                     <td>
-                        <strong>↑ ↓</strong>
-                     </td>
-
-                     <td>Navigate through submenu items.</td>
-                  </tr>
-
-                  <tr>
-                     <td>
-                        <strong>Esc</strong>
-                     </td>
-
-                     <td>Close Orbit.</td>
-                  </tr>
-               </tbody>
-            </table>
-         </div>
-      </section>
-
-      <!-- ===================================== -->
-
-      <section id="pricing" class="pricing">
-         <div class="container">
-            <div class="section-title">
-               <span class="eyebrow"> Pricing </span>
-
-               <h2>Simple, honest pricing.</h2>
-
-               <p>One payment. No subscriptions. Own Orbit forever.</p>
-            </div>
-
-            <div class="price-card">
-               <span class="badge"> One-Time Purchase </span>
-
-               <h3 class="price-name">Orbit</h3>
-
-               <div class="price">
-                  <span class="currency">$</span>
-
-                  <span class="amount">10</span>
-
-                  <span class="per">lifetime</span>
-               </div>
-
-               <p class="price-desc">Pay once, use it forever.</p>
-
-               <ul class="price-features">
-                  <li><span class="check">✓</span> Full version of Orbit</li>
-
-                  <li><span class="check">✓</span> Free future updates</li>
-
-                  <li><span class="check">✓</span> No subscriptions</li>
-
-                  <li><span class="check">✓</span> One-time payment</li>
-               </ul>
-
-               <a
-                  href="https://ikbalrahadian.lemonsqueezy.com/checkout/buy/caa7ea38-18cd-4725-bf7a-bad52e008998"
-                  class="btn btn-primary"
-               >
-                  Buy with Lemon Squeezy
-               </a>
-
-               <p class="guarantee">30-day money-back guarantee</p>
-            </div>
-         </div>
-      </section>
-
-      <!-- ===================================== -->
-
-      <footer>
-         <div class="container footer">
-            <div class="footer-top">
-               <div class="footer-brand">
-                  <a href="#" class="logo">
-                     <img src="assets/icon/app_icon.png" alt="Orbit" />
-
-                     <span>Orbit</span>
-                  </a>
-
-                  <p>The fastest way to switch applications on Windows.</p>
-               </div>
-
-               <div class="footer-col">
-                  <h4>Product</h4>
-
-                  <a href="#games"> Why Orbit </a>
-
-                  <a href="#showcase"> Features </a>
-
-                  <a href="#controls"> Controls </a>
-
-                  <a href="#pricing"> Pricing </a>
-               </div>
-
-               <div class="footer-col">
-                  <h4>Community</h4>
-
-                  <a href="https://github.com/ikbalrahadian/Orbit" target="_blank">
-                     GitHub
-                  </a>
-
-                  <a
-                     href="https://github.com/ikbalrahadian/Orbit/issues"
-                     target="_blank"
-                  >
-                     Issues
-                  </a>
-
-                  <a href="mailto:hello@orbitapp.dev"> Contact </a>
-               </div>
-            </div>
-
-            <div class="footer-bottom">
-               <p>© 2026 Orbit. All rights reserved.</p>
-
-               <p>Made for Windows</p>
-            </div>
-         </div>
-      </footer>
-
-      <script src="script.js"></script>
-   </body>
+            <p>The fastest way to switch applications on Windows.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Product</h4>
+            <a href="#showcase">Features</a>
+            <a href="#controls">Controls</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#faq">FAQ</a>
+          </div>
+          <div class="footer-col">
+            <h4>Support</h4>
+            <a href="support.html">Contact Support</a>
+            <a href="refund.html">Refund Policy</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+          </div>
+          <div class="footer-col">
+            <h4>Resources</h4>
+            <a href="https://github.com/ikbalrahadian/Orbit">GitHub</a>
+            <a href="https://github.com/ikbalrahadian/Orbit/releases">Download</a>
+            <a href="mailto:support@orbitapp.dev"> ikbal.rahadian@outlook.com </a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 Orbit. Made for Windows</p>
+          <p> Orbit is developed by Ikbal Rahadian. For sales or support inquiries: ikbal.rahadian@outlook.com </p>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
