@@ -1,76 +1,158 @@
 // ===========================================
 // Orbit Landing Page
-// script.js
 // ===========================================
-// -------------------------------------------
-// Fade In Animation
-// -------------------------------------------
-const observer = new IntersectionObserver(
-    (entries) => {
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    // ---------------------------------------
+    // Fade In Animation
+    // ---------------------------------------
+
+    const observer = new IntersectionObserver((entries, obs) => {
+
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("show");
-            }
+
+            if (!entry.isIntersecting) return;
+
+            entry.target.classList.add("show");
+
+            obs.unobserve(entry.target);
+
         });
+
     }, {
         threshold: 0.15
     });
-document.querySelectorAll("section").forEach(section => {
-    section.classList.add("fade");
-    observer.observe(section);
-});
-// -------------------------------------------
-// Smooth Navigation
-// -------------------------------------------
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener("click", function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute("href"));
-        if (target) {
+
+    document.querySelectorAll("section").forEach(section => {
+
+        section.classList.add("fade");
+
+        observer.observe(section);
+
+    });
+
+
+    // ---------------------------------------
+    // Smooth Scroll
+    // ---------------------------------------
+
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+
+        link.addEventListener("click", e => {
+
+            const href = link.getAttribute("href");
+
+            if (!href || href === "#") return;
+
+            const target = document.querySelector(href);
+
+            if (!target) return;
+
+            e.preventDefault();
+
             target.scrollIntoView({
-                behavior: "smooth"
+                behavior: "smooth",
+                block: "start"
             });
-        }
+
+        });
+
     });
-});
-// -------------------------------------------
-// Navbar Background
-// -------------------------------------------
-const header = document.querySelector("header");
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 40) {
-        header.classList.add("scrolled");
-    } else {
-        header.classList.remove("scrolled");
+
+
+    // ---------------------------------------
+    // Header Scroll Effect
+    // ---------------------------------------
+
+    const header = document.querySelector("header");
+
+    if (header) {
+
+        window.addEventListener("scroll", () => {
+
+            header.classList.toggle(
+                "scrolled",
+                window.scrollY > 40
+            );
+
+        });
+
     }
-});
-// -------------------------------------------
-// Pricing Button Hover
-// -------------------------------------------
-const buyButton = document.querySelector(".price-card .btn");
-if (buyButton) {
-    buyButton.addEventListener("mouseenter", () => {
-        buyButton.innerHTML = "Buy Now →";
+
+
+    // ---------------------------------------
+    // Pricing Button
+    // ---------------------------------------
+
+    const buyButton = document.querySelector(".price-card .btn");
+
+    if (buyButton) {
+
+        const originalText = buyButton.textContent;
+
+        buyButton.addEventListener("mouseenter", () => {
+
+            buyButton.textContent = "Buy Now →";
+
+        });
+
+        buyButton.addEventListener("mouseleave", () => {
+
+            buyButton.textContent = originalText;
+
+        });
+
+    }
+
+
+    // ---------------------------------------
+    // Lazy Loading
+    // ---------------------------------------
+
+    document.querySelectorAll("img").forEach(img => {
+
+        if (!img.classList.contains("hero-image")) {
+
+            img.loading = "lazy";
+
+        }
+
     });
-    buyButton.addEventListener("mouseleave", () => {
-        buyButton.innerHTML = "Buy with Lemon Squeezy";
+
+
+    // ---------------------------------------
+    // FAQ Accordion
+    // ---------------------------------------
+
+    document.querySelectorAll(".faq-item h3").forEach(title => {
+
+        title.style.cursor = "pointer";
+
+        title.addEventListener("click", () => {
+
+            const item = title.parentElement;
+
+            item.classList.toggle("open");
+
+        });
+
     });
-}
-// -------------------------------------------
-// Image Lazy Loading
-// -------------------------------------------
-document.querySelectorAll("img").forEach(img => {
-    img.loading = "lazy";
-});
-// -------------------------------------------
-// Console Easter Egg
-// -------------------------------------------
-console.log(`
+
+
+    // ---------------------------------------
+    // Console Message
+    // ---------------------------------------
+
+    console.log(`
 🪐 Orbit
 
-Stop searching for windows.
+The fastest way to switch applications on Windows.
 
-Start switching with muscle memory.
-
+Download:
 https://github.com/ikbalrahadian/Orbit
+
+Built by Achmad Ikbal Rahadian
 `);
+
+});
