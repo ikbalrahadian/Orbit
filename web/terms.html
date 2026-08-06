@@ -1,208 +1,265 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Terms of Service • Orbit</title>
-
-<link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Terms of Service • Orbit</title>
+	<style>
+	@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap');
+	:root {
+		--bg: #09090B;
+		--surface: #111216;
+		--border: #23242B;
+		--text: #FAFAFA;
+		--muted: #A1A1AA;
+		--primary: #4F8CFF;
+		--max-width: 900px;
+	}
+	
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	
+	html {
+		scroll-behavior: smooth;
+	}
+	
+	body {
+		background: var(--bg);
+		color: var(--text);
+		font-family: Inter, sans-serif;
+		line-height: 1.8;
+		-webkit-font-smoothing: antialiased;
+	}
+	
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+	
+	img {
+		display: block;
+		max-width: 100%;
+	}
+	
+	header {
+		position: sticky;
+		top: 0;
+		backdrop-filter: blur(18px);
+		background: rgba(9, 9, 11, .85);
+		border-bottom: 1px solid rgba(255, 255, 255, .05);
+		z-index: 999;
+	}
+	
+	.container {
+		width: min(92%, 1100px);
+		margin: auto;
+	}
+	
+	.nav {
+		height: 70px;
+		display: flex;
+		align-items: center;
+	}
+	
+	.logo {
+		display: flex;
+		align-items: center;
+		gap: 14px;
+	}
+	
+	.logo img {
+		width: 42px;
+	}
+	
+	.logo span {
+		font-family: "Space Grotesk", sans-serif;
+		font-size: 1.35rem;
+		font-weight: 700;
+	}
+	
+	main {
+		padding: 80px 20px;
+	}
+	
+	.legal-container {
+		max-width: var(--max-width);
+		margin: auto;
+		background: var(--surface);
+		border: 1px solid var(--border);
+		border-radius: 20px;
+		padding: 50px;
+		box-shadow: 0 30px 70px rgba(0, 0, 0, .35);
+	}
+	
+	h1 {
+		font-family: "Space Grotesk", sans-serif;
+		font-size: 3rem;
+		margin-bottom: 14px;
+	}
+	
+	h2 {
+		font-family: "Space Grotesk", sans-serif;
+		font-size: 1.45rem;
+		margin-bottom: 16px;
+	}
+	
+	p {
+		color: var(--muted);
+		margin-bottom: 18px;
+	}
+	
+	strong {
+		color: var(--text);
+	}
+	
+	section {
+		margin-top: 45px;
+		padding-top: 35px;
+		border-top: 1px solid rgba(255, 255, 255, .06);
+	}
+	
+	ul {
+		margin-top: 15px;
+		margin-left: 22px;
+	}
+	
+	li {
+		color: var(--muted);
+		margin-bottom: 12px;
+	}
+	
+	.email {
+		display: inline-block;
+		margin-top: 8px;
+		color: var(--primary);
+		font-weight: 600;
+	}
+	
+	.back {
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		margin-bottom: 35px;
+		color: var(--muted);
+		transition: .25s;
+	}
+	
+	.back:hover {
+		color: white;
+	}
+	
+	.notice {
+		margin-top: 25px;
+		padding: 18px 22px;
+		border-radius: 14px;
+		background: rgba(79, 140, 255, .08);
+		border: 1px solid rgba(79, 140, 255, .25);
+	}
+	
+	.notice p {
+		margin: 0;
+		color: #D9E8FF;
+	}
+	
+	footer {
+		text-align: center;
+		color: #777;
+		font-size: .9rem;
+		padding: 50px 20px;
+	}
+	
+	@media(max-width:768px) {
+		.legal-container {
+			padding: 32px 24px;
+		}
+		h1 {
+			font-size: 2.2rem;
+		}
+		h2 {
+			font-size: 1.3rem;
+		}
+	}
+	</style>
 </head>
 
 <body>
+	<header>
+		<div class="container nav">
+			<a href="index.html" class="logo"> <img src="assets/icon/app_icon.png" alt="Orbit Logo"> <span>Orbit</span> </a>
+		</div>
+	</header>
+	<main>
+		<div class="legal-container"> <a href="index.html" class="back">← Back to Orbit</a>
+			<h1>Terms of Service</h1>
+			<p><strong>Last Updated:</strong> August 5, 2026</p>
+			<p> These Terms of Service govern your use of Orbit ("Software"), developed and distributed by Achmad Ikbal Rahadian ("Developer"). By downloading, installing, activating, or using Orbit, you agree to these Terms. </p>
+			<div class="notice">
+				<p> Purchasing Orbit grants you a license to use the software. Ownership of the software remains with the Developer. </p>
+			</div>
+			<section>
+				<h2>1. License Grant</h2>
+				<p> Upon successful purchase, you are granted a personal, non-exclusive, non-transferable, and revocable license to use Orbit for your personal or business productivity. </p>
+			</section>
+			<section>
+				<h2>2. Ownership</h2>
+				<p> Orbit, including its software, documentation, artwork, trademarks, and intellectual property, remains the exclusive property of Achmad Ikbal Rahadian. </p>
+			</section>
+			<section>
+				<h2>3. Restrictions</h2>
+				<ul>
+					<li>Do not resell or redistribute Orbit.</li>
+					<li>Do not share your license key.</li>
+					<li>Do not remove copyright notices.</li>
+					<li>Do not use Orbit for unlawful purposes.</li>
+					<li>Do not reverse engineer or modify the software except where permitted by law.</li>
+				</ul>
+			</section>
+			<section>
+				<h2>4. License Activation</h2>
+				<p> Orbit may verify your license online during activation. Fraudulent purchases, chargebacks, or license abuse may result in license suspension. </p>
+			</section>
+			<section>
+				<h2>5. Software Updates</h2>
+				<p> Unless otherwise stated, your purchase includes lifetime software updates. Features may change over time as Orbit evolves. </p>
+			</section>
+			<section>
+				<h2>6. Refunds</h2>
+				<p> Refund requests are handled according to the Orbit Refund Policy available on this website. </p>
+			</section>
+			<section>
+				<h2>7. Support</h2>
+				<p> Licensed customers receive email support. Response times are not guaranteed and may vary. </p>
+			</section>
+			<section>
+				<h2>8. Disclaimer</h2>
+				<p> Orbit is provided "AS IS" without warranties of any kind. The Developer does not guarantee uninterrupted operation or compatibility with every hardware or software configuration. </p>
+			</section>
+			<section>
+				<h2>9. Limitation of Liability</h2>
+				<p> To the maximum extent permitted by law, the Developer shall not be liable for indirect, incidental, consequential, or special damages arising from the use of Orbit. Total liability shall never exceed the amount paid for the software. </p>
+			</section>
+			<section>
+				<h2>10. Termination</h2>
+				<p> Violation of these Terms may result in suspension or termination of your license. Upon termination, you must stop using Orbit and remove all installed copies. </p>
+			</section>
+			<section>
+				<h2>11. Changes to These Terms</h2>
+				<p> These Terms may be updated periodically. Revised versions will be published on this website with a new effective date. </p>
+			</section>
+			<section>
+				<h2>12. Contact</h2>
+				<p> Questions regarding these Terms can be sent to: </p> <a class="email" href="mailto:support@orbitapp.dev">
 
-<header>
-    <div class="container nav">
-        <a href="index.html" class="logo">
-            <img src="assets/icon/app_icon.png" alt="Orbit Logo">
-            <span>Orbit</span>
-        </a>
-    </div>
-</header>
+support@orbitapp.dev
 
-<main class="legal-page">
-    <div class="legal-container">
-
-    <h1>Terms of Service</h1>
-
-    <p>
-        <strong>Last Updated:</strong> August 5, 2026
-    </p>
-
-    <p>
-        These Terms of Service govern your use of Orbit ("Software"),
-        developed and distributed by Achmad Ikbal Rahadian ("Developer").
-        By downloading, installing, activating, or using Orbit, you agree
-        to these Terms.
-    </p>
-
-    <section class="legal-section">
-        <h2>1. License Grant</h2>
-
-        <p>
-            Upon successful purchase, you are granted a personal,
-            non-exclusive, non-transferable, and revocable license to use
-            Orbit in accordance with these Terms.
-        </p>
-
-        <p>
-            This license permits installation and use of Orbit for your
-            personal or business productivity purposes.
-        </p>
-    </section>
-
-    <section class="legal-section">
-        <h2>2. Ownership</h2>
-
-        <p>
-            Orbit, including all source code, design elements, trademarks,
-            documentation, and related intellectual property, remains the
-            exclusive property of Achmad Ikbal Rahadian.
-        </p>
-
-        <p>
-            Purchasing Orbit grants a license to use the software and does
-            not transfer ownership rights.
-        </p>
-    </section>
-
-    <section class="legal-section">
-        <h2>3. Restrictions</h2>
-
-        <p>You agree not to:</p>
-
-        <ul>
-            <li>Resell, sublicense, rent, or distribute Orbit.</li>
-            <li>Share license keys with unauthorized users.</li>
-            <li>Remove copyright or ownership notices.</li>
-            <li>Use Orbit for unlawful activities.</li>
-            <li>Reverse engineer, decompile, or modify Orbit except where such rights are explicitly granted by applicable law.</li>
-        </ul>
-    </section>
-
-    <section class="legal-section">
-        <h2>4. License Activation</h2>
-
-        <p>
-            Orbit may require license activation and verification to
-            validate legitimate purchases.
-        </p>
-
-        <p>
-            The Developer reserves the right to suspend or revoke licenses
-            obtained through fraud, chargebacks, unauthorized sharing, or
-            abuse of the licensing system.
-        </p>
-    </section>
-
-    <section class="legal-section">
-        <h2>5. Updates</h2>
-
-        <p>
-            Unless otherwise stated at the time of purchase, Orbit includes
-            lifetime software updates for the purchased version.
-        </p>
-
-        <p>
-            The Developer may modify, improve, or discontinue features at
-            any time.
-        </p>
-    </section>
-
-    <section class="legal-section">
-        <h2>6. Refunds</h2>
-
-        <p>
-            Refund requests are handled in accordance with the Orbit Refund
-            Policy available on this website.
-        </p>
-
-        <p>
-            By purchasing Orbit, you acknowledge that you have reviewed the
-            applicable refund policy.
-        </p>
-    </section>
-
-    <section class="legal-section">
-        <h2>7. Support</h2>
-
-        <p>
-            Reasonable email support is provided for licensed users.
-            Support availability and response times may vary.
-        </p>
-    </section>
-
-    <section class="legal-section">
-        <h2>8. Disclaimer</h2>
-
-        <p>
-            Orbit is provided on an "as is" and "as available" basis
-            without warranties of any kind, whether express or implied.
-        </p>
-
-        <p>
-            The Developer does not guarantee uninterrupted operation,
-            compatibility with every system configuration, or that the
-            software will be free from errors.
-        </p>
-    </section>
-
-    <section class="legal-section">
-        <h2>9. Limitation of Liability</h2>
-
-        <p>
-            To the maximum extent permitted by applicable law, the Developer
-            shall not be liable for any indirect, incidental, special,
-            consequential, or punitive damages arising from the use or
-            inability to use Orbit.
-        </p>
-
-        <p>
-            In no event shall the Developer's total liability exceed the
-            amount paid for the software.
-        </p>
-    </section>
-
-    <section class="legal-section">
-        <h2>10. Termination</h2>
-
-        <p>
-            These Terms remain in effect until terminated.
-        </p>
-
-        <p>
-            The Developer may terminate or suspend your license if you
-            violate these Terms. Upon termination, you must cease using
-            Orbit and remove all installed copies.
-        </p>
-    </section>
-
-    <section class="legal-section">
-        <h2>11. Changes to These Terms</h2>
-
-        <p>
-            The Developer may update these Terms from time to time. Updated
-            versions will be published on this website with a revised
-            effective date.
-        </p>
-    </section>
-
-    <section class="legal-section">
-        <h2>12. Contact</h2>
-
-        <p>
-            For questions regarding these Terms, please contact:
-        </p>
-
-        <p>
-            <strong>Email:</strong> support@orbitapp.dev
-        </p>
-    </section>
-
-</div>
-
-</main>
-
+</a> </section>
+		</div>
+	</main>
+	<footer> © 2026 Orbit • Developed by Achmad Ikbal Rahadian </footer>
 </body>
+
 </html>
