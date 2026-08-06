@@ -10,3123 +10,19 @@
    Root
    ========================================================== */
 
-:root{
-
-    --bg:#09090B;
-    --surface:#111216;
-    --surface-2:#17181E;
-
-    --border:#25262D;
-
-    --text:#FAFAFA;
-    --muted:#A1A1AA;
-
-    --primary:#4F8CFF;
-    --primary-hover:#6EA5FF;
-
-    --success:#22C55E;
-
-    --radius:18px;
-
-    --container:1180px;
-
-    --transition:.28s ease;
-
-}
-
-/* ==========================================================
-   Reset
-   ========================================================== */
-
-*,
-*::before,
-*::after{
-
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-
-}
-
-html{
-
-    scroll-behavior:smooth;
-
-}
-
-body{
-
-    background:var(--bg);
-
-    color:var(--text);
-
-    font-family:Inter,sans-serif;
-
-    line-height:1.75;
-
-    -webkit-font-smoothing:antialiased;
-
-    text-rendering:optimizeLegibility;
-
-}
-
-img{
-
-    display:block;
-
-    max-width:100%;
-
-}
-
-a{
-
-    color:inherit;
-
-    text-decoration:none;
-
-}
-
-button{
-
-    font:inherit;
-
-}
-
-/* ==========================================================
-   Accessibility
-   ========================================================== */
-
-::selection{
-
-    background:var(--primary);
-
-    color:white;
-
-}
-
-a:focus-visible,
-button:focus-visible{
-
-    outline:2px solid var(--primary);
-
-    outline-offset:4px;
-
-    border-radius:6px;
-
-}
-
-/* ==========================================================
-   Scrollbar
-   ========================================================== */
-
-::-webkit-scrollbar{
-
-    width:10px;
-
-}
-
-::-webkit-scrollbar-track{
-
-    background:#09090B;
-
-}
-
-::-webkit-scrollbar-thumb{
-
-    background:#30333A;
-
-    border-radius:999px;
-
-}
-
-::-webkit-scrollbar-thumb:hover{
-
-    background:var(--primary);
-
-}
-
-/* ==========================================================
-   Layout
-   ========================================================== */
-
-.container{
-
-    width:min(92%,var(--container));
-
-    margin:auto;
-
-}
-
-.narrow{
-
-    max-width:760px;
-
-}
-
-section{
-
-    padding:96px 0;
-
-}
-
-.page{
-
-    padding-top:140px;
-
-    padding-bottom:90px;
-
-}
-
-/* ==========================================================
-   Typography
-   ========================================================== */
-
-h1{
-
-    font-family:"Space Grotesk",sans-serif;
-
-    font-size:3.35rem;
-
-    line-height:1.05;
-
-    letter-spacing:-2px;
-
-    margin-bottom:24px;
-
-}
-
-h2{
-
-    font-family:"Space Grotesk",sans-serif;
-
-    font-size:2.45rem;
-
-    letter-spacing:-1px;
-
-    text-align:center;
-
-    margin-bottom:18px;
-
-}
-
-h3{
-
-    font-family:"Space Grotesk",sans-serif;
-
-    font-size:1.45rem;
-
-    margin-bottom:14px;
-
-}
-
-p{
-
-    color:var(--muted);
-
-    font-size:1rem;
-
-    line-height:1.8;
-
-}
-
-ul{
-
-    padding-left:20px;
-
-}
-
-/* ==========================================================
-   Section Title
-   ========================================================== */
-
-.section-title{
-
-    max-width:760px;
-
-    margin:0 auto 60px;
-
-    text-align:center;
-
-}
-
-.section-title h2{
-
-    margin-bottom:16px;
-
-}
-
-.section-title p{
-
-    font-size:1.05rem;
-
-}
-
-.eyebrow{
-
-    display:inline-block;
-
-    margin-bottom:18px;
-
-    color:#7DAFFF;
-
-    letter-spacing:.16em;
-
-    text-transform:uppercase;
-
-    font-size:.9rem;
-
-    font-weight:700;
-
-}
-
-/* ==========================================================
-   Fade Animation
-   ========================================================== */
-
-.fade{
-
-    opacity:0;
-
-    transform:translateY(30px);
-
-    transition:
-        opacity .7s ease,
-        transform .7s ease;
-
-}
-
-.fade.show{
-
-    opacity:1;
-
-    transform:none;
-
-}
-
-@media(prefers-reduced-motion:reduce){
-
-.fade{
-
-opacity:1;
-
-transform:none;
-
-transition:none;
-
-}
-
-}
-
-/* ==========================================================
-   Header
-   ========================================================== */
-
-header{
-
-    position:fixed;
-
-    top:0;
-
-    left:0;
-
-    width:100%;
-
-    z-index:999;
-
-    backdrop-filter:blur(18px);
-
-    background:rgba(9,9,11,.55);
-
-    transition:var(--transition);
-
-}
-
-header.scrolled{
-
-    background:rgba(9,9,11,.92);
-
-    border-bottom:1px solid rgba(255,255,255,.05);
-
-}
-
-.nav{
-
-    height:72px;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-}
-
-.logo{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:14px;
-
-}
-
-.logo img{
-
-    width:42px;
-
-}
-
-.logo span{
-
-    font-family:"Space Grotesk";
-
-    font-size:1.35rem;
-
-    font-weight:700;
-
-}
-
-/* ==========================================================
-   Navigation
-   ========================================================== */
-
-nav{
-
-    display:flex;
-
-    gap:32px;
-
-}
-
-nav a{
-
-    position:relative;
-
-    color:var(--muted);
-
-    font-weight:500;
-
-    transition:var(--transition);
-
-}
-
-nav a:hover{
-
-    color:white;
-
-}
-
-nav a::after{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-
-    bottom:-8px;
-
-    width:0;
-
-    height:2px;
-
-    background:var(--primary);
-
-    transition:var(--transition);
-
-}
-
-nav a:hover::after{
-
-    width:100%;
-
-}
-
-nav a.active{
-
-    color:white;
-
-}
-
-nav a.active::after{
-
-    width:100%;
-
-}
-
-/* ==========================================================
-   Hero
-   ========================================================== */
-
-.hero{
-
-    padding-top:145px;
-
-}
-
-.hero h1{
-
-    max-width:900px;
-
-}
-
-.hero p{
-
-    max-width:700px;
-
-    margin:20px 0 34px;
-
-    font-size:1.15rem;
-
-}
-
-.hero-buttons{
-
-    display:flex;
-
-    gap:16px;
-
-    flex-wrap:wrap;
-
-    margin-bottom:28px;
-
-}
-
-.hero-note{
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    gap:18px;
-
-    color:#8E8E98;
-
-    font-size:.95rem;
-
-    margin-bottom:50px;
-
-}
-
-.hero-image{
-
-    border-radius:24px;
-
-    border:1px solid var(--border);
-
-    box-shadow:
-        0 45px 90px rgba(0,0,0,.45);
-
-}
-
-/* ==========================================================
-   Buttons
-   ========================================================== */
-
-.btn{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    padding:14px 26px;
-
-    border-radius:999px;
-
-    font-weight:600;
-
-    transition:var(--transition);
-
-}
-
-.btn-primary{
-
-    color:white;
-
-    background:var(--primary);
-
-    box-shadow:
-        0 12px 35px rgba(79,140,255,.25);
-
-}
-
-.btn-primary:hover{
-
-    background:var(--primary-hover);
-
-    transform:translateY(-3px);
-
-    box-shadow:
-        0 20px 45px rgba(79,140,255,.35);
-
-}
-
-.btn-secondary{
-
-    border:1px solid var(--border);
-
-}
-
-.btn-secondary:hover{
-
-    background:rgba(255,255,255,.04);
-
-    transform:translateY(-3px);
-
-}
-
-/* ==========================================================
-   Responsive
-   ========================================================== */
-
-@media(max-width:900px){
-
-h1{
-
-font-size:2.7rem;
-
-}
-
-h2{
-
-font-size:2rem;
-
-}
-
-.nav{
-
-height:auto;
-
-padding:18px 0;
-
-flex-direction:column;
-
-gap:18px;
-
-}
-
-nav{
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-gap:20px;
-
-}
-
-.hero{
-
-padding-top:170px;
-
-}
-
-.hero-buttons{
-
-justify-content:center;
-
-}
-
-.hero{
-
-text-align:center;
-
-}
-
-.hero p{
-
-margin-left:auto;
-margin-right:auto;
-
-}
-
-.hero-note{
-
-justify-content:center;
-
-}
-
-}
-
-/* ==========================================================
-   Orbit Website
-   style.css
-   Part 2
-   Games • Showcase • Controls • Requirements
-   Pricing • Purchase Flow
-   ========================================================== */
-
-/* ==========================================================
-   Inspired by Games
-   ========================================================== */
-
-.games{
-
-    text-align:center;
-
-}
-
-.games h2{
-
-    margin-bottom:20px;
-
-}
-
-.games p{
-
-    max-width:760px;
-
-    margin:0 auto 24px;
-
-}
-
-.game-demo{
-
-    margin:42px auto;
-
-    border-radius:24px;
-
-    border:1px solid var(--border);
-
-    overflow:hidden;
-
-    box-shadow:
-        0 35px 80px rgba(0,0,0,.45);
-
-}
-
-.caption{
-
-    color:#7C7C85;
-
-    font-size:.95rem;
-
-    margin-top:-8px;
-
-}
-
-/* ==========================================================
-   Showcase
-   ========================================================== */
-
-.showcase{
-
-    padding:100px 0;
-
-}
-
-.showcase-item{
-
-    display:grid;
-
-    grid-template-columns:1.2fr .8fr;
-
-    gap:64px;
-
-    align-items:center;
-
-    margin-bottom:110px;
-
-}
-
-.showcase-item:last-child{
-
-    margin-bottom:0;
-
-}
-
-.showcase-item.reverse{
-
-    grid-template-columns:.8fr 1.2fr;
-
-}
-
-.showcase-item.reverse .image{
-
-    order:2;
-
-}
-
-.showcase-item.reverse .text{
-
-    order:1;
-
-}
-
-.image{
-
-    position:relative;
-
-}
-
-.image img{
-
-    width:100%;
-
-    border-radius:24px;
-
-    border:1px solid var(--border);
-
-    box-shadow:
-        0 35px 80px rgba(0,0,0,.45);
-
-    transition:.35s;
-
-}
-
-.image img:hover{
-
-    transform:translateY(-8px);
-
-}
-
-.image::after{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    border-radius:24px;
-
-    box-shadow:inset 0 0 0 1px rgba(255,255,255,.04);
-
-    pointer-events:none;
-
-}
-
-.text{
-
-    max-width:430px;
-
-}
-
-.text span{
-
-    display:inline-block;
-
-    margin-bottom:16px;
-
-    color:#7DAFFF;
-
-    letter-spacing:.16em;
-
-    text-transform:uppercase;
-
-    font-size:.9rem;
-
-    font-weight:700;
-
-}
-
-.text h3{
-
-    font-size:1.7rem;
-
-    line-height:1.2;
-
-    margin-bottom:18px;
-
-}
-
-.text p{
-
-    font-size:1rem;
-
-}
-
-/* ==========================================================
-   Controls
-   ========================================================== */
-
-.controls{
-
-    padding-top:40px;
-
-}
-
-.controls table{
-
-    width:100%;
-
-    border-collapse:collapse;
-
-    overflow:hidden;
-
-    border-radius:16px;
-
-    background:rgba(255,255,255,.02);
-
-    border:1px solid var(--border);
-
-}
-
-.controls th{
-
-    background:rgba(255,255,255,.03);
-
-    color:white;
-
-    text-align:left;
-
-    padding:18px;
-
-    font-weight:600;
-
-}
-
-.controls td{
-
-    padding:18px;
-
-    color:var(--muted);
-
-    border-top:1px solid rgba(255,255,255,.05);
-
-}
-
-.controls tr{
-
-    transition:.25s;
-
-}
-
-.controls tr:hover{
-
-    background:rgba(255,255,255,.03);
-
-}
-
-/* ==========================================================
-   Requirements
-   ========================================================== */
-
-.requirements{
-
-    text-align:center;
-
-}
-
-.requirements h2{
-
-    margin-bottom:28px;
-
-}
-
-.requirements ul{
-
-    list-style:none;
-
-    max-width:640px;
-
-    margin:auto;
-
-    display:grid;
-
-    gap:18px;
-
-    padding:0;
-
-}
-
-.requirements li{
-
-    background:rgba(255,255,255,.03);
-
-    border:1px solid var(--border);
-
-    border-radius:16px;
-
-    padding:18px 24px;
-
-    transition:.25s;
-
-}
-
-.requirements li:hover{
-
-    border-color:rgba(79,140,255,.35);
-
-    transform:translateY(-3px);
-
-}
-
-/* ==========================================================
-   Pricing
-   ========================================================== */
-
-.pricing{
-
-    position:relative;
-
-    overflow:hidden;
-
-    text-align:center;
-
-}
-
-.pricing::before{
-
-    content:"";
-
-    position:absolute;
-
-    left:50%;
-
-    top:-240px;
-
-    transform:translateX(-50%);
-
-    width:720px;
-
-    height:720px;
-
-    background:
-
-        radial-gradient(circle,
-
-        rgba(79,140,255,.16),
-
-        transparent 65%);
-
-    pointer-events:none;
-
-}
-
-.price-card{
-
-    position:relative;
-
-    max-width:520px;
-
-    margin:auto;
-
-    padding:46px;
-
-    border-radius:22px;
-
-    border:1px solid var(--border);
-
-    background:
-
-        linear-gradient(
-
-            180deg,
-
-            rgba(255,255,255,.05),
-
-            rgba(255,255,255,.015)
-
-        );
-
-    box-shadow:
-
-        0 30px 70px rgba(0,0,0,.45);
-
-    transition:.3s;
-
-}
-
-.price-card:hover{
-
-    transform:translateY(-6px);
-
-    border-color:rgba(79,140,255,.45);
-
-}
-
-.badge{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    padding:8px 16px;
-
-    border-radius:999px;
-
-    background:rgba(79,140,255,.12);
-
-    color:#7DAFFF;
-
-    border:1px solid rgba(79,140,255,.25);
-
-    font-size:.85rem;
-
-    font-weight:700;
-
-    text-transform:uppercase;
-
-    margin-bottom:26px;
-
-}
-
-.price-name{
-
-    margin-bottom:10px;
-
-}
-
-.price{
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:flex-end;
-
-    gap:8px;
-
-    margin-bottom:10px;
-
-}
-
-.currency{
-
-    font-size:1.5rem;
-
-    color:var(--muted);
-
-}
-
-.amount{
-
-    font-family:"Space Grotesk",sans-serif;
-
-    font-size:4.4rem;
-
-    line-height:1;
-
-}
-
-.per{
-
-    color:var(--muted);
-
-    margin-bottom:8px;
-
-}
-
-.price-desc{
-
-    margin-bottom:30px;
-
-}
-
-.price-features{
-
-    list-style:none;
-
-    padding:0;
-
-    margin:0 0 32px;
-
-    text-align:left;
-
-}
-
-.price-features li{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:12px;
-
-    padding:12px 0;
-
-    border-bottom:1px solid rgba(255,255,255,.05);
-
-}
-
-.price-features li:last-child{
-
-    border-bottom:none;
-
-}
-
-.check{
-
-    width:24px;
-
-    height:24px;
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    border-radius:50%;
-
-    background:rgba(79,140,255,.12);
-
-    color:#7DAFFF;
-
-    flex-shrink:0;
-
-}
-
-.price-card .btn{
-
-    width:100%;
-
-}
-
-.payment-note{
-
-    margin-top:16px;
-
-    font-size:.92rem;
-
-    color:#8B8B95;
-
-}
-
-.guarantee{
-
-    margin-top:18px;
-
-    color:var(--success);
-
-    font-size:.95rem;
-
-    font-weight:600;
-
-}
-
-/* ==========================================================
-   Purchase Flow
-   ========================================================== */
-
-.purchase-flow{
-
-    text-align:center;
-
-}
-
-.steps{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:24px;
-
-    margin-top:50px;
-
-}
-
-.step{
-
-    padding:34px;
-
-    background:rgba(255,255,255,.03);
-
-    border:1px solid var(--border);
-
-    border-radius:18px;
-
-    transition:.3s;
-
-}
-
-.step:hover{
-
-    transform:translateY(-5px);
-
-    border-color:rgba(79,140,255,.35);
-
-}
-
-.step h3{
-
-    width:54px;
-
-    height:54px;
-
-    margin:0 auto 18px;
-
-    border-radius:50%;
-
-    background:var(--primary);
-
-    color:white;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    font-size:1.4rem;
-
-}
-
-.step p{
-
-    margin:0;
-
-}
-
-/* ==========================================================
-   Responsive
-   ========================================================== */
-
-@media (max-width:950px){
-
-.showcase-item,
-.showcase-item.reverse{
-
-grid-template-columns:1fr;
-
-gap:42px;
-
-margin-bottom:80px;
-
-}
-
-.showcase-item.reverse .image,
-.showcase-item.reverse .text{
-
-order:unset;
-
-}
-
-.text{
-
-max-width:100%;
-
-text-align:center;
-
-margin:auto;
-
-}
-
-.steps{
-
-grid-template-columns:1fr;
-
-}
-
-	/* ==========================================================
-   Orbit Website
-   style.css
-   Part 3A
-   FAQ • Footer • Legal Pages
-   ========================================================== */
-
-/* ==========================================================
-   FAQ
-   ========================================================== */
-
-.faq{
-
-    max-width:900px;
-
-    margin:auto;
-
-}
-
-.faq h2{
-
-    margin-bottom:48px;
-
-}
-
-.faq-item{
-
-    background:rgba(255,255,255,.025);
-
-    border:1px solid var(--border);
-
-    border-radius:18px;
-
-    margin-bottom:18px;
-
-    overflow:hidden;
-
-    transition:.3s;
-
-}
-
-.faq-item:hover{
-
-    border-color:rgba(79,140,255,.35);
-
-}
-
-.faq-item h3{
-
-    position:relative;
-
-    margin:0;
-
-    padding:24px 60px 24px 24px;
-
-    cursor:pointer;
-
-    font-size:1.15rem;
-
-    user-select:none;
-
-}
-
-.faq-item h3::after{
-
-    content:"+";
-
-    position:absolute;
-
-    right:24px;
-
-    top:50%;
-
-    transform:translateY(-50%);
-
-    font-size:1.6rem;
-
-    color:var(--primary);
-
-    transition:.25s;
-
-}
-
-.faq-item p{
-
-    max-height:0;
-
-    overflow:hidden;
-
-    padding:0 24px;
-
-    transition:
-
-        max-height .35s ease,
-
-        padding .35s ease;
-
-}
-
-.faq-item.open{
-
-    border-color:rgba(79,140,255,.45);
-
-}
-
-.faq-item.open h3::after{
-
-    transform:translateY(-50%) rotate(45deg);
-
-}
-
-.faq-item.open p{
-
-    max-height:250px;
-
-    padding:0 24px 24px;
-
-}
-
-/* ==========================================================
-   Footer
-   ========================================================== */
-
-footer{
-
-    margin-top:100px;
-
-    border-top:1px solid var(--border);
-
-    background:rgba(255,255,255,.02);
-
-}
-
-.footer-top{
-
-    display:grid;
-
-    grid-template-columns:1.6fr 1fr 1fr 1fr;
-
-    gap:60px;
-
-    padding:60px 0;
-
-}
-
-.footer-brand p{
-
-    margin-top:18px;
-
-    max-width:320px;
-
-}
-
-.footer-col{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:14px;
-
-}
-
-.footer-col h4{
-
-    font-size:.9rem;
-
-    text-transform:uppercase;
-
-    letter-spacing:.12em;
-
-    color:white;
-
-    margin-bottom:8px;
-
-}
-
-.footer-col a{
-
-    color:var(--muted);
-
-    transition:.25s;
-
-    width:fit-content;
-
-}
-
-.footer-col a:hover{
-
-    color:white;
-
-    transform:translateX(3px);
-
-}
-
-.footer-bottom{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:flex-start;
-
-    gap:24px;
-
-    padding:24px 0;
-
-    border-top:1px solid rgba(255,255,255,.05);
-
-}
-
-.footer-bottom p{
-
-    font-size:.9rem;
-
-    color:#8B8B95;
-
-}
-
-.footer-bottom p:last-child{
-
-    max-width:420px;
-
-    text-align:right;
-
-}
-
-/* ==========================================================
-   Legal Pages
-   ========================================================== */
-
-.legal-page{
-
-    padding-top:140px;
-
-    padding-bottom:100px;
-
-}
-
-.legal-container{
-
-    max-width:860px;
-
-    margin:auto;
-
-}
-
-.legal-container h1{
-
-    margin-bottom:20px;
-
-}
-
-.legal-container>p{
-
-    margin-bottom:40px;
-
-    color:var(--muted);
-
-}
-
-.legal-section{
-
-    margin-bottom:48px;
-
-}
-
-.legal-section h2{
-
-    text-align:left;
-
-    font-size:1.5rem;
-
-    margin-bottom:16px;
-
-}
-
-.legal-section h3{
-
-    margin-top:26px;
-
-    margin-bottom:12px;
-
-    font-size:1.15rem;
-
-}
-
-.legal-section p{
-
-    margin-bottom:16px;
-
-}
-
-.legal-section ul{
-
-    margin-left:24px;
-
-    margin-bottom:18px;
-
-}
-
-.legal-section li{
-
-    color:var(--muted);
-
-    margin-bottom:10px;
-
-}
-
-.legal-section strong{
-
-    color:white;
-
-}
-
-.legal-section a{
-
-    color:var(--primary);
-
-}
-
-.legal-section a:hover{
-
-    text-decoration:underline;
-
-}
-
-/* ==========================================================
-   Contact Box
-   ========================================================== */
-
-.contact-box{
-
-    margin-top:36px;
-
-    padding:28px;
-
-    border-radius:18px;
-
-    border:1px solid var(--border);
-
-    background:rgba(255,255,255,.025);
-
-}
-
-.contact-box h3{
-
-    margin-bottom:12px;
-
-}
-
-.contact-box p{
-
-    margin-bottom:8px;
-
-}
-
-.contact-box a{
-
-    color:var(--primary);
-
-}
-
-.contact-box a:hover{
-
-    text-decoration:underline;
-
-}
-
-/* ==========================================================
-   Notice Box
-   ========================================================== */
-
-.notice{
-
-    padding:18px 22px;
-
-    border-radius:14px;
-
-    background:rgba(79,140,255,.08);
-
-    border:1px solid rgba(79,140,255,.25);
-
-    margin:26px 0;
-
-}
-
-.notice p{
-
-    margin:0;
-
-    color:#D7E6FF;
-
-}
-
-/* ==========================================================
-   Support Page
-   ========================================================== */
-
-.support-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:28px;
-
-    margin-top:40px;
-
-}
-
-.support-card{
-
-    padding:28px;
-
-    border-radius:18px;
-
-    border:1px solid var(--border);
-
-    background:rgba(255,255,255,.025);
-
-    transition:.3s;
-
-}
-
-.support-card:hover{
-
-    transform:translateY(-5px);
-
-    border-color:rgba(79,140,255,.35);
-
-}
-
-.support-card h3{
-
-    margin-bottom:12px;
-
-}
-
-.support-card p{
-
-    margin-bottom:14px;
-
-}
-
-.support-card a{
-
-    color:var(--primary);
-
-    font-weight:600;
-
-}
-
-/* ==========================================================
-   Refund Page
-   ========================================================== */
-
-.timeline{
-
-    margin-top:30px;
-
-    border-left:2px solid rgba(79,140,255,.25);
-
-    padding-left:28px;
-
-}
-
-.timeline-item{
-
-    position:relative;
-
-    margin-bottom:34px;
-
-}
-
-.timeline-item:last-child{
-
-    margin-bottom:0;
-
-}
-
-.timeline-item::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:12px;
-
-    height:12px;
-
-    border-radius:50%;
-
-    background:var(--primary);
-
-    left:-35px;
-
-    top:7px;
-
-}
-
-.timeline-item h3{
-
-    margin-bottom:10px;
-
-}
-
-/* ==========================================================
-   Terms / Privacy Tables
-   ========================================================== */
-
-.legal-table{
-
-    width:100%;
-
-    border-collapse:collapse;
-
-    margin-top:24px;
-
-}
-
-.legal-table th{
-
-    text-align:left;
-
-    background:rgba(255,255,255,.03);
-
-    padding:16px;
-
-    border:1px solid var(--border);
-
-}
-
-.legal-table td{
-
-    padding:16px;
-
-    color:var(--muted);
-
-    border:1px solid var(--border);
-
-}
-
-/* ==========================================================
-   Mobile
-   ========================================================== */
-
-@media(max-width:900px){
-
-.footer-top{
-
-grid-template-columns:1fr;
-
-gap:40px;
-
-}
-
-.footer-bottom{
-
-flex-direction:column;
-
-text-align:center;
-
-align-items:center;
-
-}
-
-.footer-bottom p:last-child{
-
-text-align:center;
-
-}
-
-.support-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.legal-page{
-
-padding-top:120px;
-
-}
-
-.legal-container h1{
-
-font-size:2.2rem;
-
-}
-
-.legal-section h2{
-
-font-size:1.35rem;
-
-}
-
-}
-
-.price-card{
-
-padding:34px;
-
-}
-
-}
-
-/* ==========================================================
-   Orbit Website
-   style.css
-   Part 3A
-   FAQ • Footer • Legal Pages
-   ========================================================== */
-
-/* ==========================================================
-   FAQ
-   ========================================================== */
-
-.faq{
-
-    max-width:900px;
-
-    margin:auto;
-
-}
-
-.faq h2{
-
-    margin-bottom:48px;
-
-}
-
-.faq-item{
-
-    background:rgba(255,255,255,.025);
-
-    border:1px solid var(--border);
-
-    border-radius:18px;
-
-    margin-bottom:18px;
-
-    overflow:hidden;
-
-    transition:.3s;
-
-}
-
-.faq-item:hover{
-
-    border-color:rgba(79,140,255,.35);
-
-}
-
-.faq-item h3{
-
-    position:relative;
-
-    margin:0;
-
-    padding:24px 60px 24px 24px;
-
-    cursor:pointer;
-
-    font-size:1.15rem;
-
-    user-select:none;
-
-}
-
-.faq-item h3::after{
-
-    content:"+";
-
-    position:absolute;
-
-    right:24px;
-
-    top:50%;
-
-    transform:translateY(-50%);
-
-    font-size:1.6rem;
-
-    color:var(--primary);
-
-    transition:.25s;
-
-}
-
-.faq-item p{
-
-    max-height:0;
-
-    overflow:hidden;
-
-    padding:0 24px;
-
-    transition:
-
-        max-height .35s ease,
-
-        padding .35s ease;
-
-}
-
-.faq-item.open{
-
-    border-color:rgba(79,140,255,.45);
-
-}
-
-.faq-item.open h3::after{
-
-    transform:translateY(-50%) rotate(45deg);
-
-}
-
-.faq-item.open p{
-
-    max-height:250px;
-
-    padding:0 24px 24px;
-
-}
-
-/* ==========================================================
-   Footer
-   ========================================================== */
-
-footer{
-
-    margin-top:100px;
-
-    border-top:1px solid var(--border);
-
-    background:rgba(255,255,255,.02);
-
-}
-
-.footer-top{
-
-    display:grid;
-
-    grid-template-columns:1.6fr 1fr 1fr 1fr;
-
-    gap:60px;
-
-    padding:60px 0;
-
-}
-
-.footer-brand p{
-
-    margin-top:18px;
-
-    max-width:320px;
-
-}
-
-.footer-col{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:14px;
-
-}
-
-.footer-col h4{
-
-    font-size:.9rem;
-
-    text-transform:uppercase;
-
-    letter-spacing:.12em;
-
-    color:white;
-
-    margin-bottom:8px;
-
-}
-
-.footer-col a{
-
-    color:var(--muted);
-
-    transition:.25s;
-
-    width:fit-content;
-
-}
-
-.footer-col a:hover{
-
-    color:white;
-
-    transform:translateX(3px);
-
-}
-
-.footer-bottom{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:flex-start;
-
-    gap:24px;
-
-    padding:24px 0;
-
-    border-top:1px solid rgba(255,255,255,.05);
-
-}
-
-.footer-bottom p{
-
-    font-size:.9rem;
-
-    color:#8B8B95;
-
-}
-
-.footer-bottom p:last-child{
-
-    max-width:420px;
-
-    text-align:right;
-
-}
-
-/* ==========================================================
-   Legal Pages
-   ========================================================== */
-
-.legal-page{
-
-    padding-top:140px;
-
-    padding-bottom:100px;
-
-}
-
-.legal-container{
-
-    max-width:860px;
-
-    margin:auto;
-
-}
-
-.legal-container h1{
-
-    margin-bottom:20px;
-
-}
-
-.legal-container>p{
-
-    margin-bottom:40px;
-
-    color:var(--muted);
-
-}
-
-.legal-section{
-
-    margin-bottom:48px;
-
-}
-
-.legal-section h2{
-
-    text-align:left;
-
-    font-size:1.5rem;
-
-    margin-bottom:16px;
-
-}
-
-.legal-section h3{
-
-    margin-top:26px;
-
-    margin-bottom:12px;
-
-    font-size:1.15rem;
-
-}
-
-.legal-section p{
-
-    margin-bottom:16px;
-
-}
-
-.legal-section ul{
-
-    margin-left:24px;
-
-    margin-bottom:18px;
-
-}
-
-.legal-section li{
-
-    color:var(--muted);
-
-    margin-bottom:10px;
-
-}
-
-.legal-section strong{
-
-    color:white;
-
-}
-
-.legal-section a{
-
-    color:var(--primary);
-
-}
-
-.legal-section a:hover{
-
-    text-decoration:underline;
-
-}
-
-/* ==========================================================
-   Contact Box
-   ========================================================== */
-
-.contact-box{
-
-    margin-top:36px;
-
-    padding:28px;
-
-    border-radius:18px;
-
-    border:1px solid var(--border);
-
-    background:rgba(255,255,255,.025);
-
-}
-
-.contact-box h3{
-
-    margin-bottom:12px;
-
-}
-
-.contact-box p{
-
-    margin-bottom:8px;
-
-}
-
-.contact-box a{
-
-    color:var(--primary);
-
-}
-
-.contact-box a:hover{
-
-    text-decoration:underline;
-
-}
-
-/* ==========================================================
-   Notice Box
-   ========================================================== */
-
-.notice{
-
-    padding:18px 22px;
-
-    border-radius:14px;
-
-    background:rgba(79,140,255,.08);
-
-    border:1px solid rgba(79,140,255,.25);
-
-    margin:26px 0;
-
-}
-
-.notice p{
-
-    margin:0;
-
-    color:#D7E6FF;
-
-}
-
-/* ==========================================================
-   Support Page
-   ========================================================== */
-
-.support-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:28px;
-
-    margin-top:40px;
-
-}
-
-.support-card{
-
-    padding:28px;
-
-    border-radius:18px;
-
-    border:1px solid var(--border);
-
-    background:rgba(255,255,255,.025);
-
-    transition:.3s;
-
-}
-
-.support-card:hover{
-
-    transform:translateY(-5px);
-
-    border-color:rgba(79,140,255,.35);
-
-}
-
-.support-card h3{
-
-    margin-bottom:12px;
-
-}
-
-.support-card p{
-
-    margin-bottom:14px;
-
-}
-
-.support-card a{
-
-    color:var(--primary);
-
-    font-weight:600;
-
-}
-
-/* ==========================================================
-   Refund Page
-   ========================================================== */
-
-.timeline{
-
-    margin-top:30px;
-
-    border-left:2px solid rgba(79,140,255,.25);
-
-    padding-left:28px;
-
-}
-
-.timeline-item{
-
-    position:relative;
-
-    margin-bottom:34px;
-
-}
-
-.timeline-item:last-child{
-
-    margin-bottom:0;
-
-}
-
-.timeline-item::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:12px;
-
-    height:12px;
-
-    border-radius:50%;
-
-    background:var(--primary);
-
-    left:-35px;
-
-    top:7px;
-
-}
-
-.timeline-item h3{
-
-    margin-bottom:10px;
-
-}
-
-/* ==========================================================
-   Terms / Privacy Tables
-   ========================================================== */
-
-.legal-table{
-
-    width:100%;
-
-    border-collapse:collapse;
-
-    margin-top:24px;
-
-}
-
-.legal-table th{
-
-    text-align:left;
-
-    background:rgba(255,255,255,.03);
-
-    padding:16px;
-
-    border:1px solid var(--border);
-
-}
-
-.legal-table td{
-
-    padding:16px;
-
-    color:var(--muted);
-
-    border:1px solid var(--border);
-
-}
-
-/* ==========================================================
-   Mobile
-   ========================================================== */
-
-@media(max-width:900px){
-
-.footer-top{
-
-grid-template-columns:1fr;
-
-gap:40px;
-
-}
-
-.footer-bottom{
-
-flex-direction:column;
-
-text-align:center;
-
-align-items:center;
-
-}
-
-.footer-bottom p:last-child{
-
-text-align:center;
-
-}
-
-.support-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.legal-page{
-
-padding-top:120px;
-
-}
-
-.legal-container h1{
-
-font-size:2.2rem;
-
-}
-
-.legal-section h2{
-
-font-size:1.35rem;
-
-}
-
-}
-
-/* ==========================================================
-   Orbit Website
-   style.css
-   Part 3B
-   Utilities • Responsive • Animations • Print
-   ========================================================== */
-
-
-/* ==========================================================
-   Utilities
-   ========================================================== */
-
-.text-center{
-    text-align:center;
-}
-
-.text-left{
-    text-align:left;
-}
-
-.text-right{
-    text-align:right;
-}
-
-.mt-0{margin-top:0;}
-.mt-1{margin-top:8px;}
-.mt-2{margin-top:16px;}
-.mt-3{margin-top:24px;}
-.mt-4{margin-top:32px;}
-.mt-5{margin-top:48px;}
-
-.mb-0{margin-bottom:0;}
-.mb-1{margin-bottom:8px;}
-.mb-2{margin-bottom:16px;}
-.mb-3{margin-bottom:24px;}
-.mb-4{margin-bottom:32px;}
-.mb-5{margin-bottom:48px;}
-
-.pt-0{padding-top:0;}
-.pb-0{padding-bottom:0;}
-
-.w-100{
-    width:100%;
-}
-
-.hidden{
-    display:none !important;
-}
-
-
-/* ==========================================================
-   Generic Card
-   ========================================================== */
-
-.card{
-
-    background:rgba(255,255,255,.03);
-
-    border:1px solid var(--border);
-
-    border-radius:18px;
-
-    padding:28px;
-
-    transition:.3s;
-
-}
-
-.card:hover{
-
-    border-color:rgba(79,140,255,.35);
-
-    transform:translateY(-4px);
-
-}
-
-
-/* ==========================================================
-   Links
-   ========================================================== */
-
-a{
-
-    transition:color .25s ease;
-
-}
-
-a:hover{
-
-    color:white;
-
-}
-
-
-/* ==========================================================
-   Images
-   ========================================================== */
-
-img{
-
-    user-select:none;
-
-    -webkit-user-drag:none;
-
-}
-
-.hero-image,
-.game-demo,
-.image img{
-
-    transition:
-        transform .35s ease,
-        box-shadow .35s ease;
-
-}
-
-.hero-image:hover{
-
-    transform:translateY(-4px);
-
-}
-
-.image img:hover{
-
-    box-shadow:
-        0 45px 90px rgba(0,0,0,.55);
-
-}
-
-
-/* ==========================================================
-   Tables
-   ========================================================== */
-
-table{
-
-    overflow:hidden;
-
-    border-radius:16px;
-
-}
-
-
-/* ==========================================================
-   Lists
-   ========================================================== */
-
-.price-features li,
-.requirements li,
-.timeline-item,
-.support-card,
-.faq-item{
-
-    will-change:transform;
-
-}
-
-
-/* ==========================================================
-   Button Active
-   ========================================================== */
-
-.btn:active{
-
-    transform:scale(.98);
-
-}
-
-
-/* ==========================================================
-   Header Animation
-   ========================================================== */
-
-header{
-
-    transition:
-        background .25s ease,
-        border .25s ease,
-        box-shadow .25s ease;
-
-}
-
-header.scrolled{
-
-    box-shadow:
-        0 10px 30px rgba(0,0,0,.25);
-
-}
-
-
-/* ==========================================================
-   Hero Gradient
-   ========================================================== */
-
-.hero{
-
-    position:relative;
-
-    overflow:hidden;
-
-}
-
-.hero::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:700px;
-
-    height:700px;
-
-    left:-250px;
-
-    top:-250px;
-
-    border-radius:50%;
-
-    background:
-        radial-gradient(circle,
-        rgba(79,140,255,.10),
-        transparent 70%);
-
-    pointer-events:none;
-
-}
-
-.hero::after{
-
-    content:"";
-
-    position:absolute;
-
-    width:500px;
-
-    height:500px;
-
-    right:-180px;
-
-    bottom:-180px;
-
-    border-radius:50%;
-
-    background:
-        radial-gradient(circle,
-        rgba(79,140,255,.08),
-        transparent 70%);
-
-    pointer-events:none;
-
-}
-
-
-/* ==========================================================
-   Hover Lift
-   ========================================================== */
-
-.price-card,
-.step,
-.requirements li,
-.support-card{
-
-    transition:
-        transform .3s ease,
-        border-color .3s ease,
-        box-shadow .3s ease;
-
-}
-
-.price-card:hover,
-.step:hover,
-.requirements li:hover,
-.support-card:hover{
-
-    box-shadow:
-        0 18px 50px rgba(0,0,0,.35);
-
-}
-
-
-/* ==========================================================
-   Mobile Navigation
-   ========================================================== */
-
-@media(max-width:900px){
-
-    header{
-
-        backdrop-filter:blur(12px);
-
-    }
-
-    nav{
-
-        gap:16px;
-
-    }
-
-    nav a{
-
-        font-size:.95rem;
-
-    }
-
-}
-
-
-/* ==========================================================
-   Tablet
-   ========================================================== */
-
-@media(max-width:1100px){
-
-    h1{
-
-        font-size:2.8rem;
-
-    }
-
-    h2{
-
-        font-size:2rem;
-
-    }
-
-    .showcase-item{
-
-        gap:42px;
-
-    }
-
-}
-
-
-/* ==========================================================
-   Mobile
-   ========================================================== */
-
-@media(max-width:768px){
-
-    section{
-
-        padding:70px 0;
-
-    }
-
-    .hero{
-
-        padding-top:130px;
-
-    }
-
-    h1{
-
-        font-size:2.25rem;
-
-        line-height:1.1;
-
-    }
-
-    h2{
-
-        font-size:1.8rem;
-
-    }
-
-    h3{
-
-        font-size:1.25rem;
-
-    }
-
-    p{
-
-        font-size:.98rem;
-
-    }
-
-    .hero-buttons{
-
-        flex-direction:column;
-
-    }
-
-    .btn{
-
-        width:100%;
-
-    }
-
-    .price-card{
-
-        padding:30px;
-
-    }
-
-    .amount{
-
-        font-size:3.4rem;
-
-    }
-
-    .controls table{
-
-        display:block;
-
-        overflow-x:auto;
-
-    }
-
-    .legal-table{
-
-        display:block;
-
-        overflow-x:auto;
-
-    }
-
-}
-
-
-/* ==========================================================
-   Small Phones
-   ========================================================== */
-
-@media(max-width:480px){
-
-    h1{
-
-        font-size:2rem;
-
-    }
-
-    h2{
-
-        font-size:1.6rem;
-
-    }
-
-    .hero-note{
-
-        flex-direction:column;
-
-        gap:8px;
-
-    }
-
-    .price-card{
-
-        padding:24px;
-
-    }
-
-    .footer-top{
-
-        gap:28px;
-
-    }
-
-}
-
-
-/* ==========================================================
-   Animations
-   ========================================================== */
-
-@keyframes fadeUp{
-
-    from{
-
-        opacity:0;
-
-        transform:translateY(30px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:none;
-
-    }
-
-}
-
-@keyframes pulse{
-
-    0%{
-
-        transform:scale(1);
-
-    }
-
-    50%{
-
-        transform:scale(1.04);
-
-    }
-
-    100%{
-
-        transform:scale(1);
-
-    }
-
-}
-
-.btn-primary:hover{
-
-    animation:pulse .8s ease;
-
-}
-
-
-/* ==========================================================
-   Loading State
-   ========================================================== */
-
-.loading{
-
-    opacity:.65;
-
-    pointer-events:none;
-
-}
-
-
-/* ==========================================================
-   Reduced Motion
-   ========================================================== */
-
-@media(prefers-reduced-motion:reduce){
-
-    *{
-
-        animation:none !important;
-
-        transition:none !important;
-
-        scroll-behavior:auto !important;
-
-    }
-
-}
-
-
-/* ==========================================================
-   Print
-   ========================================================== */
-
-@media print{
-
-    header,
-    footer,
-    .hero-buttons,
-    .btn{
-
-        display:none !important;
-
-    }
-
-    body{
-
-        background:white;
-
-        color:black;
-
-    }
-
-    p{
-
-        color:#333;
-
-    }/* ==========================================================
-   Orbit Website
-   style.css
-   Part 1
-   ========================================================== */
-
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap");
-
-/* ==========================================================
-   Root
-   ========================================================== */
-
 :root {
-  --bg: #09090b;
-  --surface: #111216;
-  --surface-2: #17181e;
-
-  --border: #25262d;
-
-  --text: #fafafa;
-  --muted: #a1a1aa;
-
-  --primary: #4f8cff;
-  --primary-hover: #6ea5ff;
-
-  --success: #22c55e;
-
-  --radius: 18px;
-
-  --container: 1180px;
-
-  --transition: 0.28s ease;
+	--bg: #09090B;
+	--surface: #111216;
+	--surface-2: #17181E;
+	--border: #25262D;
+	--text: #FAFAFA;
+	--muted: #A1A1AA;
+	--primary: #4F8CFF;
+	--primary-hover: #6EA5FF;
+	--success: #22C55E;
+	--radius: 18px;
+	--container: 1180px;
+	--transition: .28s ease;
 }
 
 /* ==========================================================
@@ -3136,43 +32,36 @@ header.scrolled{
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 body {
-  background: var(--bg);
-
-  color: var(--text);
-
-  font-family: Inter, sans-serif;
-
-  line-height: 1.75;
-
-  -webkit-font-smoothing: antialiased;
-
-  text-rendering: optimizeLegibility;
+	background: var(--bg);
+	color: var(--text);
+	font-family: Inter,sans-serif;
+	line-height: 1.75;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
 }
 
 img {
-  display: block;
-
-  max-width: 100%;
+	display: block;
+	max-width: 100%;
 }
 
 a {
-  color: inherit;
-
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 button {
-  font: inherit;
+	font: inherit;
 }
 
 /* ==========================================================
@@ -3180,18 +69,15 @@ button {
    ========================================================== */
 
 ::selection {
-  background: var(--primary);
-
-  color: white;
+	background: var(--primary);
+	color: white;
 }
 
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid var(--primary);
-
-  outline-offset: 4px;
-
-  border-radius: 6px;
+	outline: 2px solid var(--primary);
+	outline-offset: 4px;
+	border-radius: 6px;
 }
 
 /* ==========================================================
@@ -3199,21 +85,20 @@ button:focus-visible {
    ========================================================== */
 
 ::-webkit-scrollbar {
-  width: 10px;
+	width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #09090b;
+	background: #09090B;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #30333a;
-
-  border-radius: 999px;
+	background: #30333A;
+	border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--primary);
+	background: var(--primary);
 }
 
 /* ==========================================================
@@ -3221,23 +106,21 @@ button:focus-visible {
    ========================================================== */
 
 .container {
-  width: min(92%, var(--container));
-
-  margin: auto;
+	width: min(92%,var(--container));
+	margin: auto;
 }
 
 .narrow {
-  max-width: 760px;
+	max-width: 760px;
 }
 
 section {
-  padding: 96px 0;
+	padding: 96px 0;
 }
 
 .page {
-  padding-top: 140px;
-
-  padding-bottom: 90px;
+	padding-top: 140px;
+	padding-bottom: 90px;
 }
 
 /* ==========================================================
@@ -3245,47 +128,35 @@ section {
    ========================================================== */
 
 h1 {
-  font-family: "Space Grotesk", sans-serif;
-
-  font-size: 3.35rem;
-
-  line-height: 1.05;
-
-  letter-spacing: -2px;
-
-  margin-bottom: 24px;
+	font-family: "Space Grotesk",sans-serif;
+	font-size: 3.35rem;
+	line-height: 1.05;
+	letter-spacing: -2px;
+	margin-bottom: 24px;
 }
 
 h2 {
-  font-family: "Space Grotesk", sans-serif;
-
-  font-size: 2.45rem;
-
-  letter-spacing: -1px;
-
-  text-align: center;
-
-  margin-bottom: 18px;
+	font-family: "Space Grotesk",sans-serif;
+	font-size: 2.45rem;
+	letter-spacing: -1px;
+	text-align: center;
+	margin-bottom: 18px;
 }
 
 h3 {
-  font-family: "Space Grotesk", sans-serif;
-
-  font-size: 1.45rem;
-
-  margin-bottom: 14px;
+	font-family: "Space Grotesk",sans-serif;
+	font-size: 1.45rem;
+	margin-bottom: 14px;
 }
 
 p {
-  color: var(--muted);
-
-  font-size: 1rem;
-
-  line-height: 1.8;
+	color: var(--muted);
+	font-size: 1rem;
+	line-height: 1.8;
 }
 
 ul {
-  padding-left: 20px;
+	padding-left: 20px;
 }
 
 /* ==========================================================
@@ -3293,35 +164,27 @@ ul {
    ========================================================== */
 
 .section-title {
-  max-width: 760px;
-
-  margin: 0 auto 60px;
-
-  text-align: center;
+	max-width: 760px;
+	margin: 0 auto 60px;
+	text-align: center;
 }
 
 .section-title h2 {
-  margin-bottom: 16px;
+	margin-bottom: 16px;
 }
 
 .section-title p {
-  font-size: 1.05rem;
+	font-size: 1.05rem;
 }
 
 .eyebrow {
-  display: inline-block;
-
-  margin-bottom: 18px;
-
-  color: #7dafff;
-
-  letter-spacing: 0.16em;
-
-  text-transform: uppercase;
-
-  font-size: 0.9rem;
-
-  font-weight: 700;
+	display: inline-block;
+	margin-bottom: 18px;
+	color: #7DAFFF;
+	letter-spacing: .16em;
+	text-transform: uppercase;
+	font-size: .9rem;
+	font-weight: 700;
 }
 
 /* ==========================================================
@@ -3329,27 +192,24 @@ ul {
    ========================================================== */
 
 .fade {
-  opacity: 0;
-
-  transform: translateY(30px);
-
-  transition: opacity 0.7s ease, transform 0.7s ease;
+	opacity: 0;
+	transform: translateY(30px);
+	transition: opacity .7s ease,
+        transform .7s ease;
 }
 
 .fade.show {
-  opacity: 1;
-
-  transform: none;
+	opacity: 1;
+	transform: none;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .fade {
-    opacity: 1;
+@media(prefers-reduced-motion:reduce) {
 
-    transform: none;
-
-    transition: none;
-  }
+	.fade {
+		opacity: 1;
+		transform: none;
+		transition: none;
+	}
 }
 
 /* ==========================================================
@@ -3357,57 +217,42 @@ ul {
    ========================================================== */
 
 header {
-  position: fixed;
-
-  top: 0;
-
-  left: 0;
-
-  width: 100%;
-
-  z-index: 999;
-
-  backdrop-filter: blur(18px);
-
-  background: rgba(9, 9, 11, 0.55);
-
-  transition: var(--transition);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 999;
+	backdrop-filter: blur(18px);
+	background: rgba(9,9,11,.55);
+	transition: var(--transition);
 }
 
 header.scrolled {
-  background: rgba(9, 9, 11, 0.92);
-
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+	background: rgba(9,9,11,.92);
+	border-bottom: 1px solid rgba(255,255,255,.05);
 }
 
 .nav {
-  height: 72px;
-
-  display: flex;
-
-  justify-content: space-between;
-
-  align-items: center;
+	height: 72px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .logo {
-  display: flex;
-
-  align-items: center;
-
-  gap: 14px;
+	display: flex;
+	align-items: center;
+	gap: 14px;
 }
 
 .logo img {
-  width: 42px;
+	width: 42px;
 }
 
 .logo span {
-  font-family: "Space Grotesk";
-
-  font-size: 1.35rem;
-
-  font-weight: 700;
+	font-family: "Space Grotesk";
+	font-size: 1.35rem;
+	font-weight: 700;
 }
 
 /* ==========================================================
@@ -3415,53 +260,42 @@ header.scrolled {
    ========================================================== */
 
 nav {
-  display: flex;
-
-  gap: 32px;
+	display: flex;
+	gap: 32px;
 }
 
 nav a {
-  position: relative;
-
-  color: var(--muted);
-
-  font-weight: 500;
-
-  transition: var(--transition);
+	position: relative;
+	color: var(--muted);
+	font-weight: 500;
+	transition: var(--transition);
 }
 
 nav a:hover {
-  color: white;
+	color: white;
 }
 
 nav a::after {
-  content: "";
-
-  position: absolute;
-
-  left: 0;
-
-  bottom: -8px;
-
-  width: 0;
-
-  height: 2px;
-
-  background: var(--primary);
-
-  transition: var(--transition);
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -8px;
+	width: 0;
+	height: 2px;
+	background: var(--primary);
+	transition: var(--transition);
 }
 
 nav a:hover::after {
-  width: 100%;
+	width: 100%;
 }
 
 nav a.active {
-  color: white;
+	color: white;
 }
 
 nav a.active::after {
-  width: 100%;
+	width: 100%;
 }
 
 /* ==========================================================
@@ -3469,51 +303,39 @@ nav a.active::after {
    ========================================================== */
 
 .hero {
-  padding-top: 145px;
+	padding-top: 145px;
 }
 
 .hero h1 {
-  max-width: 900px;
+	max-width: 900px;
 }
 
 .hero p {
-  max-width: 700px;
-
-  margin: 20px 0 34px;
-
-  font-size: 1.15rem;
+	max-width: 700px;
+	margin: 20px 0 34px;
+	font-size: 1.15rem;
 }
 
 .hero-buttons {
-  display: flex;
-
-  gap: 16px;
-
-  flex-wrap: wrap;
-
-  margin-bottom: 28px;
+	display: flex;
+	gap: 16px;
+	flex-wrap: wrap;
+	margin-bottom: 28px;
 }
 
 .hero-note {
-  display: flex;
-
-  flex-wrap: wrap;
-
-  gap: 18px;
-
-  color: #8e8e98;
-
-  font-size: 0.95rem;
-
-  margin-bottom: 50px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 18px;
+	color: #8E8E98;
+	font-size: .95rem;
+	margin-bottom: 50px;
 }
 
 .hero-image {
-  border-radius: 24px;
-
-  border: 1px solid var(--border);
-
-  box-shadow: 0 45px 90px rgba(0, 0, 0, 0.45);
+	border-radius: 24px;
+	border: 1px solid var(--border);
+	box-shadow: 0 45px 90px rgba(0,0,0,.45);
 }
 
 /* ==========================================================
@@ -3521,98 +343,83 @@ nav a.active::after {
    ========================================================== */
 
 .btn {
-  display: inline-flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  padding: 14px 26px;
-
-  border-radius: 999px;
-
-  font-weight: 600;
-
-  transition: var(--transition);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 14px 26px;
+	border-radius: 999px;
+	font-weight: 600;
+	transition: var(--transition);
 }
 
 .btn-primary {
-  color: white;
-
-  background: var(--primary);
-
-  box-shadow: 0 12px 35px rgba(79, 140, 255, 0.25);
+	color: white;
+	background: var(--primary);
+	box-shadow: 0 12px 35px rgba(79,140,255,.25);
 }
 
 .btn-primary:hover {
-  background: var(--primary-hover);
-
-  transform: translateY(-3px);
-
-  box-shadow: 0 20px 45px rgba(79, 140, 255, 0.35);
+	background: var(--primary-hover);
+	transform: translateY(-3px);
+	box-shadow: 0 20px 45px rgba(79,140,255,.35);
 }
 
 .btn-secondary {
-  border: 1px solid var(--border);
+	border: 1px solid var(--border);
 }
 
 .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.04);
-
-  transform: translateY(-3px);
+	background: rgba(255,255,255,.04);
+	transform: translateY(-3px);
 }
 
 /* ==========================================================
    Responsive
    ========================================================== */
 
-@media (max-width: 900px) {
-  h1 {
-    font-size: 2.7rem;
-  }
+@media(max-width:900px) {
 
-  h2 {
-    font-size: 2rem;
-  }
+	h1 {
+		font-size: 2.7rem;
+	}
 
-  .nav {
-    height: auto;
+	h2 {
+		font-size: 2rem;
+	}
 
-    padding: 18px 0;
+	.nav {
+		height: auto;
+		padding: 18px 0;
+		flex-direction: column;
+		gap: 18px;
+	}
 
-    flex-direction: column;
+	nav {
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 20px;
+	}
 
-    gap: 18px;
-  }
+	.hero {
+		padding-top: 170px;
+	}
 
-  nav {
-    flex-wrap: wrap;
+	.hero-buttons {
+		justify-content: center;
+	}
 
-    justify-content: center;
+	.hero {
+		text-align: center;
+	}
 
-    gap: 20px;
-  }
+	.hero p {
+		margin-left: auto;
+		margin-right: auto;
+	}
 
-  .hero {
-    padding-top: 170px;
-  }
-
-  .hero-buttons {
-    justify-content: center;
-  }
-
-  .hero {
-    text-align: center;
-  }
-
-  .hero p {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-note {
-    justify-content: center;
-  }
+	.hero-note {
+		justify-content: center;
+	}
 }
 
 /* ==========================================================
@@ -3628,37 +435,30 @@ nav a.active::after {
    ========================================================== */
 
 .games {
-  text-align: center;
+	text-align: center;
 }
 
 .games h2 {
-  margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 
 .games p {
-  max-width: 760px;
-
-  margin: 0 auto 24px;
+	max-width: 760px;
+	margin: 0 auto 24px;
 }
 
 .game-demo {
-  margin: 42px auto;
-
-  border-radius: 24px;
-
-  border: 1px solid var(--border);
-
-  overflow: hidden;
-
-  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.45);
+	margin: 42px auto;
+	border-radius: 24px;
+	border: 1px solid var(--border);
+	overflow: hidden;
+	box-shadow: 0 35px 80px rgba(0,0,0,.45);
 }
 
 .caption {
-  color: #7c7c85;
-
-  font-size: 0.95rem;
-
-  margin-top: -8px;
+	color: #7C7C85;
+	font-size: .95rem;
+	margin-top: -8px;
 }
 
 /* ==========================================================
@@ -3666,101 +466,80 @@ nav a.active::after {
    ========================================================== */
 
 .showcase {
-  padding: 100px 0;
+	padding: 100px 0;
 }
 
 .showcase-item {
-  display: grid;
-
-  grid-template-columns: 1.2fr 0.8fr;
-
-  gap: 64px;
-
-  align-items: center;
-
-  margin-bottom: 110px;
+	display: grid;
+	grid-template-columns: 1.2fr .8fr;
+	gap: 64px;
+	align-items: center;
+	margin-bottom: 110px;
 }
 
 .showcase-item:last-child {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 .showcase-item.reverse {
-  grid-template-columns: 0.8fr 1.2fr;
+	grid-template-columns: .8fr 1.2fr;
 }
 
 .showcase-item.reverse .image {
-  order: 2;
+	order: 2;
 }
 
 .showcase-item.reverse .text {
-  order: 1;
+	order: 1;
 }
 
 .image {
-  position: relative;
+	position: relative;
 }
 
 .image img {
-  width: 100%;
-
-  border-radius: 24px;
-
-  border: 1px solid var(--border);
-
-  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.45);
-
-  transition: 0.35s;
+	width: 100%;
+	border-radius: 24px;
+	border: 1px solid var(--border);
+	box-shadow: 0 35px 80px rgba(0,0,0,.45);
+	transition: .35s;
 }
 
 .image img:hover {
-  transform: translateY(-8px);
+	transform: translateY(-8px);
 }
 
 .image::after {
-  content: "";
-
-  position: absolute;
-
-  inset: 0;
-
-  border-radius: 24px;
-
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
-
-  pointer-events: none;
+	content: "";
+	position: absolute;
+	inset: 0;
+	border-radius: 24px;
+	box-shadow: inset 0 0 0 1px rgba(255,255,255,.04);
+	pointer-events: none;
 }
 
 .text {
-  max-width: 430px;
+	max-width: 430px;
 }
 
 .text span {
-  display: inline-block;
-
-  margin-bottom: 16px;
-
-  color: #7dafff;
-
-  letter-spacing: 0.16em;
-
-  text-transform: uppercase;
-
-  font-size: 0.9rem;
-
-  font-weight: 700;
+	display: inline-block;
+	margin-bottom: 16px;
+	color: #7DAFFF;
+	letter-spacing: .16em;
+	text-transform: uppercase;
+	font-size: .9rem;
+	font-weight: 700;
 }
 
 .text h3 {
-  font-size: 1.7rem;
-
-  line-height: 1.2;
-
-  margin-bottom: 18px;
+	font-size: 1.7rem;
+	line-height: 1.2;
+	margin-bottom: 18px;
 }
 
 .text p {
-  font-size: 1rem;
+	font-size: 1rem;
 }
 
 /* ==========================================================
@@ -3768,49 +547,38 @@ nav a.active::after {
    ========================================================== */
 
 .controls {
-  padding-top: 40px;
+	padding-top: 40px;
 }
 
 .controls table {
-  width: 100%;
-
-  border-collapse: collapse;
-
-  overflow: hidden;
-
-  border-radius: 16px;
-
-  background: rgba(255, 255, 255, 0.02);
-
-  border: 1px solid var(--border);
+	width: 100%;
+	border-collapse: collapse;
+	overflow: hidden;
+	border-radius: 16px;
+	background: rgba(255,255,255,.02);
+	border: 1px solid var(--border);
 }
 
 .controls th {
-  background: rgba(255, 255, 255, 0.03);
-
-  color: white;
-
-  text-align: left;
-
-  padding: 18px;
-
-  font-weight: 600;
+	background: rgba(255,255,255,.03);
+	color: white;
+	text-align: left;
+	padding: 18px;
+	font-weight: 600;
 }
 
 .controls td {
-  padding: 18px;
-
-  color: var(--muted);
-
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+	padding: 18px;
+	color: var(--muted);
+	border-top: 1px solid rgba(255,255,255,.05);
 }
 
 .controls tr {
-  transition: 0.25s;
+	transition: .25s;
 }
 
 .controls tr:hover {
-  background: rgba(255, 255, 255, 0.03);
+	background: rgba(255,255,255,.03);
 }
 
 /* ==========================================================
@@ -3818,43 +586,33 @@ nav a.active::after {
    ========================================================== */
 
 .requirements {
-  text-align: center;
+	text-align: center;
 }
 
 .requirements h2 {
-  margin-bottom: 28px;
+	margin-bottom: 28px;
 }
 
 .requirements ul {
-  list-style: none;
-
-  max-width: 640px;
-
-  margin: auto;
-
-  display: grid;
-
-  gap: 18px;
-
-  padding: 0;
+	list-style: none;
+	max-width: 640px;
+	margin: auto;
+	display: grid;
+	gap: 18px;
+	padding: 0;
 }
 
 .requirements li {
-  background: rgba(255, 255, 255, 0.03);
-
-  border: 1px solid var(--border);
-
-  border-radius: 16px;
-
-  padding: 18px 24px;
-
-  transition: 0.25s;
+	background: rgba(255,255,255,.03);
+	border: 1px solid var(--border);
+	border-radius: 16px;
+	padding: 18px 24px;
+	transition: .25s;
 }
 
 .requirements li:hover {
-  border-color: rgba(79, 140, 255, 0.35);
-
-  transform: translateY(-3px);
+	border-color: rgba(79,140,255,.35);
+	transform: translateY(-3px);
 }
 
 /* ==========================================================
@@ -3862,199 +620,145 @@ nav a.active::after {
    ========================================================== */
 
 .pricing {
-  position: relative;
-
-  overflow: hidden;
-
-  text-align: center;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
 }
 
 .pricing::before {
-  content: "";
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: -240px;
+	transform: translateX(-50%);
+	width: 720px;
+	height: 720px;
+	background: radial-gradient(circle,
 
-  position: absolute;
+        rgba(79,140,255,.16),
 
-  left: 50%;
-
-  top: -240px;
-
-  transform: translateX(-50%);
-
-  width: 720px;
-
-  height: 720px;
-
-  background: radial-gradient(
-    circle,
-    rgba(79, 140, 255, 0.16),
-    transparent 65%
-  );
-
-  pointer-events: none;
+        transparent 65%);
+	pointer-events: none;
 }
 
 .price-card {
-  position: relative;
+	position: relative;
+	max-width: 520px;
+	margin: auto;
+	padding: 46px;
+	border-radius: 22px;
+	border: 1px solid var(--border);
+	background: linear-gradient(
 
-  max-width: 520px;
+            180deg,
 
-  margin: auto;
+            rgba(255,255,255,.05),
 
-  padding: 46px;
+            rgba(255,255,255,.015)
 
-  border-radius: 22px;
-
-  border: 1px solid var(--border);
-
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.05),
-    rgba(255, 255, 255, 0.015)
-  );
-
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
-
-  transition: 0.3s;
+        );
+	box-shadow: 0 30px 70px rgba(0,0,0,.45);
+	transition: .3s;
 }
 
 .price-card:hover {
-  transform: translateY(-6px);
-
-  border-color: rgba(79, 140, 255, 0.45);
+	transform: translateY(-6px);
+	border-color: rgba(79,140,255,.45);
 }
 
 .badge {
-  display: inline-flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  padding: 8px 16px;
-
-  border-radius: 999px;
-
-  background: rgba(79, 140, 255, 0.12);
-
-  color: #7dafff;
-
-  border: 1px solid rgba(79, 140, 255, 0.25);
-
-  font-size: 0.85rem;
-
-  font-weight: 700;
-
-  text-transform: uppercase;
-
-  margin-bottom: 26px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 8px 16px;
+	border-radius: 999px;
+	background: rgba(79,140,255,.12);
+	color: #7DAFFF;
+	border: 1px solid rgba(79,140,255,.25);
+	font-size: .85rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-bottom: 26px;
 }
 
 .price-name {
-  margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 .price {
-  display: flex;
-
-  justify-content: center;
-
-  align-items: flex-end;
-
-  gap: 8px;
-
-  margin-bottom: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	gap: 8px;
+	margin-bottom: 10px;
 }
 
 .currency {
-  font-size: 1.5rem;
-
-  color: var(--muted);
+	font-size: 1.5rem;
+	color: var(--muted);
 }
 
 .amount {
-  font-family: "Space Grotesk", sans-serif;
-
-  font-size: 4.4rem;
-
-  line-height: 1;
+	font-family: "Space Grotesk",sans-serif;
+	font-size: 4.4rem;
+	line-height: 1;
 }
 
 .per {
-  color: var(--muted);
-
-  margin-bottom: 8px;
+	color: var(--muted);
+	margin-bottom: 8px;
 }
 
 .price-desc {
-  margin-bottom: 30px;
+	margin-bottom: 30px;
 }
 
 .price-features {
-  list-style: none;
-
-  padding: 0;
-
-  margin: 0 0 32px;
-
-  text-align: left;
+	list-style: none;
+	padding: 0;
+	margin: 0 0 32px;
+	text-align: left;
 }
 
 .price-features li {
-  display: flex;
-
-  align-items: center;
-
-  gap: 12px;
-
-  padding: 12px 0;
-
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 12px 0;
+	border-bottom: 1px solid rgba(255,255,255,.05);
 }
 
 .price-features li:last-child {
-  border-bottom: none;
+	border-bottom: none;
 }
 
 .check {
-  width: 24px;
-
-  height: 24px;
-
-  display: inline-flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  border-radius: 50%;
-
-  background: rgba(79, 140, 255, 0.12);
-
-  color: #7dafff;
-
-  flex-shrink: 0;
+	width: 24px;
+	height: 24px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	background: rgba(79,140,255,.12);
+	color: #7DAFFF;
+	flex-shrink: 0;
 }
 
 .price-card .btn {
-  width: 100%;
+	width: 100%;
 }
 
 .payment-note {
-  margin-top: 16px;
-
-  font-size: 0.92rem;
-
-  color: #8b8b95;
+	margin-top: 16px;
+	font-size: .92rem;
+	color: #8B8B95;
 }
 
 .guarantee {
-  margin-top: 18px;
-
-  color: var(--success);
-
-  font-size: 0.95rem;
-
-  font-weight: 600;
+	margin-top: 18px;
+	color: var(--success);
+	font-size: .95rem;
+	font-weight: 600;
 }
 
 /* ==========================================================
@@ -4062,568 +766,461 @@ nav a.active::after {
    ========================================================== */
 
 .purchase-flow {
-  text-align: center;
+	text-align: center;
 }
 
 .steps {
-  display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 24px;
-
-  margin-top: 50px;
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	gap: 24px;
+	margin-top: 50px;
 }
 
 .step {
-  padding: 34px;
-
-  background: rgba(255, 255, 255, 0.03);
-
-  border: 1px solid var(--border);
-
-  border-radius: 18px;
-
-  transition: 0.3s;
+	padding: 34px;
+	background: rgba(255,255,255,.03);
+	border: 1px solid var(--border);
+	border-radius: 18px;
+	transition: .3s;
 }
 
 .step:hover {
-  transform: translateY(-5px);
-
-  border-color: rgba(79, 140, 255, 0.35);
+	transform: translateY(-5px);
+	border-color: rgba(79,140,255,.35);
 }
 
 .step h3 {
-  width: 54px;
-
-  height: 54px;
-
-  margin: 0 auto 18px;
-
-  border-radius: 50%;
-
-  background: var(--primary);
-
-  color: white;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  font-size: 1.4rem;
+	width: 54px;
+	height: 54px;
+	margin: 0 auto 18px;
+	border-radius: 50%;
+	background: var(--primary);
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.4rem;
 }
 
 .step p {
-  margin: 0;
+	margin: 0;
 }
 
 /* ==========================================================
    Responsive
    ========================================================== */
 
-@media (max-width: 950px) {
-  .showcase-item,
-  .showcase-item.reverse {
-    grid-template-columns: 1fr;
+@media (max-width:950px) {
 
-    gap: 42px;
+	.showcase-item,
+.showcase-item.reverse {
+		grid-template-columns: 1fr;
+		gap: 42px;
+		margin-bottom: 80px;
+	}
 
-    margin-bottom: 80px;
-  }
+	.showcase-item.reverse .image,
+.showcase-item.reverse .text {
+		order: unset;
+	}
 
-  .showcase-item.reverse .image,
-  .showcase-item.reverse .text {
-    order: unset;
-  }
+	.text {
+		max-width: 100%;
+		text-align: center;
+		margin: auto;
+	}
 
-  .text {
-    max-width: 100%;
+	.steps {
+		grid-template-columns: 1fr;
+	}
 
-    text-align: center;
-
-    margin: auto;
-  }
-
-  .steps {
-    grid-template-columns: 1fr;
-  }
-
-  /* ==========================================================
+	/* ==========================================================
    Orbit Website
    style.css
    Part 3A
    FAQ • Footer • Legal Pages
    ========================================================== */
 
-  /* ==========================================================
+/* ==========================================================
    FAQ
    ========================================================== */
 
-  .faq {
-    max-width: 900px;
+	.faq {
+		max-width: 900px;
+		margin: auto;
+	}
 
-    margin: auto;
-  }
+	.faq h2 {
+		margin-bottom: 48px;
+	}
 
-  .faq h2 {
-    margin-bottom: 48px;
-  }
+	.faq-item {
+		background: rgba(255,255,255,.025);
+		border: 1px solid var(--border);
+		border-radius: 18px;
+		margin-bottom: 18px;
+		overflow: hidden;
+		transition: .3s;
+	}
 
-  .faq-item {
-    background: rgba(255, 255, 255, 0.025);
+	.faq-item:hover {
+		border-color: rgba(79,140,255,.35);
+	}
 
-    border: 1px solid var(--border);
+	.faq-item h3 {
+		position: relative;
+		margin: 0;
+		padding: 24px 60px 24px 24px;
+		cursor: pointer;
+		font-size: 1.15rem;
+		user-select: none;
+	}
 
-    border-radius: 18px;
+	.faq-item h3::after {
+		content: "+";
+		position: absolute;
+		right: 24px;
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: 1.6rem;
+		color: var(--primary);
+		transition: .25s;
+	}
 
-    margin-bottom: 18px;
+	.faq-item p {
+		max-height: 0;
+		overflow: hidden;
+		padding: 0 24px;
+		transition: max-height .35s ease,
 
-    overflow: hidden;
+        padding .35s ease;
+	}
 
-    transition: 0.3s;
-  }
+	.faq-item.open {
+		border-color: rgba(79,140,255,.45);
+	}
 
-  .faq-item:hover {
-    border-color: rgba(79, 140, 255, 0.35);
-  }
+	.faq-item.open h3::after {
+		transform: translateY(-50%) rotate(45deg);
+	}
 
-  .faq-item h3 {
-    position: relative;
+	.faq-item.open p {
+		max-height: 250px;
+		padding: 0 24px 24px;
+	}
 
-    margin: 0;
-
-    padding: 24px 60px 24px 24px;
-
-    cursor: pointer;
-
-    font-size: 1.15rem;
-
-    user-select: none;
-  }
-
-  .faq-item h3::after {
-    content: "+";
-
-    position: absolute;
-
-    right: 24px;
-
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    font-size: 1.6rem;
-
-    color: var(--primary);
-
-    transition: 0.25s;
-  }
-
-  .faq-item p {
-    max-height: 0;
-
-    overflow: hidden;
-
-    padding: 0 24px;
-
-    transition: max-height 0.35s ease, padding 0.35s ease;
-  }
-
-  .faq-item.open {
-    border-color: rgba(79, 140, 255, 0.45);
-  }
-
-  .faq-item.open h3::after {
-    transform: translateY(-50%) rotate(45deg);
-  }
-
-  .faq-item.open p {
-    max-height: 250px;
-
-    padding: 0 24px 24px;
-  }
-
-  /* ==========================================================
+/* ==========================================================
    Footer
    ========================================================== */
 
-  footer {
-    margin-top: 100px;
+	footer {
+		margin-top: 100px;
+		border-top: 1px solid var(--border);
+		background: rgba(255,255,255,.02);
+	}
 
-    border-top: 1px solid var(--border);
+	.footer-top {
+		display: grid;
+		grid-template-columns: 1.6fr 1fr 1fr 1fr;
+		gap: 60px;
+		padding: 60px 0;
+	}
 
-    background: rgba(255, 255, 255, 0.02);
-  }
+	.footer-brand p {
+		margin-top: 18px;
+		max-width: 320px;
+	}
 
-  .footer-top {
-    display: grid;
+	.footer-col {
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+	}
 
-    grid-template-columns: 1.6fr 1fr 1fr 1fr;
+	.footer-col h4 {
+		font-size: .9rem;
+		text-transform: uppercase;
+		letter-spacing: .12em;
+		color: white;
+		margin-bottom: 8px;
+	}
 
-    gap: 60px;
+	.footer-col a {
+		color: var(--muted);
+		transition: .25s;
+		width: fit-content;
+	}
 
-    padding: 60px 0;
-  }
+	.footer-col a:hover {
+		color: white;
+		transform: translateX(3px);
+	}
 
-  .footer-brand p {
-    margin-top: 18px;
+	.footer-bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: 24px;
+		padding: 24px 0;
+		border-top: 1px solid rgba(255,255,255,.05);
+	}
 
-    max-width: 320px;
-  }
+	.footer-bottom p {
+		font-size: .9rem;
+		color: #8B8B95;
+	}
 
-  .footer-col {
-    display: flex;
+	.footer-bottom p:last-child {
+		max-width: 420px;
+		text-align: right;
+	}
 
-    flex-direction: column;
-
-    gap: 14px;
-  }
-
-  .footer-col h4 {
-    font-size: 0.9rem;
-
-    text-transform: uppercase;
-
-    letter-spacing: 0.12em;
-
-    color: white;
-
-    margin-bottom: 8px;
-  }
-
-  .footer-col a {
-    color: var(--muted);
-
-    transition: 0.25s;
-
-    width: fit-content;
-  }
-
-  .footer-col a:hover {
-    color: white;
-
-    transform: translateX(3px);
-  }
-
-  .footer-bottom {
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: flex-start;
-
-    gap: 24px;
-
-    padding: 24px 0;
-
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-  }
-
-  .footer-bottom p {
-    font-size: 0.9rem;
-
-    color: #8b8b95;
-  }
-
-  .footer-bottom p:last-child {
-    max-width: 420px;
-
-    text-align: right;
-  }
-
-  /* ==========================================================
+/* ==========================================================
    Legal Pages
    ========================================================== */
 
-  .legal-page {
-    padding-top: 140px;
+	.legal-page {
+		padding-top: 140px;
+		padding-bottom: 100px;
+	}
 
-    padding-bottom: 100px;
-  }
+	.legal-container {
+		max-width: 860px;
+		margin: auto;
+	}
 
-  .legal-container {
-    max-width: 860px;
+	.legal-container h1 {
+		margin-bottom: 20px;
+	}
 
-    margin: auto;
-  }
+	.legal-container>p {
+		margin-bottom: 40px;
+		color: var(--muted);
+	}
 
-  .legal-container h1 {
-    margin-bottom: 20px;
-  }
+	.legal-section {
+		margin-bottom: 48px;
+	}
 
-  .legal-container > p {
-    margin-bottom: 40px;
+	.legal-section h2 {
+		text-align: left;
+		font-size: 1.5rem;
+		margin-bottom: 16px;
+	}
 
-    color: var(--muted);
-  }
+	.legal-section h3 {
+		margin-top: 26px;
+		margin-bottom: 12px;
+		font-size: 1.15rem;
+	}
 
-  .legal-section {
-    margin-bottom: 48px;
-  }
+	.legal-section p {
+		margin-bottom: 16px;
+	}
 
-  .legal-section h2 {
-    text-align: left;
+	.legal-section ul {
+		margin-left: 24px;
+		margin-bottom: 18px;
+	}
 
-    font-size: 1.5rem;
+	.legal-section li {
+		color: var(--muted);
+		margin-bottom: 10px;
+	}
 
-    margin-bottom: 16px;
-  }
+	.legal-section strong {
+		color: white;
+	}
 
-  .legal-section h3 {
-    margin-top: 26px;
+	.legal-section a {
+		color: var(--primary);
+	}
 
-    margin-bottom: 12px;
+	.legal-section a:hover {
+		text-decoration: underline;
+	}
 
-    font-size: 1.15rem;
-  }
-
-  .legal-section p {
-    margin-bottom: 16px;
-  }
-
-  .legal-section ul {
-    margin-left: 24px;
-
-    margin-bottom: 18px;
-  }
-
-  .legal-section li {
-    color: var(--muted);
-
-    margin-bottom: 10px;
-  }
-
-  .legal-section strong {
-    color: white;
-  }
-
-  .legal-section a {
-    color: var(--primary);
-  }
-
-  .legal-section a:hover {
-    text-decoration: underline;
-  }
-
-  /* ==========================================================
+/* ==========================================================
    Contact Box
    ========================================================== */
 
-  .contact-box {
-    margin-top: 36px;
+	.contact-box {
+		margin-top: 36px;
+		padding: 28px;
+		border-radius: 18px;
+		border: 1px solid var(--border);
+		background: rgba(255,255,255,.025);
+	}
 
-    padding: 28px;
+	.contact-box h3 {
+		margin-bottom: 12px;
+	}
 
-    border-radius: 18px;
+	.contact-box p {
+		margin-bottom: 8px;
+	}
 
-    border: 1px solid var(--border);
+	.contact-box a {
+		color: var(--primary);
+	}
 
-    background: rgba(255, 255, 255, 0.025);
-  }
+	.contact-box a:hover {
+		text-decoration: underline;
+	}
 
-  .contact-box h3 {
-    margin-bottom: 12px;
-  }
-
-  .contact-box p {
-    margin-bottom: 8px;
-  }
-
-  .contact-box a {
-    color: var(--primary);
-  }
-
-  .contact-box a:hover {
-    text-decoration: underline;
-  }
-
-  /* ==========================================================
+/* ==========================================================
    Notice Box
    ========================================================== */
 
-  .notice {
-    padding: 18px 22px;
+	.notice {
+		padding: 18px 22px;
+		border-radius: 14px;
+		background: rgba(79,140,255,.08);
+		border: 1px solid rgba(79,140,255,.25);
+		margin: 26px 0;
+	}
 
-    border-radius: 14px;
+	.notice p {
+		margin: 0;
+		color: #D7E6FF;
+	}
 
-    background: rgba(79, 140, 255, 0.08);
-
-    border: 1px solid rgba(79, 140, 255, 0.25);
-
-    margin: 26px 0;
-  }
-
-  .notice p {
-    margin: 0;
-
-    color: #d7e6ff;
-  }
-
-  /* ==========================================================
+/* ==========================================================
    Support Page
    ========================================================== */
 
-  .support-grid {
-    display: grid;
+	.support-grid {
+		display: grid;
+		grid-template-columns: repeat(2,1fr);
+		gap: 28px;
+		margin-top: 40px;
+	}
 
-    grid-template-columns: repeat(2, 1fr);
+	.support-card {
+		padding: 28px;
+		border-radius: 18px;
+		border: 1px solid var(--border);
+		background: rgba(255,255,255,.025);
+		transition: .3s;
+	}
 
-    gap: 28px;
+	.support-card:hover {
+		transform: translateY(-5px);
+		border-color: rgba(79,140,255,.35);
+	}
 
-    margin-top: 40px;
-  }
+	.support-card h3 {
+		margin-bottom: 12px;
+	}
 
-  .support-card {
-    padding: 28px;
+	.support-card p {
+		margin-bottom: 14px;
+	}
 
-    border-radius: 18px;
+	.support-card a {
+		color: var(--primary);
+		font-weight: 600;
+	}
 
-    border: 1px solid var(--border);
-
-    background: rgba(255, 255, 255, 0.025);
-
-    transition: 0.3s;
-  }
-
-  .support-card:hover {
-    transform: translateY(-5px);
-
-    border-color: rgba(79, 140, 255, 0.35);
-  }
-
-  .support-card h3 {
-    margin-bottom: 12px;
-  }
-
-  .support-card p {
-    margin-bottom: 14px;
-  }
-
-  .support-card a {
-    color: var(--primary);
-
-    font-weight: 600;
-  }
-
-  /* ==========================================================
+/* ==========================================================
    Refund Page
    ========================================================== */
 
-  .timeline {
-    margin-top: 30px;
+	.timeline {
+		margin-top: 30px;
+		border-left: 2px solid rgba(79,140,255,.25);
+		padding-left: 28px;
+	}
 
-    border-left: 2px solid rgba(79, 140, 255, 0.25);
+	.timeline-item {
+		position: relative;
+		margin-bottom: 34px;
+	}
 
-    padding-left: 28px;
-  }
+	.timeline-item:last-child {
+		margin-bottom: 0;
+	}
 
-  .timeline-item {
-    position: relative;
+	.timeline-item::before {
+		content: "";
+		position: absolute;
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		background: var(--primary);
+		left: -35px;
+		top: 7px;
+	}
 
-    margin-bottom: 34px;
-  }
+	.timeline-item h3 {
+		margin-bottom: 10px;
+	}
 
-  .timeline-item:last-child {
-    margin-bottom: 0;
-  }
-
-  .timeline-item::before {
-    content: "";
-
-    position: absolute;
-
-    width: 12px;
-
-    height: 12px;
-
-    border-radius: 50%;
-
-    background: var(--primary);
-
-    left: -35px;
-
-    top: 7px;
-  }
-
-  .timeline-item h3 {
-    margin-bottom: 10px;
-  }
-
-  /* ==========================================================
+/* ==========================================================
    Terms / Privacy Tables
    ========================================================== */
 
-  .legal-table {
-    width: 100%;
+	.legal-table {
+		width: 100%;
+		border-collapse: collapse;
+		margin-top: 24px;
+	}
 
-    border-collapse: collapse;
+	.legal-table th {
+		text-align: left;
+		background: rgba(255,255,255,.03);
+		padding: 16px;
+		border: 1px solid var(--border);
+	}
 
-    margin-top: 24px;
-  }
+	.legal-table td {
+		padding: 16px;
+		color: var(--muted);
+		border: 1px solid var(--border);
+	}
 
-  .legal-table th {
-    text-align: left;
-
-    background: rgba(255, 255, 255, 0.03);
-
-    padding: 16px;
-
-    border: 1px solid var(--border);
-  }
-
-  .legal-table td {
-    padding: 16px;
-
-    color: var(--muted);
-
-    border: 1px solid var(--border);
-  }
-
-  /* ==========================================================
+/* ==========================================================
    Mobile
    ========================================================== */
 
-  @media (max-width: 900px) {
-    .footer-top {
-      grid-template-columns: 1fr;
+@	media(max-width:900px) {
+		.footer-top{
 
-      gap: 40px;
-    }
+grid-template-columns: 1fr;
+		gap: 40px;
+	}
 
-    .footer-bottom {
-      flex-direction: column;
+	.footer-bottom {
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+	}
 
-      text-align: center;
+	.footer-bottom p:last-child {
+		text-align: center;
+	}
 
-      align-items: center;
-    }
+	.support-grid {
+		grid-template-columns: 1fr;
+	}
 
-    .footer-bottom p:last-child {
-      text-align: center;
-    }
+	.legal-page {
+		padding-top: 120px;
+	}
 
-    .support-grid {
-      grid-template-columns: 1fr;
-    }
+	.legal-container h1 {
+		font-size: 2.2rem;
+	}
 
-    .legal-page {
-      padding-top: 120px;
-    }
+	.legal-section h2 {
+		font-size: 1.35rem;
+	}
+}
 
-    .legal-container h1 {
-      font-size: 2.2rem;
-    }
+.price-card {
+	padding: 34px;
+}
 
-    .legal-section h2 {
-      font-size: 1.35rem;
-    }
-  }
-
-  .price-card {
-    padding: 34px;
-  }
 }
 
 /* ==========================================================
@@ -4638,87 +1235,67 @@ nav a.active::after {
    ========================================================== */
 
 .faq {
-  max-width: 900px;
-
-  margin: auto;
+	max-width: 900px;
+	margin: auto;
 }
 
 .faq h2 {
-  margin-bottom: 48px;
+	margin-bottom: 48px;
 }
 
 .faq-item {
-  background: rgba(255, 255, 255, 0.025);
-
-  border: 1px solid var(--border);
-
-  border-radius: 18px;
-
-  margin-bottom: 18px;
-
-  overflow: hidden;
-
-  transition: 0.3s;
+	background: rgba(255,255,255,.025);
+	border: 1px solid var(--border);
+	border-radius: 18px;
+	margin-bottom: 18px;
+	overflow: hidden;
+	transition: .3s;
 }
 
 .faq-item:hover {
-  border-color: rgba(79, 140, 255, 0.35);
+	border-color: rgba(79,140,255,.35);
 }
 
 .faq-item h3 {
-  position: relative;
-
-  margin: 0;
-
-  padding: 24px 60px 24px 24px;
-
-  cursor: pointer;
-
-  font-size: 1.15rem;
-
-  user-select: none;
+	position: relative;
+	margin: 0;
+	padding: 24px 60px 24px 24px;
+	cursor: pointer;
+	font-size: 1.15rem;
+	user-select: none;
 }
 
 .faq-item h3::after {
-  content: "+";
-
-  position: absolute;
-
-  right: 24px;
-
-  top: 50%;
-
-  transform: translateY(-50%);
-
-  font-size: 1.6rem;
-
-  color: var(--primary);
-
-  transition: 0.25s;
+	content: "+";
+	position: absolute;
+	right: 24px;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 1.6rem;
+	color: var(--primary);
+	transition: .25s;
 }
 
 .faq-item p {
-  max-height: 0;
+	max-height: 0;
+	overflow: hidden;
+	padding: 0 24px;
+	transition: max-height .35s ease,
 
-  overflow: hidden;
-
-  padding: 0 24px;
-
-  transition: max-height 0.35s ease, padding 0.35s ease;
+        padding .35s ease;
 }
 
 .faq-item.open {
-  border-color: rgba(79, 140, 255, 0.45);
+	border-color: rgba(79,140,255,.45);
 }
 
 .faq-item.open h3::after {
-  transform: translateY(-50%) rotate(45deg);
+	transform: translateY(-50%) rotate(45deg);
 }
 
 .faq-item.open p {
-  max-height: 250px;
-
-  padding: 0 24px 24px;
+	max-height: 250px;
+	padding: 0 24px 24px;
 }
 
 /* ==========================================================
@@ -4726,87 +1303,65 @@ nav a.active::after {
    ========================================================== */
 
 footer {
-  margin-top: 100px;
-
-  border-top: 1px solid var(--border);
-
-  background: rgba(255, 255, 255, 0.02);
+	margin-top: 100px;
+	border-top: 1px solid var(--border);
+	background: rgba(255,255,255,.02);
 }
 
 .footer-top {
-  display: grid;
-
-  grid-template-columns: 1.6fr 1fr 1fr 1fr;
-
-  gap: 60px;
-
-  padding: 60px 0;
+	display: grid;
+	grid-template-columns: 1.6fr 1fr 1fr 1fr;
+	gap: 60px;
+	padding: 60px 0;
 }
 
 .footer-brand p {
-  margin-top: 18px;
-
-  max-width: 320px;
+	margin-top: 18px;
+	max-width: 320px;
 }
 
 .footer-col {
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 14px;
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
 }
 
 .footer-col h4 {
-  font-size: 0.9rem;
-
-  text-transform: uppercase;
-
-  letter-spacing: 0.12em;
-
-  color: white;
-
-  margin-bottom: 8px;
+	font-size: .9rem;
+	text-transform: uppercase;
+	letter-spacing: .12em;
+	color: white;
+	margin-bottom: 8px;
 }
 
 .footer-col a {
-  color: var(--muted);
-
-  transition: 0.25s;
-
-  width: fit-content;
+	color: var(--muted);
+	transition: .25s;
+	width: fit-content;
 }
 
 .footer-col a:hover {
-  color: white;
-
-  transform: translateX(3px);
+	color: white;
+	transform: translateX(3px);
 }
 
 .footer-bottom {
-  display: flex;
-
-  justify-content: space-between;
-
-  align-items: flex-start;
-
-  gap: 24px;
-
-  padding: 24px 0;
-
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 24px;
+	padding: 24px 0;
+	border-top: 1px solid rgba(255,255,255,.05);
 }
 
 .footer-bottom p {
-  font-size: 0.9rem;
-
-  color: #8b8b95;
+	font-size: .9rem;
+	color: #8B8B95;
 }
 
 .footer-bottom p:last-child {
-  max-width: 420px;
-
-  text-align: right;
+	max-width: 420px;
+	text-align: right;
 }
 
 /* ==========================================================
@@ -4814,73 +1369,64 @@ footer {
    ========================================================== */
 
 .legal-page {
-  padding-top: 140px;
-
-  padding-bottom: 100px;
+	padding-top: 140px;
+	padding-bottom: 100px;
 }
 
 .legal-container {
-  max-width: 860px;
-
-  margin: auto;
+	max-width: 860px;
+	margin: auto;
 }
 
 .legal-container h1 {
-  margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 
-.legal-container > p {
-  margin-bottom: 40px;
-
-  color: var(--muted);
+.legal-container>p {
+	margin-bottom: 40px;
+	color: var(--muted);
 }
 
 .legal-section {
-  margin-bottom: 48px;
+	margin-bottom: 48px;
 }
 
 .legal-section h2 {
-  text-align: left;
-
-  font-size: 1.5rem;
-
-  margin-bottom: 16px;
+	text-align: left;
+	font-size: 1.5rem;
+	margin-bottom: 16px;
 }
 
 .legal-section h3 {
-  margin-top: 26px;
-
-  margin-bottom: 12px;
-
-  font-size: 1.15rem;
+	margin-top: 26px;
+	margin-bottom: 12px;
+	font-size: 1.15rem;
 }
 
 .legal-section p {
-  margin-bottom: 16px;
+	margin-bottom: 16px;
 }
 
 .legal-section ul {
-  margin-left: 24px;
-
-  margin-bottom: 18px;
+	margin-left: 24px;
+	margin-bottom: 18px;
 }
 
 .legal-section li {
-  color: var(--muted);
-
-  margin-bottom: 10px;
+	color: var(--muted);
+	margin-bottom: 10px;
 }
 
 .legal-section strong {
-  color: white;
+	color: white;
 }
 
 .legal-section a {
-  color: var(--primary);
+	color: var(--primary);
 }
 
 .legal-section a:hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 /* ==========================================================
@@ -4888,31 +1434,27 @@ footer {
    ========================================================== */
 
 .contact-box {
-  margin-top: 36px;
-
-  padding: 28px;
-
-  border-radius: 18px;
-
-  border: 1px solid var(--border);
-
-  background: rgba(255, 255, 255, 0.025);
+	margin-top: 36px;
+	padding: 28px;
+	border-radius: 18px;
+	border: 1px solid var(--border);
+	background: rgba(255,255,255,.025);
 }
 
 .contact-box h3 {
-  margin-bottom: 12px;
+	margin-bottom: 12px;
 }
 
 .contact-box p {
-  margin-bottom: 8px;
+	margin-bottom: 8px;
 }
 
 .contact-box a {
-  color: var(--primary);
+	color: var(--primary);
 }
 
 .contact-box a:hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 /* ==========================================================
@@ -4920,21 +1462,16 @@ footer {
    ========================================================== */
 
 .notice {
-  padding: 18px 22px;
-
-  border-radius: 14px;
-
-  background: rgba(79, 140, 255, 0.08);
-
-  border: 1px solid rgba(79, 140, 255, 0.25);
-
-  margin: 26px 0;
+	padding: 18px 22px;
+	border-radius: 14px;
+	background: rgba(79,140,255,.08);
+	border: 1px solid rgba(79,140,255,.25);
+	margin: 26px 0;
 }
 
 .notice p {
-  margin: 0;
-
-  color: #d7e6ff;
+	margin: 0;
+	color: #D7E6FF;
 }
 
 /* ==========================================================
@@ -4942,45 +1479,36 @@ footer {
    ========================================================== */
 
 .support-grid {
-  display: grid;
-
-  grid-template-columns: repeat(2, 1fr);
-
-  gap: 28px;
-
-  margin-top: 40px;
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	gap: 28px;
+	margin-top: 40px;
 }
 
 .support-card {
-  padding: 28px;
-
-  border-radius: 18px;
-
-  border: 1px solid var(--border);
-
-  background: rgba(255, 255, 255, 0.025);
-
-  transition: 0.3s;
+	padding: 28px;
+	border-radius: 18px;
+	border: 1px solid var(--border);
+	background: rgba(255,255,255,.025);
+	transition: .3s;
 }
 
 .support-card:hover {
-  transform: translateY(-5px);
-
-  border-color: rgba(79, 140, 255, 0.35);
+	transform: translateY(-5px);
+	border-color: rgba(79,140,255,.35);
 }
 
 .support-card h3 {
-  margin-bottom: 12px;
+	margin-bottom: 12px;
 }
 
 .support-card p {
-  margin-bottom: 14px;
+	margin-bottom: 14px;
 }
 
 .support-card a {
-  color: var(--primary);
-
-  font-weight: 600;
+	color: var(--primary);
+	font-weight: 600;
 }
 
 /* ==========================================================
@@ -4988,43 +1516,33 @@ footer {
    ========================================================== */
 
 .timeline {
-  margin-top: 30px;
-
-  border-left: 2px solid rgba(79, 140, 255, 0.25);
-
-  padding-left: 28px;
+	margin-top: 30px;
+	border-left: 2px solid rgba(79,140,255,.25);
+	padding-left: 28px;
 }
 
 .timeline-item {
-  position: relative;
-
-  margin-bottom: 34px;
+	position: relative;
+	margin-bottom: 34px;
 }
 
 .timeline-item:last-child {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 .timeline-item::before {
-  content: "";
-
-  position: absolute;
-
-  width: 12px;
-
-  height: 12px;
-
-  border-radius: 50%;
-
-  background: var(--primary);
-
-  left: -35px;
-
-  top: 7px;
+	content: "";
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: var(--primary);
+	left: -35px;
+	top: 7px;
 }
 
 .timeline-item h3 {
-  margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 /* ==========================================================
@@ -5032,29 +1550,2076 @@ footer {
    ========================================================== */
 
 .legal-table {
-  width: 100%;
-
-  border-collapse: collapse;
-
-  margin-top: 24px;
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 24px;
 }
 
 .legal-table th {
-  text-align: left;
-
-  background: rgba(255, 255, 255, 0.03);
-
-  padding: 16px;
-
-  border: 1px solid var(--border);
+	text-align: left;
+	background: rgba(255,255,255,.03);
+	padding: 16px;
+	border: 1px solid var(--border);
 }
 
 .legal-table td {
-  padding: 16px;
+	padding: 16px;
+	color: var(--muted);
+	border: 1px solid var(--border);
+}
 
-  color: var(--muted);
+/* ==========================================================
+   Mobile
+   ========================================================== */
 
-  border: 1px solid var(--border);
+@media(max-width:900px) {
+
+	.footer-top {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+
+	.footer-bottom {
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+	}
+
+	.footer-bottom p:last-child {
+		text-align: center;
+	}
+
+	.support-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.legal-page {
+		padding-top: 120px;
+	}
+
+	.legal-container h1 {
+		font-size: 2.2rem;
+	}
+
+	.legal-section h2 {
+		font-size: 1.35rem;
+	}
+}
+
+/* ==========================================================
+   Orbit Website
+   style.css
+   Part 3B
+   Utilities • Responsive • Animations • Print
+   ========================================================== */
+
+
+/* ==========================================================
+   Utilities
+   ========================================================== */
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.mt-0 {
+	margin-top: 0;
+}
+
+.mt-1 {
+	margin-top: 8px;
+}
+
+.mt-2 {
+	margin-top: 16px;
+}
+
+.mt-3 {
+	margin-top: 24px;
+}
+
+.mt-4 {
+	margin-top: 32px;
+}
+
+.mt-5 {
+	margin-top: 48px;
+}
+
+.mb-0 {
+	margin-bottom: 0;
+}
+
+.mb-1 {
+	margin-bottom: 8px;
+}
+
+.mb-2 {
+	margin-bottom: 16px;
+}
+
+.mb-3 {
+	margin-bottom: 24px;
+}
+
+.mb-4 {
+	margin-bottom: 32px;
+}
+
+.mb-5 {
+	margin-bottom: 48px;
+}
+
+.pt-0 {
+	padding-top: 0;
+}
+
+.pb-0 {
+	padding-bottom: 0;
+}
+
+.w-100 {
+	width: 100%;
+}
+
+.hidden {
+	display: none !important;
+}
+
+
+/* ==========================================================
+   Generic Card
+   ========================================================== */
+
+.card {
+	background: rgba(255,255,255,.03);
+	border: 1px solid var(--border);
+	border-radius: 18px;
+	padding: 28px;
+	transition: .3s;
+}
+
+.card:hover {
+	border-color: rgba(79,140,255,.35);
+	transform: translateY(-4px);
+}
+
+
+/* ==========================================================
+   Links
+   ========================================================== */
+
+a {
+	transition: color .25s ease;
+}
+
+a:hover {
+	color: white;
+}
+
+
+/* ==========================================================
+   Images
+   ========================================================== */
+
+img {
+	user-select: none;
+	-webkit-user-drag: none;
+}
+
+.hero-image,
+.game-demo,
+.image img {
+	transition: transform .35s ease,
+        box-shadow .35s ease;
+}
+
+.hero-image:hover {
+	transform: translateY(-4px);
+}
+
+.image img:hover {
+	box-shadow: 0 45px 90px rgba(0,0,0,.55);
+}
+
+
+/* ==========================================================
+   Tables
+   ========================================================== */
+
+table {
+	overflow: hidden;
+	border-radius: 16px;
+}
+
+
+/* ==========================================================
+   Lists
+   ========================================================== */
+
+.price-features li,
+.requirements li,
+.timeline-item,
+.support-card,
+.faq-item {
+	will-change: transform;
+}
+
+
+/* ==========================================================
+   Button Active
+   ========================================================== */
+
+.btn:active {
+	transform: scale(.98);
+}
+
+
+/* ==========================================================
+   Header Animation
+   ========================================================== */
+
+header {
+	transition: background .25s ease,
+        border .25s ease,
+        box-shadow .25s ease;
+}
+
+header.scrolled {
+	box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+
+/* ==========================================================
+   Hero Gradient
+   ========================================================== */
+
+.hero {
+	position: relative;
+	overflow: hidden;
+}
+
+.hero::before {
+	content: "";
+	position: absolute;
+	width: 700px;
+	height: 700px;
+	left: -250px;
+	top: -250px;
+	border-radius: 50%;
+	background: radial-gradient(circle,
+        rgba(79,140,255,.10),
+        transparent 70%);
+	pointer-events: none;
+}
+
+.hero::after {
+	content: "";
+	position: absolute;
+	width: 500px;
+	height: 500px;
+	right: -180px;
+	bottom: -180px;
+	border-radius: 50%;
+	background: radial-gradient(circle,
+        rgba(79,140,255,.08),
+        transparent 70%);
+	pointer-events: none;
+}
+
+
+/* ==========================================================
+   Hover Lift
+   ========================================================== */
+
+.price-card,
+.step,
+.requirements li,
+.support-card {
+	transition: transform .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+}
+
+.price-card:hover,
+.step:hover,
+.requirements li:hover,
+.support-card:hover {
+	box-shadow: 0 18px 50px rgba(0,0,0,.35);
+}
+
+
+/* ==========================================================
+   Mobile Navigation
+   ========================================================== */
+
+@media(max-width:900px) {
+
+	header {
+		backdrop-filter: blur(12px);
+	}
+
+	nav {
+		gap: 16px;
+	}
+
+	nav a {
+		font-size: .95rem;
+	}
+}
+
+
+/* ==========================================================
+   Tablet
+   ========================================================== */
+
+@media(max-width:1100px) {
+
+	h1 {
+		font-size: 2.8rem;
+	}
+
+	h2 {
+		font-size: 2rem;
+	}
+
+	.showcase-item {
+		gap: 42px;
+	}
+}
+
+
+/* ==========================================================
+   Mobile
+   ========================================================== */
+
+@media(max-width:768px) {
+
+	section {
+		padding: 70px 0;
+	}
+
+	.hero {
+		padding-top: 130px;
+	}
+
+	h1 {
+		font-size: 2.25rem;
+		line-height: 1.1;
+	}
+
+	h2 {
+		font-size: 1.8rem;
+	}
+
+	h3 {
+		font-size: 1.25rem;
+	}
+
+	p {
+		font-size: .98rem;
+	}
+
+	.hero-buttons {
+		flex-direction: column;
+	}
+
+	.btn {
+		width: 100%;
+	}
+
+	.price-card {
+		padding: 30px;
+	}
+
+	.amount {
+		font-size: 3.4rem;
+	}
+
+	.controls table {
+		display: block;
+		overflow-x: auto;
+	}
+
+	.legal-table {
+		display: block;
+		overflow-x: auto;
+	}
+}
+
+
+/* ==========================================================
+   Small Phones
+   ========================================================== */
+
+@media(max-width:480px) {
+
+	h1 {
+		font-size: 2rem;
+	}
+
+	h2 {
+		font-size: 1.6rem;
+	}
+
+	.hero-note {
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	.price-card {
+		padding: 24px;
+	}
+
+	.footer-top {
+		gap: 28px;
+	}
+}
+
+
+/* ==========================================================
+   Animations
+   ========================================================== */
+
+@keyframes fadeUp {
+
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@keyframes pulse {
+
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.04);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+.btn-primary:hover {
+	animation: pulse .8s ease;
+}
+
+
+/* ==========================================================
+   Loading State
+   ========================================================== */
+
+.loading {
+	opacity: .65;
+	pointer-events: none;
+}
+
+
+/* ==========================================================
+   Reduced Motion
+   ========================================================== */
+
+@media(prefers-reduced-motion:reduce) {
+
+	* {
+		animation: none !important;
+		transition: none !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+
+/* ==========================================================
+   Print
+   ========================================================== */
+
+@media print {
+
+	header,
+    footer,
+    .hero-buttons,
+    .btn {
+		display: none !important;
+	}
+
+	body {
+		background: white;
+		color: black;
+	}
+
+	p {
+		color: #333;
+	}/* ==========================================================
+   Orbit Website
+   style.css
+   Part 1
+   ========================================================== */
+
+@	import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap");
+
+/* ==========================================================
+   Root
+   ========================================================== */
+
+:root {
+		--bg: #09090b;
+		--surface: #111216;
+		--surface-2: #17181e;
+		--border: #25262d;
+		--text: #fafafa;
+		--muted: #a1a1aa;
+		--primary: #4f8cff;
+		--primary-hover: #6ea5ff;
+		--success: #22c55e;
+		--radius: 18px;
+		--container: 1180px;
+		--transition: 0.28s ease;
+	}
+
+/* ==========================================================
+   Reset
+   ========================================================== */
+
+	*,
+*::before,
+*::after {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		background: var(--bg);
+		color: var(--text);
+		font-family: Inter, sans-serif;
+		line-height: 1.75;
+		-webkit-font-smoothing: antialiased;
+		text-rendering: optimizeLegibility;
+	}
+
+	img {
+		display: block;
+		max-width: 100%;
+	}
+
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	button {
+		font: inherit;
+	}
+
+/* ==========================================================
+   Accessibility
+   ========================================================== */
+
+	::selection {
+		background: var(--primary);
+		color: white;
+	}
+
+	a:focus-visible,
+button:focus-visible {
+		outline: 2px solid var(--primary);
+		outline-offset: 4px;
+		border-radius: 6px;
+	}
+
+/* ==========================================================
+   Scrollbar
+   ========================================================== */
+
+	::-webkit-scrollbar {
+		width: 10px;
+	}
+
+	::-webkit-scrollbar-track {
+		background: #09090b;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: #30333a;
+		border-radius: 999px;
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background: var(--primary);
+	}
+
+/* ==========================================================
+   Layout
+   ========================================================== */
+
+	.container {
+		width: min(92%, var(--container));
+		margin: auto;
+	}
+
+	.narrow {
+		max-width: 760px;
+	}
+
+	section {
+		padding: 96px 0;
+	}
+
+	.page {
+		padding-top: 140px;
+		padding-bottom: 90px;
+	}
+
+/* ==========================================================
+   Typography
+   ========================================================== */
+
+	h1 {
+		font-family: "Space Grotesk", sans-serif;
+		font-size: 3.35rem;
+		line-height: 1.05;
+		letter-spacing: -2px;
+		margin-bottom: 24px;
+	}
+
+	h2 {
+		font-family: "Space Grotesk", sans-serif;
+		font-size: 2.45rem;
+		letter-spacing: -1px;
+		text-align: center;
+		margin-bottom: 18px;
+	}
+
+	h3 {
+		font-family: "Space Grotesk", sans-serif;
+		font-size: 1.45rem;
+		margin-bottom: 14px;
+	}
+
+	p {
+		color: var(--muted);
+		font-size: 1rem;
+		line-height: 1.8;
+	}
+
+	ul {
+		padding-left: 20px;
+	}
+
+/* ==========================================================
+   Section Title
+   ========================================================== */
+
+	.section-title {
+		max-width: 760px;
+		margin: 0 auto 60px;
+		text-align: center;
+	}
+
+	.section-title h2 {
+		margin-bottom: 16px;
+	}
+
+	.section-title p {
+		font-size: 1.05rem;
+	}
+
+	.eyebrow {
+		display: inline-block;
+		margin-bottom: 18px;
+		color: #7dafff;
+		letter-spacing: 0.16em;
+		text-transform: uppercase;
+		font-size: 0.9rem;
+		font-weight: 700;
+	}
+
+/* ==========================================================
+   Fade Animation
+   ========================================================== */
+
+	.fade {
+		opacity: 0;
+		transform: translateY(30px);
+		transition: opacity 0.7s ease, transform 0.7s ease;
+	}
+
+	.fade.show {
+		opacity: 1;
+		transform: none;
+	}
+
+@	media (prefers-reduced-motion: reduce) {
+		.fade {
+    opacity: 1;
+		transform: none;
+		transition: none;
+	}
+}
+
+/* ==========================================================
+   Header
+   ========================================================== */
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 999;
+	backdrop-filter: blur(18px);
+	background: rgba(9, 9, 11, 0.55);
+	transition: var(--transition);
+}
+
+header.scrolled {
+	background: rgba(9, 9, 11, 0.92);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav {
+	height: 72px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+}
+
+.logo img {
+	width: 42px;
+}
+
+.logo span {
+	font-family: "Space Grotesk";
+	font-size: 1.35rem;
+	font-weight: 700;
+}
+
+/* ==========================================================
+   Navigation
+   ========================================================== */
+
+nav {
+	display: flex;
+	gap: 32px;
+}
+
+nav a {
+	position: relative;
+	color: var(--muted);
+	font-weight: 500;
+	transition: var(--transition);
+}
+
+nav a:hover {
+	color: white;
+}
+
+nav a::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -8px;
+	width: 0;
+	height: 2px;
+	background: var(--primary);
+	transition: var(--transition);
+}
+
+nav a:hover::after {
+	width: 100%;
+}
+
+nav a.active {
+	color: white;
+}
+
+nav a.active::after {
+	width: 100%;
+}
+
+/* ==========================================================
+   Hero
+   ========================================================== */
+
+.hero {
+	padding-top: 145px;
+}
+
+.hero h1 {
+	max-width: 900px;
+}
+
+.hero p {
+	max-width: 700px;
+	margin: 20px 0 34px;
+	font-size: 1.15rem;
+}
+
+.hero-buttons {
+	display: flex;
+	gap: 16px;
+	flex-wrap: wrap;
+	margin-bottom: 28px;
+}
+
+.hero-note {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 18px;
+	color: #8e8e98;
+	font-size: 0.95rem;
+	margin-bottom: 50px;
+}
+
+.hero-image {
+	border-radius: 24px;
+	border: 1px solid var(--border);
+	box-shadow: 0 45px 90px rgba(0, 0, 0, 0.45);
+}
+
+/* ==========================================================
+   Buttons
+   ========================================================== */
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 14px 26px;
+	border-radius: 999px;
+	font-weight: 600;
+	transition: var(--transition);
+}
+
+.btn-primary {
+	color: white;
+	background: var(--primary);
+	box-shadow: 0 12px 35px rgba(79, 140, 255, 0.25);
+}
+
+.btn-primary:hover {
+	background: var(--primary-hover);
+	transform: translateY(-3px);
+	box-shadow: 0 20px 45px rgba(79, 140, 255, 0.35);
+}
+
+.btn-secondary {
+	border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+	background: rgba(255, 255, 255, 0.04);
+	transform: translateY(-3px);
+}
+
+/* ==========================================================
+   Responsive
+   ========================================================== */
+
+@media (max-width: 900px) {
+	h1 {
+		font-size: 2.7rem;
+	}
+
+	h2 {
+		font-size: 2rem;
+	}
+
+	.nav {
+		height: auto;
+		padding: 18px 0;
+		flex-direction: column;
+		gap: 18px;
+	}
+
+	nav {
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 20px;
+	}
+
+	.hero {
+		padding-top: 170px;
+	}
+
+	.hero-buttons {
+		justify-content: center;
+	}
+
+	.hero {
+		text-align: center;
+	}
+
+	.hero p {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.hero-note {
+		justify-content: center;
+	}
+}
+
+/* ==========================================================
+   Orbit Website
+   style.css
+   Part 2
+   Games • Showcase • Controls • Requirements
+   Pricing • Purchase Flow
+   ========================================================== */
+
+/* ==========================================================
+   Inspired by Games
+   ========================================================== */
+
+.games {
+	text-align: center;
+}
+
+.games h2 {
+	margin-bottom: 20px;
+}
+
+.games p {
+	max-width: 760px;
+	margin: 0 auto 24px;
+}
+
+.game-demo {
+	margin: 42px auto;
+	border-radius: 24px;
+	border: 1px solid var(--border);
+	overflow: hidden;
+	box-shadow: 0 35px 80px rgba(0, 0, 0, 0.45);
+}
+
+.caption {
+	color: #7c7c85;
+	font-size: 0.95rem;
+	margin-top: -8px;
+}
+
+/* ==========================================================
+   Showcase
+   ========================================================== */
+
+.showcase {
+	padding: 100px 0;
+}
+
+.showcase-item {
+	display: grid;
+	grid-template-columns: 1.2fr 0.8fr;
+	gap: 64px;
+	align-items: center;
+	margin-bottom: 110px;
+}
+
+.showcase-item:last-child {
+	margin-bottom: 0;
+}
+
+.showcase-item.reverse {
+	grid-template-columns: 0.8fr 1.2fr;
+}
+
+.showcase-item.reverse .image {
+	order: 2;
+}
+
+.showcase-item.reverse .text {
+	order: 1;
+}
+
+.image {
+	position: relative;
+}
+
+.image img {
+	width: 100%;
+	border-radius: 24px;
+	border: 1px solid var(--border);
+	box-shadow: 0 35px 80px rgba(0, 0, 0, 0.45);
+	transition: 0.35s;
+}
+
+.image img:hover {
+	transform: translateY(-8px);
+}
+
+.image::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	border-radius: 24px;
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+	pointer-events: none;
+}
+
+.text {
+	max-width: 430px;
+}
+
+.text span {
+	display: inline-block;
+	margin-bottom: 16px;
+	color: #7dafff;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	font-size: 0.9rem;
+	font-weight: 700;
+}
+
+.text h3 {
+	font-size: 1.7rem;
+	line-height: 1.2;
+	margin-bottom: 18px;
+}
+
+.text p {
+	font-size: 1rem;
+}
+
+/* ==========================================================
+   Controls
+   ========================================================== */
+
+.controls {
+	padding-top: 40px;
+}
+
+.controls table {
+	width: 100%;
+	border-collapse: collapse;
+	overflow: hidden;
+	border-radius: 16px;
+	background: rgba(255, 255, 255, 0.02);
+	border: 1px solid var(--border);
+}
+
+.controls th {
+	background: rgba(255, 255, 255, 0.03);
+	color: white;
+	text-align: left;
+	padding: 18px;
+	font-weight: 600;
+}
+
+.controls td {
+	padding: 18px;
+	color: var(--muted);
+	border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.controls tr {
+	transition: 0.25s;
+}
+
+.controls tr:hover {
+	background: rgba(255, 255, 255, 0.03);
+}
+
+/* ==========================================================
+   Requirements
+   ========================================================== */
+
+.requirements {
+	text-align: center;
+}
+
+.requirements h2 {
+	margin-bottom: 28px;
+}
+
+.requirements ul {
+	list-style: none;
+	max-width: 640px;
+	margin: auto;
+	display: grid;
+	gap: 18px;
+	padding: 0;
+}
+
+.requirements li {
+	background: rgba(255, 255, 255, 0.03);
+	border: 1px solid var(--border);
+	border-radius: 16px;
+	padding: 18px 24px;
+	transition: 0.25s;
+}
+
+.requirements li:hover {
+	border-color: rgba(79, 140, 255, 0.35);
+	transform: translateY(-3px);
+}
+
+/* ==========================================================
+   Pricing
+   ========================================================== */
+
+.pricing {
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+}
+
+.pricing::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: -240px;
+	transform: translateX(-50%);
+	width: 720px;
+	height: 720px;
+	background: radial-gradient(
+    circle,
+    rgba(79, 140, 255, 0.16),
+    transparent 65%
+  );
+	pointer-events: none;
+}
+
+.price-card {
+	position: relative;
+	max-width: 520px;
+	margin: auto;
+	padding: 46px;
+	border-radius: 22px;
+	border: 1px solid var(--border);
+	background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.015)
+  );
+	box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+	transition: 0.3s;
+}
+
+.price-card:hover {
+	transform: translateY(-6px);
+	border-color: rgba(79, 140, 255, 0.45);
+}
+
+.badge {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 8px 16px;
+	border-radius: 999px;
+	background: rgba(79, 140, 255, 0.12);
+	color: #7dafff;
+	border: 1px solid rgba(79, 140, 255, 0.25);
+	font-size: 0.85rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-bottom: 26px;
+}
+
+.price-name {
+	margin-bottom: 10px;
+}
+
+.price {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	gap: 8px;
+	margin-bottom: 10px;
+}
+
+.currency {
+	font-size: 1.5rem;
+	color: var(--muted);
+}
+
+.amount {
+	font-family: "Space Grotesk", sans-serif;
+	font-size: 4.4rem;
+	line-height: 1;
+}
+
+.per {
+	color: var(--muted);
+	margin-bottom: 8px;
+}
+
+.price-desc {
+	margin-bottom: 30px;
+}
+
+.price-features {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 32px;
+	text-align: left;
+}
+
+.price-features li {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 12px 0;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.price-features li:last-child {
+	border-bottom: none;
+}
+
+.check {
+	width: 24px;
+	height: 24px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	background: rgba(79, 140, 255, 0.12);
+	color: #7dafff;
+	flex-shrink: 0;
+}
+
+.price-card .btn {
+	width: 100%;
+}
+
+.payment-note {
+	margin-top: 16px;
+	font-size: 0.92rem;
+	color: #8b8b95;
+}
+
+.guarantee {
+	margin-top: 18px;
+	color: var(--success);
+	font-size: 0.95rem;
+	font-weight: 600;
+}
+
+/* ==========================================================
+   Purchase Flow
+   ========================================================== */
+
+.purchase-flow {
+	text-align: center;
+}
+
+.steps {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 24px;
+	margin-top: 50px;
+}
+
+.step {
+	padding: 34px;
+	background: rgba(255, 255, 255, 0.03);
+	border: 1px solid var(--border);
+	border-radius: 18px;
+	transition: 0.3s;
+}
+
+.step:hover {
+	transform: translateY(-5px);
+	border-color: rgba(79, 140, 255, 0.35);
+}
+
+.step h3 {
+	width: 54px;
+	height: 54px;
+	margin: 0 auto 18px;
+	border-radius: 50%;
+	background: var(--primary);
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.4rem;
+}
+
+.step p {
+	margin: 0;
+}
+
+/* ==========================================================
+   Responsive
+   ========================================================== */
+
+@media (max-width: 950px) {
+	.showcase-item,
+  .showcase-item.reverse {
+		grid-template-columns: 1fr;
+		gap: 42px;
+		margin-bottom: 80px;
+	}
+
+	.showcase-item.reverse .image,
+  .showcase-item.reverse .text {
+		order: unset;
+	}
+
+	.text {
+		max-width: 100%;
+		text-align: center;
+		margin: auto;
+	}
+
+	.steps {
+		grid-template-columns: 1fr;
+	}
+
+  /* ==========================================================
+   Orbit Website
+   style.css
+   Part 3A
+   FAQ • Footer • Legal Pages
+   ========================================================== */
+
+  /* ==========================================================
+   FAQ
+   ========================================================== */
+
+	.faq {
+		max-width: 900px;
+		margin: auto;
+	}
+
+	.faq h2 {
+		margin-bottom: 48px;
+	}
+
+	.faq-item {
+		background: rgba(255, 255, 255, 0.025);
+		border: 1px solid var(--border);
+		border-radius: 18px;
+		margin-bottom: 18px;
+		overflow: hidden;
+		transition: 0.3s;
+	}
+
+	.faq-item:hover {
+		border-color: rgba(79, 140, 255, 0.35);
+	}
+
+	.faq-item h3 {
+		position: relative;
+		margin: 0;
+		padding: 24px 60px 24px 24px;
+		cursor: pointer;
+		font-size: 1.15rem;
+		user-select: none;
+	}
+
+	.faq-item h3::after {
+		content: "+";
+		position: absolute;
+		right: 24px;
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: 1.6rem;
+		color: var(--primary);
+		transition: 0.25s;
+	}
+
+	.faq-item p {
+		max-height: 0;
+		overflow: hidden;
+		padding: 0 24px;
+		transition: max-height 0.35s ease, padding 0.35s ease;
+	}
+
+	.faq-item.open {
+		border-color: rgba(79, 140, 255, 0.45);
+	}
+
+	.faq-item.open h3::after {
+		transform: translateY(-50%) rotate(45deg);
+	}
+
+	.faq-item.open p {
+		max-height: 250px;
+		padding: 0 24px 24px;
+	}
+
+  /* ==========================================================
+   Footer
+   ========================================================== */
+
+	footer {
+		margin-top: 100px;
+		border-top: 1px solid var(--border);
+		background: rgba(255, 255, 255, 0.02);
+	}
+
+	.footer-top {
+		display: grid;
+		grid-template-columns: 1.6fr 1fr 1fr 1fr;
+		gap: 60px;
+		padding: 60px 0;
+	}
+
+	.footer-brand p {
+		margin-top: 18px;
+		max-width: 320px;
+	}
+
+	.footer-col {
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+	}
+
+	.footer-col h4 {
+		font-size: 0.9rem;
+		text-transform: uppercase;
+		letter-spacing: 0.12em;
+		color: white;
+		margin-bottom: 8px;
+	}
+
+	.footer-col a {
+		color: var(--muted);
+		transition: 0.25s;
+		width: fit-content;
+	}
+
+	.footer-col a:hover {
+		color: white;
+		transform: translateX(3px);
+	}
+
+	.footer-bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: 24px;
+		padding: 24px 0;
+		border-top: 1px solid rgba(255, 255, 255, 0.05);
+	}
+
+	.footer-bottom p {
+		font-size: 0.9rem;
+		color: #8b8b95;
+	}
+
+	.footer-bottom p:last-child {
+		max-width: 420px;
+		text-align: right;
+	}
+
+  /* ==========================================================
+   Legal Pages
+   ========================================================== */
+
+	.legal-page {
+		padding-top: 140px;
+		padding-bottom: 100px;
+	}
+
+	.legal-container {
+		max-width: 860px;
+		margin: auto;
+	}
+
+	.legal-container h1 {
+		margin-bottom: 20px;
+	}
+
+	.legal-container > p {
+		margin-bottom: 40px;
+		color: var(--muted);
+	}
+
+	.legal-section {
+		margin-bottom: 48px;
+	}
+
+	.legal-section h2 {
+		text-align: left;
+		font-size: 1.5rem;
+		margin-bottom: 16px;
+	}
+
+	.legal-section h3 {
+		margin-top: 26px;
+		margin-bottom: 12px;
+		font-size: 1.15rem;
+	}
+
+	.legal-section p {
+		margin-bottom: 16px;
+	}
+
+	.legal-section ul {
+		margin-left: 24px;
+		margin-bottom: 18px;
+	}
+
+	.legal-section li {
+		color: var(--muted);
+		margin-bottom: 10px;
+	}
+
+	.legal-section strong {
+		color: white;
+	}
+
+	.legal-section a {
+		color: var(--primary);
+	}
+
+	.legal-section a:hover {
+		text-decoration: underline;
+	}
+
+  /* ==========================================================
+   Contact Box
+   ========================================================== */
+
+	.contact-box {
+		margin-top: 36px;
+		padding: 28px;
+		border-radius: 18px;
+		border: 1px solid var(--border);
+		background: rgba(255, 255, 255, 0.025);
+	}
+
+	.contact-box h3 {
+		margin-bottom: 12px;
+	}
+
+	.contact-box p {
+		margin-bottom: 8px;
+	}
+
+	.contact-box a {
+		color: var(--primary);
+	}
+
+	.contact-box a:hover {
+		text-decoration: underline;
+	}
+
+  /* ==========================================================
+   Notice Box
+   ========================================================== */
+
+	.notice {
+		padding: 18px 22px;
+		border-radius: 14px;
+		background: rgba(79, 140, 255, 0.08);
+		border: 1px solid rgba(79, 140, 255, 0.25);
+		margin: 26px 0;
+	}
+
+	.notice p {
+		margin: 0;
+		color: #d7e6ff;
+	}
+
+  /* ==========================================================
+   Support Page
+   ========================================================== */
+
+	.support-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 28px;
+		margin-top: 40px;
+	}
+
+	.support-card {
+		padding: 28px;
+		border-radius: 18px;
+		border: 1px solid var(--border);
+		background: rgba(255, 255, 255, 0.025);
+		transition: 0.3s;
+	}
+
+	.support-card:hover {
+		transform: translateY(-5px);
+		border-color: rgba(79, 140, 255, 0.35);
+	}
+
+	.support-card h3 {
+		margin-bottom: 12px;
+	}
+
+	.support-card p {
+		margin-bottom: 14px;
+	}
+
+	.support-card a {
+		color: var(--primary);
+		font-weight: 600;
+	}
+
+  /* ==========================================================
+   Refund Page
+   ========================================================== */
+
+	.timeline {
+		margin-top: 30px;
+		border-left: 2px solid rgba(79, 140, 255, 0.25);
+		padding-left: 28px;
+	}
+
+	.timeline-item {
+		position: relative;
+		margin-bottom: 34px;
+	}
+
+	.timeline-item:last-child {
+		margin-bottom: 0;
+	}
+
+	.timeline-item::before {
+		content: "";
+		position: absolute;
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		background: var(--primary);
+		left: -35px;
+		top: 7px;
+	}
+
+	.timeline-item h3 {
+		margin-bottom: 10px;
+	}
+
+  /* ==========================================================
+   Terms / Privacy Tables
+   ========================================================== */
+
+	.legal-table {
+		width: 100%;
+		border-collapse: collapse;
+		margin-top: 24px;
+	}
+
+	.legal-table th {
+		text-align: left;
+		background: rgba(255, 255, 255, 0.03);
+		padding: 16px;
+		border: 1px solid var(--border);
+	}
+
+	.legal-table td {
+		padding: 16px;
+		color: var(--muted);
+		border: 1px solid var(--border);
+	}
+
+  /* ==========================================================
+   Mobile
+   ========================================================== */
+
+  @	media (max-width: 900px) {
+		.footer-top {
+      grid-template-columns: 1fr;
+		gap: 40px;
+	}
+
+	.footer-bottom {
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+	}
+
+	.footer-bottom p:last-child {
+		text-align: center;
+	}
+
+	.support-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.legal-page {
+		padding-top: 120px;
+	}
+
+	.legal-container h1 {
+		font-size: 2.2rem;
+	}
+
+	.legal-section h2 {
+		font-size: 1.35rem;
+	}
+}
+
+.price-card {
+	padding: 34px;
+}
+}
+
+/* ==========================================================
+   Orbit Website
+   style.css
+   Part 3A
+   FAQ • Footer • Legal Pages
+   ========================================================== */
+
+/* ==========================================================
+   FAQ
+   ========================================================== */
+
+.faq {
+	max-width: 900px;
+	margin: auto;
+}
+
+.faq h2 {
+	margin-bottom: 48px;
+}
+
+.faq-item {
+	background: rgba(255, 255, 255, 0.025);
+	border: 1px solid var(--border);
+	border-radius: 18px;
+	margin-bottom: 18px;
+	overflow: hidden;
+	transition: 0.3s;
+}
+
+.faq-item:hover {
+	border-color: rgba(79, 140, 255, 0.35);
+}
+
+.faq-item h3 {
+	position: relative;
+	margin: 0;
+	padding: 24px 60px 24px 24px;
+	cursor: pointer;
+	font-size: 1.15rem;
+	user-select: none;
+}
+
+.faq-item h3::after {
+	content: "+";
+	position: absolute;
+	right: 24px;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 1.6rem;
+	color: var(--primary);
+	transition: 0.25s;
+}
+
+.faq-item p {
+	max-height: 0;
+	overflow: hidden;
+	padding: 0 24px;
+	transition: max-height 0.35s ease, padding 0.35s ease;
+}
+
+.faq-item.open {
+	border-color: rgba(79, 140, 255, 0.45);
+}
+
+.faq-item.open h3::after {
+	transform: translateY(-50%) rotate(45deg);
+}
+
+.faq-item.open p {
+	max-height: 250px;
+	padding: 0 24px 24px;
+}
+
+/* ==========================================================
+   Footer
+   ========================================================== */
+
+footer {
+	margin-top: 100px;
+	border-top: 1px solid var(--border);
+	background: rgba(255, 255, 255, 0.02);
+}
+
+.footer-top {
+	display: grid;
+	grid-template-columns: 1.6fr 1fr 1fr 1fr;
+	gap: 60px;
+	padding: 60px 0;
+}
+
+.footer-brand p {
+	margin-top: 18px;
+	max-width: 320px;
+}
+
+.footer-col {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.footer-col h4 {
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	color: white;
+	margin-bottom: 8px;
+}
+
+.footer-col a {
+	color: var(--muted);
+	transition: 0.25s;
+	width: fit-content;
+}
+
+.footer-col a:hover {
+	color: white;
+	transform: translateX(3px);
+}
+
+.footer-bottom {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 24px;
+	padding: 24px 0;
+	border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-bottom p {
+	font-size: 0.9rem;
+	color: #8b8b95;
+}
+
+.footer-bottom p:last-child {
+	max-width: 420px;
+	text-align: right;
+}
+
+/* ==========================================================
+   Legal Pages
+   ========================================================== */
+
+.legal-page {
+	padding-top: 140px;
+	padding-bottom: 100px;
+}
+
+.legal-container {
+	max-width: 860px;
+	margin: auto;
+}
+
+.legal-container h1 {
+	margin-bottom: 20px;
+}
+
+.legal-container > p {
+	margin-bottom: 40px;
+	color: var(--muted);
+}
+
+.legal-section {
+	margin-bottom: 48px;
+}
+
+.legal-section h2 {
+	text-align: left;
+	font-size: 1.5rem;
+	margin-bottom: 16px;
+}
+
+.legal-section h3 {
+	margin-top: 26px;
+	margin-bottom: 12px;
+	font-size: 1.15rem;
+}
+
+.legal-section p {
+	margin-bottom: 16px;
+}
+
+.legal-section ul {
+	margin-left: 24px;
+	margin-bottom: 18px;
+}
+
+.legal-section li {
+	color: var(--muted);
+	margin-bottom: 10px;
+}
+
+.legal-section strong {
+	color: white;
+}
+
+.legal-section a {
+	color: var(--primary);
+}
+
+.legal-section a:hover {
+	text-decoration: underline;
+}
+
+/* ==========================================================
+   Contact Box
+   ========================================================== */
+
+.contact-box {
+	margin-top: 36px;
+	padding: 28px;
+	border-radius: 18px;
+	border: 1px solid var(--border);
+	background: rgba(255, 255, 255, 0.025);
+}
+
+.contact-box h3 {
+	margin-bottom: 12px;
+}
+
+.contact-box p {
+	margin-bottom: 8px;
+}
+
+.contact-box a {
+	color: var(--primary);
+}
+
+.contact-box a:hover {
+	text-decoration: underline;
+}
+
+/* ==========================================================
+   Notice Box
+   ========================================================== */
+
+.notice {
+	padding: 18px 22px;
+	border-radius: 14px;
+	background: rgba(79, 140, 255, 0.08);
+	border: 1px solid rgba(79, 140, 255, 0.25);
+	margin: 26px 0;
+}
+
+.notice p {
+	margin: 0;
+	color: #d7e6ff;
+}
+
+/* ==========================================================
+   Support Page
+   ========================================================== */
+
+.support-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 28px;
+	margin-top: 40px;
+}
+
+.support-card {
+	padding: 28px;
+	border-radius: 18px;
+	border: 1px solid var(--border);
+	background: rgba(255, 255, 255, 0.025);
+	transition: 0.3s;
+}
+
+.support-card:hover {
+	transform: translateY(-5px);
+	border-color: rgba(79, 140, 255, 0.35);
+}
+
+.support-card h3 {
+	margin-bottom: 12px;
+}
+
+.support-card p {
+	margin-bottom: 14px;
+}
+
+.support-card a {
+	color: var(--primary);
+	font-weight: 600;
+}
+
+/* ==========================================================
+   Refund Page
+   ========================================================== */
+
+.timeline {
+	margin-top: 30px;
+	border-left: 2px solid rgba(79, 140, 255, 0.25);
+	padding-left: 28px;
+}
+
+.timeline-item {
+	position: relative;
+	margin-bottom: 34px;
+}
+
+.timeline-item:last-child {
+	margin-bottom: 0;
+}
+
+.timeline-item::before {
+	content: "";
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: var(--primary);
+	left: -35px;
+	top: 7px;
+}
+
+.timeline-item h3 {
+	margin-bottom: 10px;
+}
+
+/* ==========================================================
+   Terms / Privacy Tables
+   ========================================================== */
+
+.legal-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 24px;
+}
+
+.legal-table th {
+	text-align: left;
+	background: rgba(255, 255, 255, 0.03);
+	padding: 16px;
+	border: 1px solid var(--border);
+}
+
+.legal-table td {
+	padding: 16px;
+	color: var(--muted);
+	border: 1px solid var(--border);
 }
 
 /* ==========================================================
@@ -5062,39 +3627,36 @@ footer {
    ========================================================== */
 
 @media (max-width: 900px) {
-  .footer-top {
-    grid-template-columns: 1fr;
+	.footer-top {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
 
-    gap: 40px;
-  }
+	.footer-bottom {
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+	}
 
-  .footer-bottom {
-    flex-direction: column;
+	.footer-bottom p:last-child {
+		text-align: center;
+	}
 
-    text-align: center;
+	.support-grid {
+		grid-template-columns: 1fr;
+	}
 
-    align-items: center;
-  }
+	.legal-page {
+		padding-top: 120px;
+	}
 
-  .footer-bottom p:last-child {
-    text-align: center;
-  }
+	.legal-container h1 {
+		font-size: 2.2rem;
+	}
 
-  .support-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .legal-page {
-    padding-top: 120px;
-  }
-
-  .legal-container h1 {
-    font-size: 2.2rem;
-  }
-
-  .legal-section h2 {
-    font-size: 1.35rem;
-  }
+	.legal-section h2 {
+		font-size: 1.35rem;
+	}
 }
 
 /* ==========================================================
@@ -5109,68 +3671,79 @@ footer {
    ========================================================== */
 
 .text-center {
-  text-align: center;
+	text-align: center;
 }
 
 .text-left {
-  text-align: left;
+	text-align: left;
 }
 
 .text-right {
-  text-align: right;
+	text-align: right;
 }
 
 .mt-0 {
-  margin-top: 0;
+	margin-top: 0;
 }
+
 .mt-1 {
-  margin-top: 8px;
+	margin-top: 8px;
 }
+
 .mt-2 {
-  margin-top: 16px;
+	margin-top: 16px;
 }
+
 .mt-3 {
-  margin-top: 24px;
+	margin-top: 24px;
 }
+
 .mt-4 {
-  margin-top: 32px;
+	margin-top: 32px;
 }
+
 .mt-5 {
-  margin-top: 48px;
+	margin-top: 48px;
 }
 
 .mb-0 {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
+
 .mb-1 {
-  margin-bottom: 8px;
+	margin-bottom: 8px;
 }
+
 .mb-2 {
-  margin-bottom: 16px;
+	margin-bottom: 16px;
 }
+
 .mb-3 {
-  margin-bottom: 24px;
+	margin-bottom: 24px;
 }
+
 .mb-4 {
-  margin-bottom: 32px;
+	margin-bottom: 32px;
 }
+
 .mb-5 {
-  margin-bottom: 48px;
+	margin-bottom: 48px;
 }
 
 .pt-0 {
-  padding-top: 0;
+	padding-top: 0;
 }
+
 .pb-0 {
-  padding-bottom: 0;
+	padding-bottom: 0;
 }
 
 .w-100 {
-  width: 100%;
+	width: 100%;
 }
 
 .hidden {
-  display: none !important;
+	display: none !important;
 }
 
 /* ==========================================================
@@ -5178,21 +3751,16 @@ footer {
    ========================================================== */
 
 .card {
-  background: rgba(255, 255, 255, 0.03);
-
-  border: 1px solid var(--border);
-
-  border-radius: 18px;
-
-  padding: 28px;
-
-  transition: 0.3s;
+	background: rgba(255, 255, 255, 0.03);
+	border: 1px solid var(--border);
+	border-radius: 18px;
+	padding: 28px;
+	transition: 0.3s;
 }
 
 .card:hover {
-  border-color: rgba(79, 140, 255, 0.35);
-
-  transform: translateY(-4px);
+	border-color: rgba(79, 140, 255, 0.35);
+	transform: translateY(-4px);
 }
 
 /* ==========================================================
@@ -5200,11 +3768,11 @@ footer {
    ========================================================== */
 
 a {
-  transition: color 0.25s ease;
+	transition: color 0.25s ease;
 }
 
 a:hover {
-  color: white;
+	color: white;
 }
 
 /* ==========================================================
@@ -5212,23 +3780,22 @@ a:hover {
    ========================================================== */
 
 img {
-  user-select: none;
-
-  -webkit-user-drag: none;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 
 .hero-image,
 .game-demo,
 .image img {
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+	transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .hero-image:hover {
-  transform: translateY(-4px);
+	transform: translateY(-4px);
 }
 
 .image img:hover {
-  box-shadow: 0 45px 90px rgba(0, 0, 0, 0.55);
+	box-shadow: 0 45px 90px rgba(0, 0, 0, 0.55);
 }
 
 /* ==========================================================
@@ -5236,9 +3803,8 @@ img {
    ========================================================== */
 
 table {
-  overflow: hidden;
-
-  border-radius: 16px;
+	overflow: hidden;
+	border-radius: 16px;
 }
 
 /* ==========================================================
@@ -5250,7 +3816,7 @@ table {
 .timeline-item,
 .support-card,
 .faq-item {
-  will-change: transform;
+	will-change: transform;
 }
 
 /* ==========================================================
@@ -5258,7 +3824,7 @@ table {
    ========================================================== */
 
 .btn:active {
-  transform: scale(0.98);
+	transform: scale(0.98);
 }
 
 /* ==========================================================
@@ -5266,11 +3832,11 @@ table {
    ========================================================== */
 
 header {
-  transition: background 0.25s ease, border 0.25s ease, box-shadow 0.25s ease;
+	transition: background 0.25s ease, border 0.25s ease, box-shadow 0.25s ease;
 }
 
 header.scrolled {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
 /* ==========================================================
@@ -5278,53 +3844,36 @@ header.scrolled {
    ========================================================== */
 
 .hero {
-  position: relative;
-
-  overflow: hidden;
+	position: relative;
+	overflow: hidden;
 }
 
 .hero::before {
-  content: "";
-
-  position: absolute;
-
-  width: 700px;
-
-  height: 700px;
-
-  left: -250px;
-
-  top: -250px;
-
-  border-radius: 50%;
-
-  background: radial-gradient(circle, rgba(79, 140, 255, 0.1), transparent 70%);
-
-  pointer-events: none;
+	content: "";
+	position: absolute;
+	width: 700px;
+	height: 700px;
+	left: -250px;
+	top: -250px;
+	border-radius: 50%;
+	background: radial-gradient(circle, rgba(79, 140, 255, 0.1), transparent 70%);
+	pointer-events: none;
 }
 
 .hero::after {
-  content: "";
-
-  position: absolute;
-
-  width: 500px;
-
-  height: 500px;
-
-  right: -180px;
-
-  bottom: -180px;
-
-  border-radius: 50%;
-
-  background: radial-gradient(
+	content: "";
+	position: absolute;
+	width: 500px;
+	height: 500px;
+	right: -180px;
+	bottom: -180px;
+	border-radius: 50%;
+	background: radial-gradient(
     circle,
     rgba(79, 140, 255, 0.08),
     transparent 70%
   );
-
-  pointer-events: none;
+	pointer-events: none;
 }
 
 /* ==========================================================
@@ -5335,14 +3884,14 @@ header.scrolled {
 .step,
 .requirements li,
 .support-card {
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+	transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .price-card:hover,
 .step:hover,
 .requirements li:hover,
 .support-card:hover {
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+	box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
 }
 
 /* ==========================================================
@@ -5350,17 +3899,17 @@ header.scrolled {
    ========================================================== */
 
 @media (max-width: 900px) {
-  header {
-    backdrop-filter: blur(12px);
-  }
+	header {
+		backdrop-filter: blur(12px);
+	}
 
-  nav {
-    gap: 16px;
-  }
+	nav {
+		gap: 16px;
+	}
 
-  nav a {
-    font-size: 0.95rem;
-  }
+	nav a {
+		font-size: 0.95rem;
+	}
 }
 
 /* ==========================================================
@@ -5368,17 +3917,17 @@ header.scrolled {
    ========================================================== */
 
 @media (max-width: 1100px) {
-  h1 {
-    font-size: 2.8rem;
-  }
+	h1 {
+		font-size: 2.8rem;
+	}
 
-  h2 {
-    font-size: 2rem;
-  }
+	h2 {
+		font-size: 2rem;
+	}
 
-  .showcase-item {
-    gap: 42px;
-  }
+	.showcase-item {
+		gap: 42px;
+	}
 }
 
 /* ==========================================================
@@ -5386,59 +3935,56 @@ header.scrolled {
    ========================================================== */
 
 @media (max-width: 768px) {
-  section {
-    padding: 70px 0;
-  }
+	section {
+		padding: 70px 0;
+	}
 
-  .hero {
-    padding-top: 130px;
-  }
+	.hero {
+		padding-top: 130px;
+	}
 
-  h1 {
-    font-size: 2.25rem;
+	h1 {
+		font-size: 2.25rem;
+		line-height: 1.1;
+	}
 
-    line-height: 1.1;
-  }
+	h2 {
+		font-size: 1.8rem;
+	}
 
-  h2 {
-    font-size: 1.8rem;
-  }
+	h3 {
+		font-size: 1.25rem;
+	}
 
-  h3 {
-    font-size: 1.25rem;
-  }
+	p {
+		font-size: 0.98rem;
+	}
 
-  p {
-    font-size: 0.98rem;
-  }
+	.hero-buttons {
+		flex-direction: column;
+	}
 
-  .hero-buttons {
-    flex-direction: column;
-  }
+	.btn {
+		width: 100%;
+	}
 
-  .btn {
-    width: 100%;
-  }
+	.price-card {
+		padding: 30px;
+	}
 
-  .price-card {
-    padding: 30px;
-  }
+	.amount {
+		font-size: 3.4rem;
+	}
 
-  .amount {
-    font-size: 3.4rem;
-  }
+	.controls table {
+		display: block;
+		overflow-x: auto;
+	}
 
-  .controls table {
-    display: block;
-
-    overflow-x: auto;
-  }
-
-  .legal-table {
-    display: block;
-
-    overflow-x: auto;
-  }
+	.legal-table {
+		display: block;
+		overflow-x: auto;
+	}
 }
 
 /* ==========================================================
@@ -5446,27 +3992,26 @@ header.scrolled {
    ========================================================== */
 
 @media (max-width: 480px) {
-  h1 {
-    font-size: 2rem;
-  }
+	h1 {
+		font-size: 2rem;
+	}
 
-  h2 {
-    font-size: 1.6rem;
-  }
+	h2 {
+		font-size: 1.6rem;
+	}
 
-  .hero-note {
-    flex-direction: column;
+	.hero-note {
+		flex-direction: column;
+		gap: 8px;
+	}
 
-    gap: 8px;
-  }
+	.price-card {
+		padding: 24px;
+	}
 
-  .price-card {
-    padding: 24px;
-  }
-
-  .footer-top {
-    gap: 28px;
-  }
+	.footer-top {
+		gap: 28px;
+	}
 }
 
 /* ==========================================================
@@ -5474,35 +4019,33 @@ header.scrolled {
    ========================================================== */
 
 @keyframes fadeUp {
-  from {
-    opacity: 0;
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
 
-    transform: translateY(30px);
-  }
-
-  to {
-    opacity: 1;
-
-    transform: none;
-  }
+	to {
+		opacity: 1;
+		transform: none;
+	}
 }
 
 @keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
+	0% {
+		transform: scale(1);
+	}
 
-  50% {
-    transform: scale(1.04);
-  }
+	50% {
+		transform: scale(1.04);
+	}
 
-  100% {
-    transform: scale(1);
-  }
+	100% {
+		transform: scale(1);
+	}
 }
 
 .btn-primary:hover {
-  animation: pulse 0.8s ease;
+	animation: pulse 0.8s ease;
 }
 
 /* ==========================================================
@@ -5510,9 +4053,8 @@ header.scrolled {
    ========================================================== */
 
 .loading {
-  opacity: 0.65;
-
-  pointer-events: none;
+	opacity: 0.65;
+	pointer-events: none;
 }
 
 /* ==========================================================
@@ -5520,13 +4062,11 @@ header.scrolled {
    ========================================================== */
 
 @media (prefers-reduced-motion: reduce) {
-  * {
-    animation: none !important;
-
-    transition: none !important;
-
-    scroll-behavior: auto !important;
-  }
+	* {
+		animation: none !important;
+		transition: none !important;
+		scroll-behavior: auto !important;
+	}
 }
 
 /* ==========================================================
@@ -5534,26 +4074,25 @@ header.scrolled {
    ========================================================== */
 
 @media print {
-  header,
+	header,
   footer,
   .hero-buttons,
   .btn {
-    display: none !important;
-  }
+		display: none !important;
+	}
 
-  body {
-    background: white;
+	body {
+		background: white;
+		color: black;
+	}
 
-    color: black;
-  }
+	p {
+		color: #333;
+	}
 
-  p {
-    color: #333;
-  }
-
-  section {
-    padding: 20px 0;
-  }
+	section {
+		padding: 20px 0;
+	}
 }
 
 /* ==========================================================
@@ -5561,11 +4100,9 @@ header.scrolled {
    ========================================================== */
 
 
-    section{
-
-        padding:20px 0;
-
-    }
+section {
+	padding: 20px 0;
+}
 
 }
 
@@ -5573,3 +4110,191 @@ header.scrolled {
 /* ==========================================================
    End of Orbit Stylesheet
    ========================================================== */
+
+
+/* ==========================================================
+   Legal Pages
+   (privacy.html, terms.html, refund.html, support.html)
+   ========================================================== */
+
+.legal-page {
+	padding-top: 140px;
+	padding-bottom: 100px;
+}
+
+.legal-container {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.legal-container h1 {
+	margin-bottom: 12px;
+}
+
+.legal-container > p {
+	margin-bottom: 48px;
+	color: var(--muted);
+}
+
+.legal-section {
+	margin-bottom: 52px;
+}
+
+.legal-section:last-child {
+	margin-bottom: 0;
+}
+
+.legal-section h2 {
+	text-align: left;
+	margin-bottom: 16px;
+	font-size: 1.55rem;
+}
+
+.legal-section h3 {
+	margin-top: 28px;
+	margin-bottom: 12px;
+	font-size: 1.15rem;
+}
+
+.legal-section p {
+	margin-bottom: 18px;
+	color: var(--muted);
+}
+
+.legal-section ul {
+	margin: 18px 0;
+	padding-left: 22px;
+}
+
+.legal-section li {
+	margin-bottom: 10px;
+	color: var(--muted);
+}
+
+.legal-section strong {
+	color: var(--text);
+}
+
+.legal-section a {
+	color: var(--primary);
+	text-decoration: none;
+}
+
+.legal-section a:hover {
+	text-decoration: underline;
+}
+
+/* ========================================== */
+
+.notice {
+	margin: 28px 0;
+	padding: 22px 24px;
+	border-radius: 16px;
+	background: rgba(79,140,255,.08);
+	border: 1px solid rgba(79,140,255,.25);
+}
+
+.notice p {
+	margin: 0;
+	color: #D9E8FF;
+}
+
+/* ========================================== */
+
+.contact-box {
+	margin-top: 42px;
+	padding: 28px;
+	border-radius: 18px;
+	border: 1px solid var(--border);
+	background: rgba(255,255,255,.03);
+}
+
+.contact-box h3 {
+	margin-bottom: 14px;
+}
+
+.contact-box p {
+	margin-bottom: 10px;
+}
+
+.contact-box a {
+	color: var(--primary);
+}
+
+.contact-box a:hover {
+	text-decoration: underline;
+}
+
+/* ========================================== */
+
+.legal-table {
+	width: 100%;
+	margin-top: 28px;
+	border-collapse: collapse;
+	overflow: hidden;
+	border-radius: 16px;
+	border: 1px solid var(--border);
+}
+
+.legal-table th {
+	text-align: left;
+	padding: 16px;
+	background: rgba(255,255,255,.03);
+	border-bottom: 1px solid var(--border);
+}
+
+.legal-table td {
+	padding: 16px;
+	border-bottom: 1px solid rgba(255,255,255,.05);
+	color: var(--muted);
+}
+
+.legal-table tr:last-child td {
+	border-bottom: none;
+}
+
+/* ========================================== */
+
+.back-home {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 36px;
+	color: var(--muted);
+	transition: .25s;
+}
+
+.back-home:hover {
+	color: white;
+}
+
+/* ========================================== */
+
+@media(max-width:768px) {
+
+	.legal-page {
+		padding-top: 120px;
+		padding-bottom: 70px;
+	}
+
+	.legal-container {
+		width: min(92%,900px);
+	}
+
+	.legal-container h1 {
+		font-size: 2.2rem;
+	}
+
+	.legal-section h2 {
+		font-size: 1.35rem;
+	}
+
+	.legal-table {
+		display: block;
+		overflow-x: auto;
+	}
+
+	.contact-box {
+		padding: 22px;
+	}
+}
