@@ -1,95 +1,226 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Support • Orbit</title>
-
-<link rel="stylesheet" href="style.css">
-
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Support • Orbit</title>
+	<style>
+	@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap');
+	:root {
+		--bg: #09090B;
+		--surface: #111216;
+		--border: #23242B;
+		--text: #FAFAFA;
+		--muted: #A1A1AA;
+		--primary: #4F8CFF;
+	}
+	
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	
+	body {
+		background: var(--bg);
+		color: var(--text);
+		font-family: Inter, sans-serif;
+		line-height: 1.8;
+	}
+	
+	header {
+		position: sticky;
+		top: 0;
+		backdrop-filter: blur(18px);
+		background: rgba(9, 9, 11, .85);
+		border-bottom: 1px solid rgba(255, 255, 255, .06);
+	}
+	
+	.container {
+		width: min(92%, 1000px);
+		margin: auto;
+	}
+	
+	.nav {
+		height: 72px;
+		display: flex;
+		align-items: center;
+	}
+	
+	.logo {
+		display: flex;
+		align-items: center;
+		gap: 14px;
+		color: white;
+		text-decoration: none;
+	}
+	
+	.logo img {
+		width: 42px;
+	}
+	
+	.logo span {
+		font-family: "Space Grotesk";
+		font-size: 1.35rem;
+		font-weight: 700;
+	}
+	
+	main {
+		padding: 70px 20px;
+	}
+	
+	.card {
+		max-width: 900px;
+		margin: auto;
+		background: var(--surface);
+		border: 1px solid var(--border);
+		border-radius: 20px;
+		padding: 50px;
+	}
+	
+	h1 {
+		font-family: "Space Grotesk";
+		font-size: 3rem;
+		margin-bottom: 18px;
+	}
+	
+	h2 {
+		margin-top: 40px;
+		margin-bottom: 14px;
+		font-family: "Space Grotesk";
+	}
+	
+	p {
+		color: var(--muted);
+		margin-bottom: 18px;
+	}
+	
+	ul {
+		margin-left: 22px;
+	}
+	
+	li {
+		color: var(--muted);
+		margin-bottom: 10px;
+	}
+	
+	.notice {
+		background: rgba(79, 140, 255, .08);
+		border: 1px solid rgba(79, 140, 255, .25);
+		border-radius: 14px;
+		padding: 20px;
+		margin: 30px 0;
+	}
+	
+	.notice p {
+		margin: 0;
+		color: #dbe8ff;
+	}
+	
+	.email {
+		color: var(--primary);
+		text-decoration: none;
+		font-weight: 600;
+	}
+	
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+		gap: 20px;
+		margin-top: 24px;
+	}
+	
+	.box {
+		border: 1px solid var(--border);
+		border-radius: 14px;
+		padding: 22px;
+		background: rgba(255, 255, 255, .02);
+	}
+	
+	.box h3 {
+		margin-bottom: 10px;
+	}
+	
+	footer {
+		padding: 40px;
+		text-align: center;
+		color: #777;
+	}
+	
+	@media(max-width:768px) {
+		.card {
+			padding: 30px 24px;
+		}
+		h1 {
+			font-size: 2.2rem;
+		}
+	}
+	</style>
 </head>
 
 <body>
+	<header>
+		<div class="container nav">
+			<a href="index.html" class="logo"> <img src="assets/icon/app_icon.png" alt="Orbit"> <span>Orbit</span> </a>
+		</div>
+	</header>
+	<main>
+		<div class="card">
+			<h1>Support</h1>
+			<p> Need help with Orbit? We're here to help you get back up and running as quickly as possible. </p>
+			<div class="notice">
+				<p> 📧 For all support requests, please contact us at <a class="email" href="mailto:support@orbitapp.dev">support@orbitapp.dev</a>. Please include your license email, your Windows version, and a detailed description of the issue to help us assist you faster. </p>
+			</div>
+			<h2>What We Can Help With</h2>
+			<div class="grid">
+				<div class="box">
+					<h3>Installation</h3>
+					<p>Problems installing or launching Orbit.</p>
+				</div>
+				<div class="box">
+					<h3>License Activation</h3>
+					<p>Activation failures, license verification, or device limits.</p>
+				</div>
+				<div class="box">
+					<h3>License Transfer</h3>
+					<p>Moving your license to a new computer or replacing an old device.</p>
+				</div>
+				<div class="box">
+					<h3>Bug Reports</h3>
+					<p>Unexpected crashes, errors, or software issues.</p>
+				</div>
+				<div class="box">
+					<h3>Feature Requests</h3>
+					<p>Ideas and suggestions for future Orbit releases.</p>
+				</div>
+				<div class="box">
+					<h3>Refund Requests</h3>
+					<p>Assistance with eligible refund requests under our Refund Policy.</p>
+				</div>
+			</div>
+			<h2>Before Contacting Support</h2>
+			<ul>
+				<li>Make sure you're using the latest version of Orbit.</li>
+				<li>Review the Frequently Asked Questions on the Orbit homepage.</li>
+				<li>Include screenshots or screen recordings if you're reporting a bug.</li>
+				<li>Include any error messages exactly as displayed.</li>
+				<li>For activation issues, include the email address used during purchase.</li>
+			</ul>
+			<h2>Support Hours</h2>
+			<p> Support is provided via email on a reasonable-effort basis. Most requests receive a response within <strong>1–3 business days</strong>, although response times may vary during weekends and holidays. </p>
+			<h2>Contact Information</h2>
+			<p> <strong>Email</strong>
+				<br> <a class="email" href="mailto:support@orbitapp.dev">
 
-<header>
+support@orbitapp.dev
 
-<div class="container nav">
-
-<a href="index.html" class="logo">
-
-<img src="assets/icon/app_icon.png">
-
-<span>Orbit</span>
-
-</a>
-
-</div>
-
-</header>
-
-<section class="page">
-
-<div class="container narrow">
-
-<h1>Support</h1>
-
-<p>
-
-Need help with Orbit?
-
-We're happy to help.
-
-</p>
-
-<h2>Contact</h2>
-
-<p>
-
-Email:
-
-<strong>support@orbitapp.dev</strong>
-
-</p>
-
-<p>
-
-Typical support topics include:
-
-</p>
-
-<ul>
-
-<li>Installation</li>
-
-<li>License activation</li>
-
-<li>License transfer</li>
-
-<li>Bug reports</li>
-
-<li>Feature requests</li>
-
-<li>Refund requests</li>
-
-</ul>
-
-<h2>Frequently Asked</h2>
-
-<p>
-
-Before contacting support, please review the FAQ on our homepage.
-
-</p>
-
-</div>
-
-</section>
-
+</a> </p>
+			<p> <strong>Developer</strong>
+				<br> Achmad Ikbal Rahadian </p>
+		</div>
+	</main>
+	<footer> © 2026 Orbit • Developed by Achmad Ikbal Rahadian </footer>
 </body>
 
 </html>
