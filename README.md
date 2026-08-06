@@ -18,7 +18,7 @@
 
 # Why Orbit?
 
-Modern games solved fast selection years ago. Whether you're switching weapons in **Grand Theft Auto V** or navigating inventory wheels in your favorite RPG, everything is built around **spatial memory**. You don't search, you simply know where everything is.
+Modern games solved fast selection years ago. Whether you're switching weapons or navigating inventory wheels in your favorite RPG, everything is built around **spatial memory**. You don't search, you simply know where everything is.
 
 <p align="center">
   <img src="web/assets/img/game-wheel.gif" alt="Weapon Wheel Inspiration" width="650">
