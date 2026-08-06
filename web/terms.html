@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Terms of Service • Orbit</title>
 	<style>
-	@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap');
 	:root {
 		--bg: #09090B;
 		--surface: #111216;
@@ -14,7 +14,6 @@
 		--text: #FAFAFA;
 		--muted: #A1A1AA;
 		--primary: #4F8CFF;
-		--max-width: 900px;
 	}
 	
 	* {
@@ -23,26 +22,11 @@
 		box-sizing: border-box;
 	}
 	
-	html {
-		scroll-behavior: smooth;
-	}
-	
 	body {
 		background: var(--bg);
 		color: var(--text);
 		font-family: Inter, sans-serif;
 		line-height: 1.8;
-		-webkit-font-smoothing: antialiased;
-	}
-	
-	a {
-		color: inherit;
-		text-decoration: none;
-	}
-	
-	img {
-		display: block;
-		max-width: 100%;
 	}
 	
 	header {
@@ -50,17 +34,16 @@
 		top: 0;
 		backdrop-filter: blur(18px);
 		background: rgba(9, 9, 11, .85);
-		border-bottom: 1px solid rgba(255, 255, 255, .05);
-		z-index: 999;
+		border-bottom: 1px solid rgba(255, 255, 255, .06);
 	}
 	
 	.container {
-		width: min(92%, 1100px);
+		width: min(92%, 1000px);
 		margin: auto;
 	}
 	
 	.nav {
-		height: 70px;
+		height: 72px;
 		display: flex;
 		align-items: center;
 	}
@@ -69,6 +52,8 @@
 		display: flex;
 		align-items: center;
 		gap: 14px;
+		text-decoration: none;
+		color: white;
 	}
 	
 	.logo img {
@@ -82,27 +67,26 @@
 	}
 	
 	main {
-		padding: 80px 20px;
+		padding: 70px 20px;
 	}
 	
-	.legal-container {
-		max-width: var(--max-width);
+	.card {
+		max-width: 900px;
 		margin: auto;
 		background: var(--surface);
 		border: 1px solid var(--border);
 		border-radius: 20px;
 		padding: 50px;
-		box-shadow: 0 30px 70px rgba(0, 0, 0, .35);
 	}
 	
 	h1 {
-		font-family: "Space Grotesk", sans-serif;
+		font-family: "Space Grotesk";
 		font-size: 3rem;
-		margin-bottom: 14px;
+		margin-bottom: 12px;
 	}
 	
 	h2 {
-		font-family: "Space Grotesk", sans-serif;
+		font-family: "Space Grotesk";
 		font-size: 1.45rem;
 		margin-bottom: 16px;
 	}
@@ -113,18 +97,17 @@
 	}
 	
 	strong {
-		color: var(--text);
+		color: white;
 	}
 	
 	section {
-		margin-top: 45px;
-		padding-top: 35px;
-		border-top: 1px solid rgba(255, 255, 255, .06);
+		margin-top: 42px;
+		padding-top: 34px;
+		border-top: 1px solid rgba(255, 255, 255, .05);
 	}
 	
 	ul {
-		margin-top: 15px;
-		margin-left: 22px;
+		margin-left: 24px;
 	}
 	
 	li {
@@ -132,55 +115,37 @@
 		margin-bottom: 12px;
 	}
 	
-	.email {
-		display: inline-block;
-		margin-top: 8px;
-		color: var(--primary);
-		font-weight: 600;
-	}
-	
-	.back {
-		display: inline-flex;
-		align-items: center;
-		gap: 8px;
-		margin-bottom: 35px;
-		color: var(--muted);
-		transition: .25s;
-	}
-	
-	.back:hover {
-		color: white;
-	}
-	
 	.notice {
-		margin-top: 25px;
+		margin: 30px 0;
 		padding: 18px 22px;
 		border-radius: 14px;
-		background: rgba(79, 140, 255, .08);
 		border: 1px solid rgba(79, 140, 255, .25);
+		background: rgba(79, 140, 255, .08);
 	}
 	
 	.notice p {
+		color: #d9e8ff;
 		margin: 0;
-		color: #D9E8FF;
+	}
+	
+	.email {
+		color: var(--primary);
+		text-decoration: none;
+		font-weight: 600;
 	}
 	
 	footer {
 		text-align: center;
+		padding: 40px;
 		color: #777;
-		font-size: .9rem;
-		padding: 50px 20px;
 	}
 	
 	@media(max-width:768px) {
-		.legal-container {
-			padding: 32px 24px;
+		.card {
+			padding: 30px 24px;
 		}
 		h1 {
 			font-size: 2.2rem;
-		}
-		h2 {
-			font-size: 1.3rem;
 		}
 	}
 	</style>
@@ -189,74 +154,96 @@
 <body>
 	<header>
 		<div class="container nav">
-			<a href="index.html" class="logo"> <img src="assets/icon/app_icon.png" alt="Orbit Logo"> <span>Orbit</span> </a>
+			<a class="logo" href="index.html"> <img src="assets/icon/app_icon.png" alt="Orbit"> <span>Orbit</span> </a>
 		</div>
 	</header>
 	<main>
-		<div class="legal-container"> <a href="index.html" class="back">← Back to Orbit</a>
+		<div class="card">
 			<h1>Terms of Service</h1>
-			<p><strong>Last Updated:</strong> August 5, 2026</p>
-			<p> These Terms of Service govern your use of Orbit ("Software"), developed and distributed by Achmad Ikbal Rahadian ("Developer"). By downloading, installing, activating, or using Orbit, you agree to these Terms. </p>
+			<p><strong>Last Updated:</strong> August 6, 2026</p>
+			<p> These Terms of Service ("Terms") govern your purchase and use of Orbit ("Software"), developed and distributed by <strong>Achmad Ikbal Rahadian</strong>. By downloading, installing, activating, or using Orbit, you agree to these Terms. </p>
 			<div class="notice">
-				<p> Purchasing Orbit grants you a license to use the software. Ownership of the software remains with the Developer. </p>
+				<p> Purchasing Orbit grants you a license to use the software. Ownership of Orbit remains with the Developer. </p>
 			</div>
 			<section>
 				<h2>1. License Grant</h2>
-				<p> Upon successful purchase, you are granted a personal, non-exclusive, non-transferable, and revocable license to use Orbit for your personal or business productivity. </p>
+				<p> Upon successful purchase, you are granted a personal, non-exclusive, non-transferable, revocable license to use Orbit. </p>
+				<p> Each license may be activated on up to <strong>five (5) devices</strong> owned or controlled by you. Sharing your license with other individuals or organizations is not permitted. </p>
 			</section>
 			<section>
 				<h2>2. Ownership</h2>
-				<p> Orbit, including its software, documentation, artwork, trademarks, and intellectual property, remains the exclusive property of Achmad Ikbal Rahadian. </p>
+				<p> Orbit, including its software, documentation, graphics, trademarks, and all intellectual property rights, remains the exclusive property of Achmad Ikbal Rahadian. </p>
+				<p> Purchasing Orbit provides a license to use the software and does not transfer ownership. </p>
 			</section>
 			<section>
-				<h2>3. Restrictions</h2>
+				<h2>3. Acceptable Use</h2>
+				<p>You agree not to:</p>
 				<ul>
-					<li>Do not resell or redistribute Orbit.</li>
-					<li>Do not share your license key.</li>
-					<li>Do not remove copyright notices.</li>
-					<li>Do not use Orbit for unlawful purposes.</li>
-					<li>Do not reverse engineer or modify the software except where permitted by law.</li>
+					<li>Resell, sublicense, lease, rent, or redistribute Orbit.</li>
+					<li>Share your license key with unauthorized users.</li>
+					<li>Circumvent or disable the licensing system.</li>
+					<li>Remove copyright notices or branding.</li>
+					<li>Reverse engineer, decompile, or modify Orbit except where permitted by applicable law.</li>
+					<li>Use Orbit for illegal or malicious activities.</li>
 				</ul>
 			</section>
 			<section>
 				<h2>4. License Activation</h2>
-				<p> Orbit may verify your license online during activation. Fraudulent purchases, chargebacks, or license abuse may result in license suspension. </p>
+				<p> Orbit requires an internet connection during activation to verify a valid license. </p>
+				<p> The Developer may suspend or revoke licenses that are obtained through fraud, payment disputes, chargebacks, excessive activation abuse, or unauthorized sharing. </p>
 			</section>
 			<section>
-				<h2>5. Software Updates</h2>
-				<p> Unless otherwise stated, your purchase includes lifetime software updates. Features may change over time as Orbit evolves. </p>
+				<h2>5. Updates</h2>
+				<p> Unless otherwise stated, your purchase includes lifetime software updates. </p>
+				<p> The Developer may add, modify, or remove features as the software evolves. </p>
 			</section>
 			<section>
-				<h2>6. Refunds</h2>
-				<p> Refund requests are handled according to the Orbit Refund Policy available on this website. </p>
+				<h2>6. Refund Policy</h2>
+				<p> Refunds are only available if Orbit cannot be installed, activated, or used because of a verified technical issue that cannot be resolved by the Developer. </p>
+				<p> To request a refund, you must contact support within 30 days of purchase and provide sufficient evidence, including screenshots, error messages, log files, or screen recordings demonstrating the issue. </p>
+				<p> Refund requests submitted without adequate supporting evidence may be declined. </p>
+				<p> Refunds are generally not provided for reasons including, but not limited to: </p>
+				<ul>
+					<li>Changing your mind.</li>
+					<li>Purchasing by mistake.</li>
+					<li>Requesting features that Orbit does not advertise.</li>
+					<li>User preference.</li>
+					<li>Failure to read the product description before purchasing.</li>
+				</ul>
 			</section>
 			<section>
-				<h2>7. Support</h2>
-				<p> Licensed customers receive email support. Response times are not guaranteed and may vary. </p>
+				<h2>7. Technical Support</h2>
+				<p> Licensed customers receive email support for installation, activation, and technical issues. </p>
+				<p> Support is provided on a reasonable-effort basis. Response times are not guaranteed. </p>
 			</section>
 			<section>
 				<h2>8. Disclaimer</h2>
-				<p> Orbit is provided "AS IS" without warranties of any kind. The Developer does not guarantee uninterrupted operation or compatibility with every hardware or software configuration. </p>
+				<p> Orbit is provided "AS IS" without warranties of any kind, either express or implied. </p>
+				<p> The Developer does not guarantee uninterrupted operation, compatibility with every system configuration, or that the software will be error-free. </p>
 			</section>
 			<section>
 				<h2>9. Limitation of Liability</h2>
-				<p> To the maximum extent permitted by law, the Developer shall not be liable for indirect, incidental, consequential, or special damages arising from the use of Orbit. Total liability shall never exceed the amount paid for the software. </p>
+				<p> To the maximum extent permitted by law, the Developer shall not be liable for any indirect, incidental, consequential, or special damages arising from the use of Orbit. </p>
+				<p> The Developer's total liability shall never exceed the amount paid for the software. </p>
 			</section>
 			<section>
 				<h2>10. Termination</h2>
-				<p> Violation of these Terms may result in suspension or termination of your license. Upon termination, you must stop using Orbit and remove all installed copies. </p>
+				<p> The Developer may suspend or terminate your license if these Terms are violated. </p>
+				<p> Upon termination, you must immediately stop using Orbit and remove all installed copies. </p>
 			</section>
 			<section>
 				<h2>11. Changes to These Terms</h2>
-				<p> These Terms may be updated periodically. Revised versions will be published on this website with a new effective date. </p>
+				<p> These Terms may be updated periodically. Updated versions will be published on this website with a revised effective date. </p>
 			</section>
 			<section>
 				<h2>12. Contact</h2>
-				<p> Questions regarding these Terms can be sent to: </p> <a class="email" href="mailto:support@orbitapp.dev">
+				<p> For questions regarding these Terms or your license, please contact: </p>
+				<p> <a class="email" href="mailto:support@orbitapp.dev">
 
 support@orbitapp.dev
 
-</a> </section>
+</a> </p>
+			</section>
 		</div>
 	</main>
 	<footer> © 2026 Orbit • Developed by Achmad Ikbal Rahadian </footer>
