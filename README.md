@@ -5,9 +5,9 @@
 <h1 align="center">Orbit</h1>
 
 <p align="center">
-  <strong>Stop searching for windows. Start switching with muscle memory.</strong>
+  <strong>The fastest way to switch applications on Windows.</strong>
   <br>
-  A radial application switcher for Windows inspired by the weapon wheels in modern games.
+  A radial application switcher for Windows inspired by the wheels in modern games.
 </p>
 
 <p align="center">
