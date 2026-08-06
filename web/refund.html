@@ -1,94 +1,204 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Refund Policy • Orbit</title>
-
-<link rel="stylesheet" href="style.css">
-
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Refund Policy • Orbit</title>
+	<style>
+	@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap');
+	:root {
+		--bg: #09090B;
+		--surface: #111216;
+		--border: #23242B;
+		--text: #FAFAFA;
+		--muted: #A1A1AA;
+		--primary: #4F8CFF;
+	}
+	
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	
+	body {
+		background: var(--bg);
+		color: var(--text);
+		font-family: Inter, sans-serif;
+		line-height: 1.8;
+	}
+	
+	header {
+		position: sticky;
+		top: 0;
+		backdrop-filter: blur(18px);
+		background: rgba(9, 9, 11, .85);
+		border-bottom: 1px solid rgba(255, 255, 255, .06);
+	}
+	
+	.container {
+		width: min(92%, 1000px);
+		margin: auto;
+	}
+	
+	.nav {
+		height: 72px;
+		display: flex;
+		align-items: center;
+	}
+	
+	.logo {
+		display: flex;
+		align-items: center;
+		gap: 14px;
+		color: white;
+		text-decoration: none;
+	}
+	
+	.logo img {
+		width: 42px;
+	}
+	
+	.logo span {
+		font-family: "Space Grotesk";
+		font-size: 1.35rem;
+		font-weight: 700;
+	}
+	
+	main {
+		padding: 70px 20px;
+	}
+	
+	.card {
+		max-width: 900px;
+		margin: auto;
+		background: var(--surface);
+		border: 1px solid var(--border);
+		border-radius: 20px;
+		padding: 50px;
+	}
+	
+	h1 {
+		font-family: "Space Grotesk";
+		font-size: 3rem;
+		margin-bottom: 14px;
+	}
+	
+	h2 {
+		font-family: "Space Grotesk";
+		margin-top: 42px;
+		margin-bottom: 16px;
+	}
+	
+	p {
+		color: var(--muted);
+		margin-bottom: 18px;
+	}
+	
+	ul {
+		margin-left: 24px;
+	}
+	
+	li {
+		color: var(--muted);
+		margin-bottom: 10px;
+	}
+	
+	.notice {
+		background: rgba(79, 140, 255, .08);
+		border: 1px solid rgba(79, 140, 255, .25);
+		border-radius: 14px;
+		padding: 22px;
+		margin: 30px 0;
+	}
+	
+	.notice p {
+		color: #dce8ff;
+		margin: 0;
+	}
+	
+	.email {
+		color: var(--primary);
+		text-decoration: none;
+		font-weight: 600;
+	}
+	
+	footer {
+		text-align: center;
+		padding: 40px;
+		color: #777;
+	}
+	
+	@media(max-width:768px) {
+		.card {
+			padding: 30px 24px;
+		}
+		h1 {
+			font-size: 2.2rem;
+		}
+	}
+	</style>
 </head>
 
 <body>
+	<header>
+		<div class="container nav">
+			<a href="index.html" class="logo"> <img src="assets/icon/app_icon.png" alt="Orbit"> <span>Orbit</span> </a>
+		</div>
+	</header>
+	<main>
+		<div class="card">
+			<h1>Refund Policy</h1>
+			<p><strong>Last Updated:</strong> August 6, 2026</p>
+			<p> Our goal is to ensure every customer can successfully install and use Orbit. If you experience a genuine technical problem that prevents you from using the software, we'll work with you to resolve it. </p>
+			<div class="notice">
+				<p> Refunds are available only when Orbit cannot be installed, activated, or used because of a verified technical issue that cannot be resolved by the Developer. </p>
+			</div>
+			<h2>Eligibility</h2>
+			<p> You may request a refund within <strong>30 days</strong> of your purchase if: </p>
+			<ul>
+				<li>Orbit cannot be installed, activated, or launched.</li>
+				<li>The issue is reproducible and verified by the Developer.</li>
+				<li>The problem cannot be resolved after reasonable troubleshooting.</li>
+			</ul>
+			<h2>How to Request a Refund</h2>
+			<p> Please email <a class="email" href="mailto:support@orbitapp.dev">
 
-<header>
+support@orbitapp.dev
 
-<div class="container nav">
+</a> within 30 days of purchase. </p>
+			<p> Your request should include: </p>
+			<ul>
+				<li>Your purchase email address.</li>
+				<li>Your order number or receipt.</li>
+				<li>Your Windows version.</li>
+				<li>A description of the issue.</li>
+				<li>Screenshots, error messages, log files, or a screen recording showing the problem.</li>
+			</ul>
+			<h2>Non-Refundable Situations</h2>
+			<p> Refund requests may be declined for reasons including, but not limited to: </p>
+			<ul>
+				<li>Changing your mind after purchase.</li>
+				<li>Purchasing by mistake.</li>
+				<li>Requesting features not advertised.</li>
+				<li>The software functions as described.</li>
+				<li>Failure to meet personal preferences or workflow expectations.</li>
+				<li>Requests submitted without sufficient supporting evidence.</li>
+			</ul>
+			<h2>Refund Process</h2>
+			<p> Each request is reviewed individually. If approved, the refund will be processed through your original payment method. Depending on your payment provider or bank, it may take several business days for the funds to appear. </p>
+			<h2>Need Help?</h2>
+			<p> If you're experiencing a technical issue, we encourage you to contact support before requesting a refund. Many installation and activation issues can be resolved quickly. </p>
+			<p> <strong>Email:</strong>
+				<br> <a class="email" href="mailto:support@orbitapp.dev">
 
-<a href="index.html" class="logo">
+support@orbitapp.dev
 
-<img src="assets/icon/app_icon.png">
-
-<span>Orbit</span>
-
-</a>
-
-</div>
-
-</header>
-
-<section class="page">
-
-<div class="container narrow">
-
-<h1>Refund Policy</h1>
-
-<p><strong>Last updated:</strong> August 5, 2026</p>
-
-<p>
-
-We want you to be satisfied with Orbit.
-
-If the software doesn't meet your expectations,
-you may request a refund within 30 days of purchase.
-
-</p>
-
-<h2>How to Request a Refund</h2>
-
-<p>
-
-Email:
-
-<strong>support@orbitapp.dev</strong>
-
-</p>
-
-<p>
-
-Please include:
-
-</p>
-
-<ul>
-
-<li>Your purchase email.</li>
-
-<li>Your order number.</li>
-
-<li>A brief explanation.</li>
-
-</ul>
-
-<h2>Processing</h2>
-
-<p>
-
-Approved refunds are processed through the original payment method.
-
-Processing time depends on your payment provider and financial institution.
-
-</p>
-
-</div>
-
-</section>
-
+</a> </p>
+		</div>
+	</main>
+	<footer> © 2026 Orbit • Developed by Achmad Ikbal Rahadian </footer>
 </body>
 
 </html>
